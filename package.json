@@ -1,0 +1,31 @@
+{
+  "name": "afteryou",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "15.5.20",
+    "docx": "9.5.1",
+    "lucide-react": "0.468.0",
+    "pdfkit": "0.17.2",
+    "playwright": "1.61.1",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.3",
+    "@types/pdfkit": "0.17.4",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "typescript": "5.8.3"
+  },
+  "overrides": {
+    "postcss": "8.5.10"
+  }
+}
