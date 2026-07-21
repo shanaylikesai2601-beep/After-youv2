@@ -1,0 +1,105 @@
+/* ============================================================
+   AfterYou — Nova Design System
+   ============================================================ */
+
+/* ---- CSS Variables ---- */
+:root {
+  --bg: #0a0806;
+  --surface: rgba(14, 12, 10, 0.8);
+  --surface-2: #1a1612;
+  --line: rgba(41, 37, 32, 0.6);
+  --text: #f0ebe3;
+  --muted: rgba(240, 235, 227, 0.4);
+  --accent: #c8a46b;
+  --accent-dim: rgba(200, 164, 107, 0.15);
+  --success: #6ed9a4;
+  --danger: #ff7979;
+  --blue: #8db7ff;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-full: 50px;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --shadow-glow: 0 0 30px rgba(200, 164, 107, 0.08), 0 0 60px rgba(200, 164, 107, 0.03);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+::selection { background: rgba(200, 164, 107, 0.25); color: var(--text); }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font: inherit; border: none; background: none; }
+img { max-width: 100%; display: block; }
+
+/* ---- Typography ---- */
+h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; letter-spacing: -0.02em; }
+
+/* ---- Page Transition ---- */
+.page-enter { animation: pageFadeIn 0.6s var(--ease-out-expo) both; }
+@keyframes pageFadeIn { 0% { opacity: 0; transform: translateY(8px); } 100% { opacity: 1; transform: translateY(0); } }
+
+/* ---- Glass card ---- */
+.glass { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); backdrop-filter: blur(12px); }
+
+/* ---- Buttons ---- */
+.btn-primary {
+  font-family: var(--font-sans); font-size: 14px; font-weight: 600;
+  padding: 11px 26px; border-radius: var(--radius-full); border: none;
+  background: var(--accent); color: #16130e;
+  cursor: pointer; transition: background 0.2s var(--ease-out-expo), transform 0.15s var(--ease-out-expo);
+}
+.btn-primary:hover { background: #dec080; transform: translateY(-1px); }
+.btn-primary:disabled { opacity: 0.4; cursor: default; transform: none; }
+
+.btn-secondary {
+  font-family: var(--font-sans); font-size: 14px; font-weight: 500;
+  padding: 11px 26px; border-radius: var(--radius-full);
+  border: 1px solid rgba(240, 235, 227, 0.12);
+  background: transparent; color: var(--text);
+  cursor: pointer; transition: background 0.2s var(--ease-out-expo), border-color 0.2s var(--ease-out-expo);
+}
+.btn-secondary:hover { background: rgba(240, 235, 227, 0.04); border-color: rgba(240, 235, 227, 0.25); }
+.btn-secondary:disabled { opacity: 0.4; cursor: default; }
+
+/* ---- Nova loading ring ---- */
+.loader-ring { width: 28px; height: 28px; border-radius: 50%; border: 2px solid rgba(200, 164, 107, 0.1); border-top-color: var(--accent); animation: spin 0.8s linear infinite; }
+.loader-ring.large { width: 36px; height: 36px; border-width: 2.5px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- Shared animations ---- */
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes fadeUp { 0% { opacity: 0; transform: translateY(16px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes slideIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes slideInRight { 0% { opacity: 0; transform: translateX(16px); } 100% { opacity: 1; transform: translateX(0); } }
+@keyframes slideUp { 0% { opacity: 0; transform: translateY(12px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes pulseGlow { 0%, 100% { box-shadow: var(--shadow-glow); } 50% { box-shadow: 0 0 40px rgba(200, 164, 107, 0.15), 0 0 80px rgba(200, 164, 107, 0.05); } }
+@keyframes ringExpand { 0% { transform: scale(0.85); opacity: 0.5; } 100% { transform: scale(1.25); opacity: 0; } }
+@keyframes collapseUp { 0% { max-height: 200px; opacity: 1; } 100% { max-height: 0; opacity: 0; overflow: hidden; } }
+
+/* ---- Nova ambient background canvas ---- */
+.nova-canvas { position: fixed; inset: 0; z-index: 0; width: 100vw; height: 100vh; pointer-events: none; }
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .btn-primary, .btn-secondary { padding: 10px 20px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

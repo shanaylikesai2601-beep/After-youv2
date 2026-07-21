@@ -1,0 +1,238 @@
+{
+  "id": "mission_582c0821-f353-4cf9-978a-ac86e26f90e5",
+  "title": "Productivity Dashboard",
+  "description": "Build a simple personal productivity dashboard page at /productivity with today tasks, completed counter, priority labels, clean modern UI, reusable components, and navigation update.",
+  "goal": "Create a /productivity dashboard page with tasks, priorities, reusable components, and navigation",
+  "status": "completed",
+  "createdAt": "2026-07-20T09:55:41.048Z",
+  "updatedAt": "2026-07-20T09:58:39.198Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_1a9017a4-ad30-47e9-b683-0a922861db23",
+      "timestamp": "2026-07-20T09:55:41.048Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Create a /productivity dashboard page with tasks, priorities, reusable components, and navigation"
+      }
+    },
+    {
+      "id": "log_80b34903-a02f-4bf7-a6a1-c27f1e0f0378",
+      "timestamp": "2026-07-20T09:55:41.070Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_a37ff8d3-7e49-4317-8d5c-50914c0b0a29",
+      "timestamp": "2026-07-20T09:55:47.852Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Plan created with 4 tasks"
+      }
+    },
+    {
+      "id": "log_d5fe0ac8-f74e-4466-8f9e-b784d4230523",
+      "timestamp": "2026-07-20T09:55:47.855Z",
+      "stage": "executing",
+      "action": "Starting 4 tasks",
+      "status": "started",
+      "metadata": {
+        "taskCount": 4
+      }
+    },
+    {
+      "id": "log_6a9bc437-5108-43f5-bfe1-3ae0b0d141cb",
+      "timestamp": "2026-07-20T09:55:47.857Z",
+      "stage": "executing",
+      "action": "Executing task: Define task data model and mock data",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Define task data model and mock data"
+      }
+    },
+    {
+      "id": "log_c8c232c0-0a54-41d5-bce1-e6eb41728915",
+      "timestamp": "2026-07-20T09:56:24.182Z",
+      "stage": "executing",
+      "action": "Task completed: Define task data model and mock data",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_2b852c42-3e33-446f-a49b-a4d2e6e482c1",
+      "timestamp": "2026-07-20T09:56:24.185Z",
+      "stage": "executing",
+      "action": "Executing task: Create reusable UI components",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Create reusable UI components"
+      }
+    },
+    {
+      "id": "log_e926070a-c3f7-4d53-9d66-f23baa96fe84",
+      "timestamp": "2026-07-20T09:56:57.036Z",
+      "stage": "executing",
+      "action": "Task completed: Create reusable UI components",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_76cd2766-ee58-4c0f-8f6c-7c6dab5b057c",
+      "timestamp": "2026-07-20T09:56:57.051Z",
+      "stage": "executing",
+      "action": "Executing task: Implement the /productivity dashboard page",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 2,
+        "taskTitle": "Implement the /productivity dashboard page"
+      }
+    },
+    {
+      "id": "log_c4536527-27cc-4c37-84fc-912fd4e82f56",
+      "timestamp": "2026-07-20T09:57:55.325Z",
+      "stage": "executing",
+      "action": "Task completed: Implement the /productivity dashboard page",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_a03556e4-7155-4dd1-a9b1-20134dda29df",
+      "timestamp": "2026-07-20T09:57:55.329Z",
+      "stage": "executing",
+      "action": "Executing task: Add navigation link to the new dashboard",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 3,
+        "taskTitle": "Add navigation link to the new dashboard"
+      }
+    },
+    {
+      "id": "log_1c00314b-a33b-472f-9cd1-1e8a4318d9b3",
+      "timestamp": "2026-07-20T09:58:36.068Z",
+      "stage": "executing",
+      "action": "Task completed: Add navigation link to the new dashboard",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_4ae7513b-8b61-4fb4-8413-70ee2fdd809a",
+      "timestamp": "2026-07-20T09:58:39.189Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "The submission does not contain any of the required artifacts (code files, component definitions, navigation setup, or visual mock‑ups). Without these, it is impossible to verify whether the productivity dashboard meets the mission requirements."
+      }
+    },
+    {
+      "id": "log_c9818cdc-a7fd-4c7f-8b6a-498b3434352a",
+      "timestamp": "2026-07-20T09:58:39.194Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalArtifacts": 0
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_f1c7ca99-f04a-4ea4-b2b2-69972d809c40",
+      "createdAt": "2026-07-20T09:56:24.184Z",
+      "key": "task-0-result",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_8ab8dcd9-796b-458f-8d20-ec3d519b992a",
+      "createdAt": "2026-07-20T09:56:57.039Z",
+      "key": "task-1-result",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_541aee12-3298-4c44-b282-fb29a7b738b1",
+      "createdAt": "2026-07-20T09:57:55.327Z",
+      "key": "task-2-result",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_48bcdb5d-ad88-4731-97ff-fe205e602156",
+      "createdAt": "2026-07-20T09:58:36.072Z",
+      "key": "task-3-result",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_224ea2b6-f2f3-462f-9d87-06f7a1853153",
+      "createdAt": "2026-07-20T09:56:24.183Z",
+      "type": "code",
+      "title": "Define task data model and mock data",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_70e1f5ab-5a47-4555-a1b1-5f1851086149",
+      "createdAt": "2026-07-20T09:56:57.038Z",
+      "type": "code",
+      "title": "Create reusable UI components",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_be6f0608-d785-4264-b9cb-35a32c5b639b",
+      "createdAt": "2026-07-20T09:57:55.327Z",
+      "type": "code",
+      "title": "Implement the /productivity dashboard page",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_95b23393-07c4-40df-b01d-f3e27efdc762",
+      "createdAt": "2026-07-20T09:58:36.070Z",
+      "type": "code",
+      "title": "Add navigation link to the new dashboard",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_2336f932-556c-49eb-8b03-ff9bc6f760b8",
+      "createdAt": "2026-07-20T09:58:39.193Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 15,\n  \"summary\": \"The submission does not contain any of the required artifacts (code files, component definitions, navigation setup, or visual mock‑ups). Without these, it is impossible to verify whether the productivity dashboard meets the mission requirements.\",\n  \"issues\": [\n    \"No source code, markup, or configuration files were provided.\",\n    \"No description of reusable components, task list implementation, or priority handling is present.\",\n    \"Navigation structure and routing details are missing.\",\n    \"No screenshots, design mock‑ups, or usage documentation were included to demonstrate functionality.\"\n  ],\n  \"recommendations\": [\n    \"Submit the complete project files (e.g., HTML/JSX, CSS/SCSS, component files, routing configuration) so the reviewer can run and test the dashboard.\",\n    \"Include a brief README that explains how to start the application, the component hierarchy, and any required dependencies.\",\n    \"Provide visual evidence (screenshots or a short video) showing the dashboard in action, especially the task list, priority indicators, and navigation links.\",\n    \"If the project uses a framework (React, Vue, Angular, etc.), ensure the build scripts and package.json are included and that the code follows the framework's conventions for reusable components.\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [],
+  "repairHistory": []
+}

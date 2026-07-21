@@ -1,0 +1,1435 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AfterYou — Mission Control</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: #0a0806;
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      color: #f0ebe3;
+      -webkit-font-smoothing: antialiased;
+    }
+    #three-container { position: fixed; inset: 0; z-index: 1; }
+
+    /* ============================================================
+       UI OVERLAY LAYERS
+       ============================================================ */
+    #ui-overlay {
+      position: fixed; inset: 0; z-index: 10;
+      display: flex; align-items: center; justify-content: center;
+      pointer-events: none;
+      padding-bottom: 5vh;
+    }
+    #ui-overlay::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(10,8,6,0.15) 0%, transparent 60%);
+    }
+
+    .ui-layer {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.8s ease;
+      pointer-events: none;
+    }
+    .ui-layer.active { opacity: 1; pointer-events: auto; }
+
+    /* ============================================================
+       STATE: INPUT — Mission textbox + CTA
+       ============================================================ */
+    #state-input {
+      flex-direction: column;
+      gap: 0;
+      text-align: center;
+    }
+    #state-input .eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(200, 160, 100, 0.4);
+      margin-bottom: 12px;
+      font-weight: 400;
+    }
+    #state-input .title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: #f0ebe3;
+      margin-bottom: 6px;
+    }
+    #state-input .title .highlight { color: #d4a854; }
+    #state-input .subtitle {
+      font-size: clamp(13px, 1vw, 16px);
+      font-weight: 300;
+      color: rgba(240, 235, 227, 0.4);
+      margin-bottom: 28px;
+    }
+
+    .mission-input-container {
+      position: relative;
+      width: min(600px, 80vw);
+      transition: all 0.6s ease;
+    }
+    .workspace-context{position:relative;z-index:30;width:min(600px,80vw);margin:0 auto 18px;text-align:left;pointer-events:auto}.workspace-card{display:flex;align-items:center;gap:16px;padding:18px 20px;border:1px solid rgba(212,168,84,.18);border-radius:18px;background:rgba(18,15,12,.58);backdrop-filter:blur(24px);box-shadow:0 18px 55px rgba(0,0,0,.16);transition:opacity .35s,transform .35s}.workspace-card.indexing{animation:workspaceShimmer 1.6s ease-in-out infinite}.workspace-icon{font-size:23px;line-height:1}.workspace-copy{min-width:0;flex:1}.workspace-copy h2{font:500 15px/1.2 'Inter',sans-serif}.workspace-copy p{margin-top:5px;color:rgba(240,235,227,.48);font:12px/1.45 'Inter',sans-serif}.workspace-path{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.workspace-actions{display:flex;gap:8px;flex-wrap:wrap}.workspace-button{position:relative;z-index:31;pointer-events:auto!important;border:1px solid rgba(212,168,84,.32);border-radius:999px;background:rgba(212,168,84,.12);color:#ead6a8;padding:8px 13px;font:500 11px 'Inter',sans-serif;cursor:pointer}.workspace-button.secondary{background:transparent;border-color:rgba(240,235,227,.16);color:rgba(240,235,227,.65)}.workspace-ready{display:inline-flex;margin-top:7px;border-radius:999px;padding:3px 7px;background:rgba(92,181,125,.14);color:#9ddbb2;font:600 10px 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase}@keyframes workspaceShimmer{50%{border-color:rgba(212,168,84,.45);box-shadow:0 18px 65px rgba(212,168,84,.12)}}
+    .mission-input-container.dissolving {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    .mission-input {
+      width: 100%;
+      min-height: 62px;
+      max-height: 260px;
+      padding: 16px 24px;
+      background: rgba(10, 8, 6, 0.5);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(212, 168, 84, 0.12);
+      border-radius: 14px;
+      color: #f0ebe3;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(16px, 1.5vw, 22px);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      outline: none;
+      transition: height 220ms ease, border-color 0.3s, box-shadow 0.3s;
+      pointer-events: auto;
+      resize: none;
+      overflow-y: hidden;
+    }
+    .mission-input::placeholder {
+      color: rgba(240, 235, 227, 0.25);
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      font-weight: 300;
+      font-size: clamp(14px, 1.3vw, 18px);
+      letter-spacing: 0.02em;
+    }
+    .mission-input:focus {
+      border-color: rgba(212, 168, 84, 0.35);
+      box-shadow: 0 0 60px rgba(212, 168, 84, 0.05), inset 0 0 40px rgba(212, 168, 84, 0.015);
+    }
+    .mission-input:focus-visible {
+      outline: 2px solid rgba(212, 168, 84, 0.5);
+      outline-offset: 3px;
+    }
+    .mission-input-error { min-height: 18px; margin: 9px 0 -4px; color: #f1a0a0; font: 11px/1.4 'Inter', system-ui, sans-serif; text-align: left; }
+
+    .mission-cta {
+      margin-top: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 11px 30px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      background: #d4a854;
+      color: #0a0806;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.3s;
+      pointer-events: auto;
+    }
+    .mission-cta:hover {
+      background: #e4b864;
+      transform: scale(1.03);
+      box-shadow: 0 0 60px rgba(212, 168, 84, 0.15);
+    }
+    .mission-cta:active { transform: scale(0.97); }
+    .mission-cta:focus-visible {
+      outline: 2px solid #d4a854;
+      outline-offset: 3px;
+    }
+    .mission-cta .key-hint {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(10, 8, 6, 0.2);
+      color: rgba(10, 8, 6, 0.5);
+    }
+
+    /* ============================================================
+       STATE: EXECUTING — holographic panels
+       ============================================================ */
+    #state-executing {
+      flex-direction: column;
+      padding: 0 40px;
+    }
+
+    .mission-intro {
+      position: absolute;
+      top: clamp(28px, 6vh, 76px);
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.7s ease;
+      pointer-events: none;
+    }
+    .mission-intro.visible { opacity: 1; }
+    .mission-intro.fading { opacity: 0; }
+    .mission-intro .title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(18px, 1.8vw, 28px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #f0ebe3;
+    }
+    .mission-intro .subtitle {
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: rgba(240, 235, 227, 0.52);
+      margin-top: 6px;
+    }
+
+    .mission-command {
+      position: absolute;
+      left: clamp(18px, 4vw, 58px);
+      bottom: clamp(20px, 5vh, 54px);
+      width: min(296px, calc(100vw - 36px));
+      padding: 18px;
+      border: 1px solid rgba(240, 235, 227, 0.13);
+      border-radius: 16px;
+      background: rgba(10, 8, 6, 0.72);
+      backdrop-filter: blur(16px);
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #f0ebe3;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 280ms ease, transform 280ms ease;
+      pointer-events: none;
+    }
+    .mission-command.visible { opacity: 1; transform: translateY(0); }
+    .mission-command .label { color: rgba(240, 235, 227, 0.48); font-size: 9px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; }
+    .mission-command .mission-name { margin: 6px 0 2px; font: 600 18px/1.2 'Playfair Display', Georgia, serif; }
+    .mission-command .mission-summary { margin: 0; color: rgba(240, 235, 227, 0.58); font-size: 11px; line-height: 1.45; }
+    .command-status { display: inline-flex; margin-top: 12px; color: #d4a854; font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .command-progress { margin-top: 17px; }
+    .command-progress-head, .command-progress-foot { display: flex; justify-content: space-between; gap: 10px; font-size: 11px; }
+    .command-progress-head { color: rgba(240, 235, 227, 0.74); }
+    .command-progress-foot { margin-top: 7px; color: rgba(240, 235, 227, 0.46); font: 10px/1.35 'JetBrains Mono', monospace; }
+    .command-progress-track { height: 6px; margin-top: 9px; overflow: hidden; border-radius: 99px; background: rgba(240, 235, 227, 0.12); }
+    .command-progress-track i { display: block; height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, #b8843a, #f0d490); transition: width 320ms ease; }
+    .execution-graph { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; margin-top: 14px; }
+    .execution-node { min-width: 0; padding: 6px; border: 1px solid rgba(240,235,227,.11); border-radius: 7px; color: rgba(240,235,227,.5); font: 8px/1.2 'JetBrains Mono', monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .execution-node.running { border-color: rgba(240,212,144,.62); color: #f0d490; box-shadow: inset 0 0 14px rgba(212,168,84,.12); }
+    .execution-node.completed { border-color: rgba(150,218,182,.3); color: rgba(186,236,207,.84); }
+    .execution-node.waiting, .execution-node.queued { color: rgba(240,235,227,.38); }
+    .execution-node.cancelled, .execution-node.failed { border-color: rgba(218,128,128,.35); color: rgba(240,163,163,.85); }
+
+    /* ============================================================
+       STATE: COMPLETE
+       ============================================================ */
+    #state-complete {
+      flex-direction: column;
+      gap: 24px;
+      text-align: center;
+    }
+    #state-complete .title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(40px, 5vw, 72px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: #f0ebe3;
+    }
+    #state-complete .title .highlight { color: #d4a854; }
+    #state-complete .title {
+      animation: completeAppear 0.8s cubic-bezier(0.2, 0, 0, 1) both;
+    }
+    #state-complete .subtitle {
+      animation: completeAppear 0.8s cubic-bezier(0.2, 0, 0, 1) 0.2s both;
+    }
+    #state-complete .complete-actions {
+      animation: completeAppear 0.8s cubic-bezier(0.2, 0, 0, 1) 0.4s both;
+    }
+    @keyframes completeAppear {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #state-complete .subtitle {
+      font-size: clamp(14px, 1.2vw, 18px);
+      font-weight: 300;
+      color: rgba(240, 235, 227, 0.5);
+    }
+    #state-complete .complete-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+    #state-complete .btn-complete {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      padding: 12px 28px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      pointer-events: auto;
+    }
+    #state-complete .btn-complete.primary {
+      background: #d4a854;
+      color: #0a0806;
+    }
+    #state-complete .btn-complete.primary:hover {
+      background: #e4b864;
+      transform: scale(1.03);
+    }
+    #state-complete .btn-complete.secondary {
+      background: transparent;
+      border: 1px solid rgba(240, 235, 227, 0.25);
+      color: #f0ebe3;
+    }
+    #state-complete .btn-complete.secondary:hover {
+      background: rgba(240, 235, 227, 0.08);
+      border-color: rgba(240, 235, 227, 0.5);
+    }
+    #state-complete .btn-complete:focus-visible {
+      outline: 2px solid #d4a854;
+      outline-offset: 3px;
+    }
+
+    /* ============================================================
+       PARTICLE CANVAS (for textbox dissolve effect)
+       ============================================================ */
+    #dissolve-canvas {
+      position: fixed; inset: 0; z-index: 8;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    /* ============================================================
+       REDUCED MOTION
+       ============================================================ */
+    @media (prefers-reduced-motion: reduce) {
+      .ui-layer { transition: opacity 0.8s ease; }
+      .mission-input, .mission-cta { transition: none; }
+      #state-complete .title { transition: none; }
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1024px) {
+      .mission-input-container { width: min(520px, 80vw); }
+      #state-input .title { font-size: clamp(24px, 3vw, 36px); }
+    }
+    @media (max-width: 768px) {
+      #ui-overlay { padding-bottom: 8vh; }
+      .mission-input {
+        padding: 14px 18px;
+        font-size: 15px;
+      }
+      .mission-input::placeholder { font-size: 14px; }
+      .mission-cta { padding: 10px 24px; font-size: 12px; }
+      .mission-intro { top: 20px; width: min(90vw, 480px); }
+      .mission-intro .title { font-size: 16px; }
+    }
+    @media (max-width: 480px) {
+      #ui-overlay { padding-bottom: 10vh; }
+      .mission-input-container { width: min(400px, 88vw); }
+      .mission-input { padding: 12px 16px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Three.js container -->
+  <div id="three-container"></div>
+
+  <!-- Dissolve canvas for textbox transition -->
+  <canvas id="dissolve-canvas"></canvas>
+
+  <!-- UI Overlay -->
+  <div id="ui-overlay">
+
+    <!-- STATE: INPUT -->
+    <div class="ui-layer active" id="state-input">
+      <div class="mission-input-container" id="input-container">
+        <p class="eyebrow">Autonomous AI Teammate</p>
+        <p class="title">Assign a <span class="highlight">mission</span></p>
+        <p class="subtitle">Nova plans, delegates, executes, and verifies. You just describe the outcome.</p>
+        <section class="workspace-context" id="workspace-context" aria-label="Workspace context"></section>
+        <textarea
+          class="mission-input"
+          id="mission-input"
+          placeholder="Tell Nova what to accomplish..."
+          aria-label="Describe your mission for Nova"
+          autofocus
+          spellcheck="false"
+          autocomplete="off"
+          rows="1"
+        ></textarea>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:10px"><button class="workspace-button" id="suggest-plan" type="button">✨ Suggest Plan</button><button class="workspace-button secondary" id="manual-plan" type="button">Create Manually</button></div>
+        <div id="next-objectives" style="display:grid;gap:8px;margin-top:12px;text-align:left"></div>
+        <p class="mission-input-error" id="mission-input-error" role="alert" aria-live="polite"></p>
+        <div style="text-align:center;margin-top:20px;">
+          <button type="button" class="mission-cta" id="mission-cta" aria-label="Assign mission to Nova">
+            Assign Mission
+            <span class="key-hint" aria-hidden="true">⌘↵</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATE: EXECUTING -->
+    <div class="ui-layer" id="state-executing">
+      <div class="mission-intro" id="mission-intro" aria-live="polite">
+        <p class="title" id="exec-mission-name">—</p>
+        <p class="subtitle" id="exec-status">Nova is initializing the mission.</p>
+      </div>
+      <section class="mission-command" id="mission-command" aria-live="polite" aria-label="Mission progress">
+        <span class="label">Mission</span>
+        <h1 class="mission-name" id="command-title">—</h1>
+        <p class="mission-summary" id="command-summary">Nova is preparing your mission.</p>
+        <span class="command-status" id="command-status">Queued</span>
+        <div class="command-progress">
+          <div class="command-progress-head"><span>Overall Progress</span><strong id="command-percent">0%</strong></div>
+          <div class="command-progress-track"><i id="command-progress"></i></div>
+          <div class="command-progress-foot"><span id="command-eta">Estimated time: —</span><span id="command-agent">Current: —</span></div>
+          <div class="command-progress-foot"><span id="command-next">Next: —</span></div>
+          <div class="execution-graph" id="execution-graph" aria-label="Live task dependency graph"></div>
+          <div id="project-memory" style="margin-top:12px;text-align:left;color:rgba(240,235,227,.62);font:11px/1.5 'Inter',sans-serif"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- STATE: COMPLETE -->
+    <div class="ui-layer" id="state-complete">
+      <div>
+        <p class="title">Mission <span class="highlight">Complete</span></p>
+        <p class="subtitle" id="complete-mission-name">—</p>
+        <p class="subtitle">Opening verified mission output…</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+    import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+    import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+    import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
+    // ============================================================
+    // REDUCED MOTION CHECK
+    // ============================================================
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ============================================================
+    // STATE MACHINE
+    // ============================================================
+    const State = { INPUT: 'input', TRANSITIONING: 'transitioning', EXECUTING: 'executing', COMPLETE: 'complete' };
+    let currentState = State.INPUT;
+    let stateTime = 0;
+
+    const layers = {
+      input: document.getElementById('state-input'),
+      executing: document.getElementById('state-executing'),
+      complete: document.getElementById('state-complete'),
+    };
+    const inputEl = document.getElementById('mission-input');
+    const ctaBtn = document.getElementById('mission-cta');
+    const inputContainer = document.getElementById('input-container');
+    const inputError = document.getElementById('mission-input-error');
+    const workspaceContextEl = document.getElementById('workspace-context');
+    let workspaceContext = null;
+    function renderWorkspace(){ if(!workspaceContext){ workspaceContextEl.innerHTML='<div class="workspace-card"><div class="workspace-icon">▰</div><div class="workspace-copy"><h2>Workspace</h2><p>Attach your project so Nova understands your codebase before planning the mission.</p></div><div class="workspace-actions"><button class="workspace-button" id="choose-workspace">Choose Folder</button></div></div>'; return; } const w=workspaceContext; workspaceContextEl.innerHTML=`<div class="workspace-card ${w.indexing?'indexing':''}"><div class="workspace-icon">▰</div><div class="workspace-copy"><h2>${w.workspaceName}</h2><p class="workspace-path">${w.workspacePath}</p><p>${w.indexing?'Inspecting project structure…':`${w.fileCount ?? '—'} files · Indexed ${new Date(w.indexedAt).toLocaleTimeString()}`}</p>${w.indexing?'':'<span class="workspace-ready">Ready</span>'}</div><div class="workspace-actions"><button class="workspace-button secondary" id="change-workspace">Change Workspace</button><button class="workspace-button secondary" id="remove-workspace">Remove</button></div></div>`; }
+    async function apiPayload(response){ const text=await response.text(); try{return JSON.parse(text);}catch{throw new Error('Nova’s local folder service is unavailable. Restart AfterYou and try again.');} }
+    async function indexWorkspace(workspacePath){ workspaceContext={workspaceName:'Workspace',workspacePath,indexedAt:new Date().toISOString(),indexing:true};renderWorkspace(); const response=await fetch('/api/workspace/index',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({workspacePath})});const payload=await apiPayload(response);if(!response.ok)throw new Error(payload.error||'Unable to index workspace');workspaceContext=payload.data;renderWorkspace(); }
+    async function chooseWorkspace(){ inputError.textContent=''; workspaceContext={workspaceName:'Workspace',workspacePath:'Opening Finder…',indexedAt:new Date().toISOString(),indexing:true};renderWorkspace(); try { const nativeResponse=await fetch('/api/workspace/pick',{method:'POST'}); const nativePayload=await apiPayload(nativeResponse); if(nativeResponse.ok) return await indexWorkspace(nativePayload.data.workspacePath); if(typeof window.showDirectoryPicker==='function'){ const handle=await window.showDirectoryPicker({mode:'read'}); inputError.textContent=`${handle.name} was selected. This browser cannot expose its absolute local path; use the desktop app to attach it.`; return; } throw new Error(nativePayload.error||'Folder selection is unavailable in this environment.'); } catch(error){ if(error && error.name==='AbortError')return; inputError.textContent=error instanceof Error?error.message:'Folder selection is unavailable in this environment.'; workspaceContext=null;renderWorkspace(); } }
+    workspaceContextEl.addEventListener('click',(event)=>{ const button=event.target.closest('#choose-workspace,#change-workspace'); if(button){ event.preventDefault(); chooseWorkspace(); } if(event.target.closest('#remove-workspace')){ workspaceContext=null;renderWorkspace(); } });
+    renderWorkspace();
+    const command = document.getElementById('mission-command');
+    const commandTitle = document.getElementById('command-title');
+    const commandSummary = document.getElementById('command-summary');
+    const commandStatus = document.getElementById('command-status');
+    const commandPercent = document.getElementById('command-percent');
+    const commandProgress = document.getElementById('command-progress');
+    const commandEta = document.getElementById('command-eta');
+    const commandAgent = document.getElementById('command-agent');
+    const commandNext = document.getElementById('command-next');
+    const executionGraph = document.getElementById('execution-graph');
+    const projectMemoryEl = document.getElementById('project-memory');
+    const missionIntro = document.getElementById('mission-intro');
+    const execStatus = document.getElementById('exec-status');
+    const execMissionName = document.getElementById('exec-mission-name');
+    const completeMissionName = document.getElementById('complete-mission-name');
+    const dissolveCanvas = document.getElementById('dissolve-canvas');
+    const dCtx = dissolveCanvas.getContext('2d');
+
+    // ============================================================
+    // THREE.JS SETUP
+    // ============================================================
+    const container = document.getElementById('three-container');
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x0a0806);
+    scene.fog = new THREE.FogExp2(0x0a0806, 0.018);
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 200);
+    camera.position.set(0, 1.5, 8.5);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
+    const dpr = window.devicePixelRatio;
+    const cores = navigator.hardwareConcurrency || 4;
+    const isLow = dpr <= 1 && cores <= 2;
+    const isMedium = !isLow && (dpr <= 1.5 || cores <= 4);
+    const isUltra = dpr > 2 && cores > 8;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isUltra ? 1.5 : 1.5));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.2;
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    container.appendChild(renderer.domElement);
+
+    const composer = new EffectComposer(renderer);
+    composer.setSize(window.innerWidth, window.innerHeight);
+    composer.addPass(new RenderPass(scene, camera));
+    const bloomPass = new UnrealBloomPass(
+      new THREE.Vector2(Math.floor(window.innerWidth / 2), Math.floor(window.innerHeight / 2)),
+      0.6, 0.3, 0.15
+    );
+    composer.addPass(bloomPass);
+    composer.addPass(new OutputPass());
+
+    // ============================================================
+    // LIGHTING
+    // ============================================================
+    const ambientLight = new THREE.AmbientLight(0x1a1410, 0.3);
+    scene.add(ambientLight);
+    const keyLight = new THREE.PointLight(0xd4a854, 0, 8);
+    keyLight.position.set(0, 0.5, 0);
+    scene.add(keyLight);
+    const rimLight = new THREE.DirectionalLight(0xd4a854, 0.15);
+    rimLight.position.set(2, 4, -3);
+    scene.add(rimLight);
+    const fillLight = new THREE.DirectionalLight(0x8a7a6a, 0.08);
+    fillLight.position.set(-3, 1, 4);
+    scene.add(fillLight);
+    const topLight = new THREE.DirectionalLight(0xd4a854, 0.05);
+    topLight.position.set(0, 5, 0);
+    scene.add(topLight);
+    const warmFill = new THREE.PointLight(0xc9944a, 0, 10);
+    warmFill.position.set(0, 2, -2);
+    scene.add(warmFill);
+    const backLight = new THREE.DirectionalLight(0xd4a854, 0.03);
+    backLight.position.set(0, -2, -5);
+    scene.add(backLight);
+
+    // ============================================================
+    // ENVIRONMENT
+    // ============================================================
+    const roomSize = 24;
+    const roomGeo = new THREE.BoxGeometry(roomSize, roomSize, roomSize);
+    const roomMat = new THREE.MeshStandardMaterial({ color: 0x0a0806, roughness: 0.9, metalness: 0.0, side: THREE.BackSide });
+    scene.add(new THREE.Mesh(roomGeo, roomMat));
+    const floorMat = new THREE.MeshStandardMaterial({ color: 0x12100a, roughness: 0.95, metalness: 0.0, transparent: true, opacity: 0.8 });
+    const floor = new THREE.Mesh(new THREE.PlaneGeometry(roomSize, roomSize), floorMat);
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.y = -1.8;
+    scene.add(floor);
+
+    // ============================================================
+    // DUST PARTICLES
+    // ============================================================
+    const DUST_COUNT = 180;
+    const dustGeo = new THREE.BufferGeometry();
+    const dustPos = new Float32Array(DUST_COUNT * 3);
+    for (let i = 0; i < DUST_COUNT; i++) {
+      const i3 = i * 3;
+      dustPos[i3] = (Math.random() - 0.5) * 12;
+      dustPos[i3 + 1] = (Math.random() - 0.5) * 6;
+      dustPos[i3 + 2] = (Math.random() - 0.5) * 12;
+    }
+    dustGeo.setAttribute('position', new THREE.BufferAttribute(dustPos, 3));
+    const dustMat = new THREE.PointsMaterial({
+      size: 0.01, color: 0xd4a854, transparent: true, opacity: 0.15,
+      blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
+    });
+    const dustParticles = new THREE.Points(dustGeo, dustMat);
+    scene.add(dustParticles);
+
+    // ============================================================
+    // NOVA — AI CRYSTALLINE FORM (reused EXACTLY from landing page)
+    // ============================================================
+    const aiFormGroup = new THREE.Group();
+    aiFormGroup.position.set(0, 1.5, 0);
+
+    const outerCrystalMat = new THREE.MeshPhysicalMaterial({
+      color: 0xd4a854, emissive: 0xd4a854, emissiveIntensity: 0.15,
+      metalness: 0.3, roughness: 0.2, transparent: true, opacity: 0.5,
+      clearcoat: 0.3, clearcoatRoughness: 0.2, envMapIntensity: 0.5, wireframe: false
+    });
+    const outerCrystal = new THREE.Mesh(new THREE.IcosahedronGeometry(1.0, 1), outerCrystalMat);
+    aiFormGroup.add(outerCrystal);
+
+    const midCrystalMat = new THREE.MeshPhysicalMaterial({
+      color: 0xe8c470, emissive: 0xd4a854, emissiveIntensity: 0.3,
+      metalness: 0.5, roughness: 0.15, transparent: true, opacity: 0.6,
+      clearcoat: 0.4, clearcoatRoughness: 0.15
+    });
+    const midCrystal = new THREE.Mesh(new THREE.OctahedronGeometry(0.7, 0), midCrystalMat);
+    aiFormGroup.add(midCrystal);
+
+    const innerCoreMat = new THREE.MeshBasicMaterial({
+      color: 0xffe8b0, transparent: true, opacity: 0.15
+    });
+    const innerCore = new THREE.Mesh(new THREE.TetrahedronGeometry(0.4, 0), innerCoreMat);
+    aiFormGroup.add(innerCore);
+
+    const wireframeMat = new THREE.MeshBasicMaterial({
+      color: 0xe8c470, wireframe: true, transparent: true, opacity: 0.12
+    });
+    const wireframe = new THREE.Mesh(new THREE.IcosahedronGeometry(1.3, 0), wireframeMat);
+    aiFormGroup.add(wireframe);
+    scene.add(aiFormGroup);
+
+    // ============================================================
+    // HOLOGRAPHIC RINGS
+    // ============================================================
+    const ringGroup = new THREE.Group();
+    const ringMat = new THREE.MeshBasicMaterial({
+      color: 0xd4a854, transparent: true, opacity: 0.08, side: THREE.DoubleSide
+    });
+    for (let i = 0; i < 3; i++) {
+      const ring = new THREE.Mesh(new THREE.RingGeometry(1.3 + i * 0.3, 1.35 + i * 0.3, 64), ringMat.clone());
+      ring.material.opacity = 0.04 + i * 0.02;
+      ring.rotation.x = Math.PI / 2 + (i * 0.3);
+      ring.rotation.z = i * 0.5;
+      ringGroup.add(ring);
+    }
+    scene.add(ringGroup);
+
+    // ============================================================
+    // PARTICLES (icosahedron formation)
+    // ============================================================
+    const PARTICLE_COUNT = isUltra ? 1400 : 900;
+    const particleGeo = new THREE.BufferGeometry();
+    const positions = new Float32Array(PARTICLE_COUNT * 3);
+    const sizes = new Float32Array(PARTICLE_COUNT);
+    const colors = new Float32Array(PARTICLE_COUNT * 3);
+    const targets = new Float32Array(PARTICLE_COUNT * 3);
+    const origins = new Float32Array(PARTICLE_COUNT * 3);
+    const icoGeo = new THREE.IcosahedronGeometry(1.4, 1);
+    const icoPos = icoGeo.attributes.position.array;
+    const icoVerts = [];
+    for (let i = 0; i < icoPos.length; i += 3) {
+      icoVerts.push(new THREE.Vector3(icoPos[i], icoPos[i+1], icoPos[i+2]));
+    }
+    const warmColors = [
+      new THREE.Color(0xd4a854), new THREE.Color(0xc9944a),
+      new THREE.Color(0xe8c470), new THREE.Color(0xb8843a),
+      new THREE.Color(0xf0d490), new THREE.Color(0xa07030)
+    ];
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      const i3 = i * 3;
+      const radius = 0.3 + Math.random() * 4;
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos(2 * Math.random() - 1);
+      origins[i3] = Math.sin(phi) * Math.cos(theta) * radius;
+      origins[i3 + 1] = Math.sin(phi) * Math.sin(theta) * radius * 0.5 + 0.5;
+      origins[i3 + 2] = Math.cos(phi) * radius;
+      positions[i3] = origins[i3];
+      positions[i3 + 1] = origins[i3 + 1];
+      positions[i3 + 2] = origins[i3 + 2];
+      const vert = icoVerts[i % icoVerts.length];
+      targets[i3] = vert.x * (0.8 + Math.random() * 0.4);
+      targets[i3 + 1] = vert.y * (0.8 + Math.random() * 0.4) + 0.5;
+      targets[i3 + 2] = vert.z * (0.8 + Math.random() * 0.4);
+      sizes[i] = 0.02 + Math.random() * 0.06;
+      const c = warmColors[Math.floor(Math.random() * warmColors.length)];
+      colors[i3] = c.r; colors[i3 + 1] = c.g; colors[i3 + 2] = c.b;
+    }
+    particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    particleGeo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+    particleGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+    const particleMat = new THREE.PointsMaterial({
+      size: 0.04, vertexColors: true, transparent: true, opacity: 0.6,
+      blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
+    });
+    const particles = new THREE.Points(particleGeo, particleMat);
+    particles.position.set(0, 0.5, 0);
+    scene.add(particles);
+
+    // ============================================================
+    // DATA STREAM PARTICLES
+    // ============================================================
+    const STREAM_COUNT = 320;
+    const streamGeo = new THREE.BufferGeometry();
+    const streamPos = new Float32Array(STREAM_COUNT * 3);
+    const streamCol = new Float32Array(STREAM_COUNT * 3);
+    const streamSizes = new Float32Array(STREAM_COUNT);
+    const streamLife = new Float32Array(STREAM_COUNT);
+    const streamOrig = new Float32Array(STREAM_COUNT * 3);
+    const streamTarg = new Float32Array(STREAM_COUNT * 3);
+    for (let i = 0; i < STREAM_COUNT; i++) {
+      const i3 = i * 3;
+      const angle = Math.random() * Math.PI * 2;
+      const radius = 0.5 + Math.random() * 3;
+      const height = (Math.random() - 0.5) * 4;
+      streamPos[i3] = Math.cos(angle) * radius;
+      streamPos[i3 + 1] = height + 1.5;
+      streamPos[i3 + 2] = Math.sin(angle) * radius;
+      streamOrig[i3] = streamPos[i3];
+      streamOrig[i3 + 1] = streamPos[i3 + 1];
+      streamOrig[i3 + 2] = streamPos[i3 + 2];
+      streamTarg[i3] = Math.cos(angle + 0.5) * (radius * 0.3);
+      streamTarg[i3 + 1] = height + 1.5 + (Math.random() - 0.5) * 2;
+      streamTarg[i3 + 2] = Math.sin(angle + 0.5) * (radius * 0.3);
+      const c = warmColors[Math.floor(Math.random() * warmColors.length)];
+      streamCol[i3] = c.r * 0.8; streamCol[i3 + 1] = c.g * 0.8; streamCol[i3 + 2] = c.b * 0.8;
+      streamSizes[i] = 0.015 + Math.random() * 0.04;
+      streamLife[i] = Math.random();
+    }
+    streamGeo.setAttribute('position', new THREE.BufferAttribute(streamPos, 3));
+    streamGeo.setAttribute('color', new THREE.BufferAttribute(streamCol, 3));
+    streamGeo.setAttribute('size', new THREE.BufferAttribute(streamSizes, 1));
+    const streamMat = new THREE.PointsMaterial({
+      size: 0.03, vertexColors: true, transparent: true, opacity: 0.5,
+      blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
+    });
+    const streamParticles = new THREE.Points(streamGeo, streamMat);
+    scene.add(streamParticles);
+
+    // ============================================================
+    // HOLOGRAPHIC AGENT PANELS
+    // ============================================================
+    const agents = [
+      { id: 'planner', label: 'Planner', color: '#d4a854', data: ['Waiting for live mission data'] },
+      { id: 'research', label: 'Research', color: '#e8c470', data: ['Waiting for live mission data'] },
+      { id: 'browser', label: 'Browser', color: '#c9944a', data: ['Waiting for live mission data'] },
+      { id: 'coding', label: 'Coding', color: '#f0d490', data: ['Waiting for live mission data'] },
+      { id: 'terminal', label: 'Terminal', color: '#b8843a', data: ['Waiting for live mission data'] },
+      { id: 'github', label: 'GitHub', color: '#c9944a', data: ['Waiting for live mission data'] },
+      { id: 'reviewer', label: 'Reviewer', color: '#d4a854', data: ['Waiting for live mission data'] },
+      { id: 'document', label: 'Document', color: '#e8c470', data: ['Waiting for live mission data'] },
+      { id: 'artifacts', label: 'Artifacts', color: '#f0d490', data: ['Waiting for live mission data'] },
+    ];
+
+    const panelGroup = new THREE.Group();
+    const panelMeshes = [];
+    const panelCanvasTextures = [];
+    const panelCanvasStates = [];
+
+    function createPanelCanvas(agent) {
+      const c = document.createElement('canvas');
+      c.width = 320; c.height = 240;
+      const ctx = c.getContext('2d');
+      return { canvas: c, ctx, agent, dataIdx: 0, dataTimer: 0 };
+    }
+
+    function renderPanelCanvas(state) {
+      const { canvas, ctx, agent } = state;
+      const w = 320, h = 240;
+      ctx.clearRect(0, 0, w, h);
+
+      // Glass background
+      const grad = ctx.createRadialGradient(w/2, h/2, 0, w/2, h/2, w*0.7);
+      grad.addColorStop(0, agent.color + '15');
+      grad.addColorStop(1, agent.color + '02');
+      ctx.fillStyle = 'rgba(10, 8, 6, 0.5)';
+      ctx.fillRect(0, 0, w, h);
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, w, h);
+
+      // Border glow
+      ctx.strokeStyle = agent.color + '40';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(1, 1, w - 2, h - 2);
+
+      // Top accent line
+      ctx.fillStyle = agent.color + '60';
+      ctx.fillRect(0, 0, w, 1);
+
+      // Agent label
+      ctx.fillStyle = agent.color + 'cc';
+      ctx.font = '600 10px "Inter", system-ui, sans-serif';
+      ctx.letterSpacing = '0.2em';
+      ctx.fillText(agent.label.toUpperCase(), 16, 22);
+
+      // Separator
+      ctx.fillStyle = agent.color + '20';
+      ctx.fillRect(16, 30, w - 32, 1);
+
+      // Data lines
+      const data = agent.data;
+      ctx.font = '300 10px "JetBrains Mono", monospace';
+      data.forEach((line, i) => {
+        const y = 52 + i * 22;
+        const isDim = line.startsWith('$') || line.startsWith('Status:');
+        ctx.fillStyle = isDim ? agent.color + '50' : agent.color + '90';
+        ctx.fillText(line, 16, y);
+      });
+
+      // Progress dots
+      for (let i = 0; i < 5; i++) {
+        const dx = w - 40 + i * 8;
+        const dy = 18;
+        ctx.fillStyle = i < 3 ? agent.color + '80' : agent.color + '20';
+        ctx.beginPath();
+        ctx.arc(dx, dy, 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Pulse ring
+      const pulse = Math.sin(state.dataTimer * 2) * 0.3 + 0.5;
+      ctx.strokeStyle = agent.color + Math.floor(pulse * 15).toString(16).padStart(2, '0');
+      ctx.lineWidth = 1;
+      ctx.strokeRect(2, 2, w - 4, h - 4);
+    }
+
+    function buildPanelMeshes() {
+      agents.forEach((agent, i) => {
+        const state = createPanelCanvas(agent);
+        renderPanelCanvas(state);
+        panelCanvasStates.push(state);
+
+        const tex = new THREE.CanvasTexture(state.canvas);
+        tex.needsUpdate = true;
+        panelCanvasTextures.push(tex);
+
+        const mat = new THREE.MeshBasicMaterial({
+          map: tex, transparent: true, opacity: 0,
+          side: THREE.DoubleSide, depthWrite: false
+        });
+
+        const mesh = new THREE.Mesh(new THREE.PlaneGeometry(1.2, 0.9), mat);
+
+        const angle = (i / agents.length) * Math.PI * 2;
+        const radius = 4.2 + Math.random() * 0.9;
+        const height = 1.0 + Math.random() * 1.8;
+        const tilt = (Math.random() - 0.5) * 0.4;
+
+        mesh.position.set(
+          Math.cos(angle) * radius,
+          height,
+          Math.sin(angle) * radius
+        );
+        mesh.lookAt(camera.position);
+
+        panelGroup.add(mesh);
+        mesh.position.set(0, 1.5, 0);
+        mesh.scale.setScalar(0.01);
+        panelMeshes.push({
+          mesh, angle, radius, height, tilt, speed: 0.08 + Math.random() * 0.06,
+          phase: Math.random() * Math.PI * 2, tex, mat, state, agent,
+          connectionLine: null, opacity: 0, visible: false, visibility: 0,
+          targetPosition: new THREE.Vector3(Math.cos(angle) * radius, height, Math.sin(angle) * radius)
+        });
+      });
+    }
+    buildPanelMeshes();
+    scene.add(panelGroup);
+
+    // Network lines from Nova to each panel
+    const connectionLines = [];
+    panelMeshes.forEach((p) => {
+      const geo = new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(0, 1.5, 0),
+        p.mesh.position.clone()
+      ]);
+      const mat = new THREE.LineBasicMaterial({
+        color: new THREE.Color(p.agent.color),
+        transparent: true, opacity: 0
+      });
+      const line = new THREE.Line(geo, mat);
+      scene.add(line);
+      connectionLines.push({ line, mesh: p.mesh, mat });
+    });
+
+    // ============================================================
+    // CAMERA — cinematic drift
+    // ============================================================
+    const cameraBase = new THREE.Vector3(0, 1.5, 8.5);
+    const cameraTarget = new THREE.Vector3(0, 1.5, 0);
+    let cameraDriftPhase = 0;
+
+    function updateCamera(time, dt) {
+      if (prefersReduced) return;
+      cameraDriftPhase += dt * 0.08;
+
+      if (currentState === State.INPUT) {
+        // Slow breathing orbit — closer to Nova
+        const orbitX = Math.sin(cameraDriftPhase * 0.3) * 0.4;
+        const orbitY = Math.sin(cameraDriftPhase * 0.2) * 0.25;
+        const orbitZ = Math.cos(cameraDriftPhase * 0.3) * 0.4;
+        camera.position.x = orbitX;
+        camera.position.y = 1.5 + orbitY;
+        camera.position.z = 8.5 + orbitZ;
+        camera.lookAt(0, 1.5, 0);
+      } else if (currentState === State.TRANSITIONING) {
+        // Push forward toward Nova
+        const t = Math.min(1, stateTime / 2.5);
+        const ease = t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+        camera.position.x *= (1 - ease * 0.3);
+        camera.position.y += ease * 0.2;
+        camera.position.z = 8.5 - ease * 2.1;
+        camera.lookAt(0, 1.5 + ease * 0.3, 0);
+      } else if (currentState === State.EXECUTING) {
+        // Slow orbit with a gradual inward dolly that keeps Nova unobstructed.
+        const orbitAngle = cameraDriftPhase * 0.12;
+        const orbitRadius = Math.max(5.35, 6.4 - stateTime * 0.018) + Math.sin(cameraDriftPhase * 0.1) * 0.16;
+        const orbitY = 1.5 + Math.sin(cameraDriftPhase * 0.12) * 0.5;
+        camera.position.x = Math.sin(orbitAngle) * orbitRadius;
+        camera.position.z = Math.cos(orbitAngle) * orbitRadius;
+        camera.position.y = orbitY;
+        camera.lookAt(0, 1.5, 0);
+      } else if (currentState === State.COMPLETE) {
+        // Pull back slightly, settle
+        const settleAngle = cameraDriftPhase * 0.05;
+        camera.position.x = Math.sin(settleAngle) * 4;
+        camera.position.z = Math.cos(settleAngle) * 4;
+        camera.position.y = 1.8 + Math.sin(cameraDriftPhase * 0.08) * 0.2;
+        camera.lookAt(0, 1.5, 0);
+      }
+    }
+
+    // ============================================================
+    // MOUSE PARALLAX
+    // ============================================================
+    const mouse = new THREE.Vector2(0, 0);
+    let mouseTarget = new THREE.Vector2(0, 0);
+    document.addEventListener('mousemove', (e) => {
+      mouseTarget.x = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseTarget.y = -(e.clientY / window.innerHeight) * 2 + 1;
+    });
+
+    // ============================================================
+    // STATE TRANSITION FUNCTIONS
+    // ============================================================
+    let dissolveParticles = [];
+    let dissolvePhase = 0;
+
+    let activeMission = null;
+    let missionPoll = null;
+    let introTimer = null;
+    const nextObjectivesEl = document.getElementById('next-objectives');
+    let nextObjectives = [];
+    let suggestedPlan = null;
+    document.getElementById('suggest-plan').addEventListener('click', async()=>{ const goal=inputEl.value.trim(); if(!goal){inputError.textContent='Describe your mission first.';return;} const response=await fetch('/api/missions/plan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({goal})}); const payload=await response.json(); if(!response.ok){inputError.textContent=payload.error||'Unable to suggest a plan';return;} suggestedPlan=payload.data; nextObjectives=suggestedPlan.stages.slice(1).map(stage=>stage.objective); renderNextObjectives(); inputError.textContent=`Nova suggested ${suggestedPlan.stages.length} stages. Review or edit them before assigning.`; });
+    document.getElementById('manual-plan').addEventListener('click',()=>{suggestedPlan=null;inputError.textContent='Manual planning enabled. Add up to three What Next? objectives.';renderNextObjectives();});
+    function renderNextObjectives(){ nextObjectivesEl.innerHTML = nextObjectives.map((value,index)=>{ const stage=suggestedPlan?.stages[index+1]; return `<div style="display:grid;grid-template-columns:1fr auto;gap:7px;align-items:center"><div><input class="mission-input" style="padding:9px 12px;min-height:0" data-next-index="${index}" value="${escapeHtml(value)}" placeholder="What Next? Step ${index+2}">${stage?`<small style="display:block;color:var(--muted);padding:5px 12px">${escapeHtml(stage.complexity)} · ${stage.estimatedDuration} min · ${escapeHtml(stage.explanation)}</small>`:''}</div><div style="display:flex;gap:4px"><button class="workspace-button secondary" data-up-next="${index}" type="button" ${index===0?'disabled':''}>↑</button><button class="workspace-button secondary" data-down-next="${index}" type="button" ${index===nextObjectives.length-1?'disabled':''}>↓</button><button class="workspace-button secondary" data-regenerate-next="${index}" type="button">↻</button><button class="workspace-button secondary" data-remove-next="${index}" type="button">Remove</button></div></div>`; }).join('')+(nextObjectives.length<3?'<button class="workspace-button" id="add-next" type="button">+ What Next?</button>':''); }
+    nextObjectivesEl.addEventListener('input', (event)=>{ const input=event.target.closest('[data-next-index]'); if(input) nextObjectives[Number(input.dataset.nextIndex)]=input.value; });
+    nextObjectivesEl.addEventListener('click', async(event)=>{ if(event.target.closest('#add-next')) nextObjectives.push(''); const remove=event.target.closest('[data-remove-next]'); if(remove) nextObjectives.splice(Number(remove.dataset.removeNext),1); const up=event.target.closest('[data-up-next]'); if(up){const i=Number(up.dataset.upNext); [nextObjectives[i-1],nextObjectives[i]]=[nextObjectives[i],nextObjectives[i-1]];} const down=event.target.closest('[data-down-next]'); if(down){const i=Number(down.dataset.downNext); [nextObjectives[i],nextObjectives[i+1]]=[nextObjectives[i+1],nextObjectives[i]];} const regenerate=event.target.closest('[data-regenerate-next]'); if(regenerate && suggestedPlan){ const i=Number(regenerate.dataset.regenerateNext); const response=await fetch('/api/missions/plan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({goal:inputEl.value.trim()})}); const payload=await response.json(); if(response.ok && payload.data.stages[i+1]) { suggestedPlan.stages[i+1]=payload.data.stages[i+1]; nextObjectives[i]=suggestedPlan.stages[i+1].objective; } } renderNextObjectives(); });
+    renderNextObjectives();
+
+    async function startMission() {
+      const missionText = inputEl.value.trim();
+      if (!missionText) { inputError.textContent = 'Describe the outcome you want Nova to achieve.'; inputEl.focus(); return; }
+      inputError.textContent = '';
+      ctaBtn.disabled = true;
+      ctaBtn.textContent = 'Assigning…';
+      try {
+        const response = await fetch('/api/missions', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ title: shortMissionTitle(missionText), description: missionText, goal: missionText, nextObjectives: nextObjectives.filter(Boolean), ...(suggestedPlan ? { plan: [{ ...suggestedPlan.stages[0], objective: missionText }, ...suggestedPlan.stages.slice(1).map((stage,index)=>({ ...stage, objective: nextObjectives[index] }))].filter((stage)=>stage.objective.trim()) } : {}), previewOnly: nextObjectives.some(Boolean), ...(workspaceContext ? { workspace: workspaceContext } : {}) })
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || 'Unable to create mission');
+        window.location.assign(`/missions/${payload.data.id}/refine`);
+      } catch (error) {
+        ctaBtn.disabled = false;
+        ctaBtn.textContent = 'Assign Mission';
+        execStatus.textContent = error instanceof Error ? error.message : 'Unable to create mission';
+      }
+    }
+
+    function renderChainPreview(mission){ const stages=mission.chain?.stages||[]; execStatus.textContent=`Plan ready — ${stages.length} sequential stages. Starting automatically…`; command.classList.add('visible'); executionGraph.innerHTML=stages.map((stage,index)=>`<span class="execution-node planned" title="${escapeHtml(stage.objective)}">${index?'↓ ':''}Step ${index+1}: ${escapeHtml(stage.objective.slice(0,42))}</span>`).join(''); }
+
+    function beginMission(mission) {
+      activeMission = mission;
+      showMissionIntro(mission);
+      completeMissionName.textContent = shortMissionTitle(mission.goal || mission.title);
+
+      // Capture input area for dissolve
+      const rect = inputContainer.getBoundingClientRect();
+      dissolveCanvas.width = window.innerWidth;
+      dissolveCanvas.height = window.innerHeight;
+      dissolveParticles = [];
+      dissolvePhase = 0;
+
+      // Sample pixels from the input area
+      const sampleCount = 200;
+      for (let i = 0; i < sampleCount; i++) {
+        dissolveParticles.push({
+          x: rect.left + Math.random() * rect.width,
+          y: rect.top + Math.random() * rect.height,
+          targetX: (Math.random() - 0.5) * 2,
+          targetY: 0.5 + Math.random() * 2,
+          targetZ: (Math.random() - 0.5) * 2,
+          size: 1 + Math.random() * 3,
+          speed: 0.3 + Math.random() * 0.4,
+          progress: 0,
+          color: `rgba(212, ${168 + Math.random() * 40}, ${84 + Math.random() * 40}, ${0.3 + Math.random() * 0.5})`
+        });
+      }
+
+      // Switch state
+      setState(State.TRANSITIONING);
+      inputContainer.classList.add('dissolving');
+
+      // This is only the supplied visual transition; mission execution comes from the existing API.
+      setTimeout(() => {
+        setState(State.EXECUTING);
+        animatePanelsIn();
+      }, 2500);
+      updateMission(mission);
+      if (missionPoll) window.clearInterval(missionPoll);
+      missionPoll = window.setInterval(readMission, 1500);
+    }
+
+    function setState(newState) {
+      Object.keys(layers).forEach((key) => {
+        layers[key].classList.toggle('active', key === newState);
+      });
+      currentState = newState;
+      stateTime = 0;
+    }
+
+    function animatePanelsIn() { syncActivePanel(activeMission); }
+
+    function handleTerminalMission(mission) {
+      if (currentState === State.COMPLETE) return;
+      activeMission = mission || activeMission;
+      window.clearInterval(missionPoll);
+      setState(State.COMPLETE);
+      // Brighten Nova
+      const intensity = 0.15 + 0.6;
+      outerCrystalMat.emissiveIntensity = 0.75;
+      midCrystalMat.emissiveIntensity = 0.9;
+      bloomPass.strength = 1.0;
+
+      // Fade panels out
+      panelMeshes.forEach((p) => {
+        p.mesh.material.opacity = 0;
+      });
+      connectionLines.forEach((cl) => { cl.mat.opacity = 0; });
+      if (activeMission) window.setTimeout(() => window.location.assign(`/mission-output/${activeMission.id}`), prefersReduced ? 0 : 1400);
+    }
+
+    // ============================================================
+    // INPUT HANDLING
+    // ============================================================
+    function handleMissionSubmit() {
+      if (currentState === State.INPUT) {
+        void startMission();
+      }
+    }
+
+    inputEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        handleMissionSubmit();
+      }
+    });
+
+    function resizeMissionInput() {
+      inputEl.style.height = '0px';
+      const nextHeight = Math.min(Math.max(inputEl.scrollHeight, 62), 260);
+      inputEl.style.height = `${nextHeight}px`;
+      inputEl.style.overflowY = inputEl.scrollHeight > 260 ? 'auto' : 'hidden';
+    }
+    inputEl.addEventListener('input', () => { inputError.textContent = ''; resizeMissionInput(); });
+    resizeMissionInput();
+
+    document.addEventListener('click', (event) => { if (event.target.closest('#mission-cta')) { event.preventDefault(); handleMissionSubmit(); } });
+
+    async function readMission() {
+      if (!activeMission) return;
+      try {
+        const response = await fetch(`/api/missions/${activeMission.id}`, { cache: 'no-store' });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || 'Unable to read mission');
+        updateMission(payload.data);
+      } catch (error) {
+        execStatus.textContent = 'Nova is reconnecting to mission progress.';
+      }
+    }
+
+    function updateMission(mission) {
+      activeMission = mission;
+      completeMissionName.textContent = shortMissionTitle(mission.goal || mission.title);
+      const latest = mission.logs?.at(-1);
+      agents.forEach((agent, index) => {
+        const entries = subsystemEntries(agent.id, mission);
+        agent.data = entries.length ? entries.map(liveLogLine) : ['Standing by'];
+        renderPanelCanvas(panelCanvasStates[index]);
+        panelCanvasTextures[index].needsUpdate = true;
+      });
+      updateCommandCenter(mission, latest);
+      renderExecutionGraph(mission);
+      renderProjectMemory(mission);
+      syncActivePanel(mission);
+      if (mission.status === 'completed' || mission.status === 'failed') handleTerminalMission(mission);
+    }
+    function renderProjectMemory(mission){ const memory=mission.memory||[]; const context=memory.find((entry)=>entry.key==='project-memory-context'); if(!context){projectMemoryEl.innerHTML='';return;} let data={entries:[]}; try{data=JSON.parse(context.value);}catch{} const entries=Array.isArray(data.entries)?data.entries:[]; projectMemoryEl.innerHTML=`<strong>Project Memory</strong><br>${entries.slice(0,6).map((entry)=>`• ${escapeHtml(String(entry))}`).join('<br>')||'No matching project knowledge yet.'}`; }
+
+    function activeSubsystem(mission) {
+      return activeSubsystems(mission)[0] || null;
+    }
+    function activeSubsystems(mission) {
+      const running = taskStates(mission).filter((task) => task.state === 'running').map((task) => task.agent);
+      if (running.length) return [...new Set(running)];
+      const latest = mission?.logs?.at(-1);
+      if (!latest || ['completed', 'failed'].includes(mission.status)) return [];
+      const agent = latest.metadata?.agent;
+      if (typeof agent === 'string' && agents.some((candidate) => candidate.id === agent)) return [agent];
+      const tool = latest.metadata?.toolId;
+      if (typeof tool === 'string' && agents.some((candidate) => candidate.id === tool)) return [tool];
+      const fallback = ({ planning: 'planner', researching: 'research', executing: 'coding', reviewing: 'reviewer' })[mission.status];
+      return fallback ? [fallback] : [];
+    }
+
+    function syncActivePanel(mission) {
+      const active = activeSubsystems(mission);
+      panelMeshes.forEach((panel, index) => {
+        panel.visible = active.includes(panel.agent.id);
+        connectionLines[index].mat.opacity = panel.visible ? 0.16 : 0;
+      });
+    }
+
+    function updateCommandCenter(mission, latest) {
+      const title = shortMissionTitle(mission.goal || mission.title);
+      const current = activeSubsystem(mission);
+      commandTitle.textContent = title;
+      const explanation = { queued: 'Nova is preparing your mission.', planning: 'Nova is mapping the work into clear steps.', researching: 'Nova is gathering the context it needs.', executing: 'Nova is building and verifying the result.', reviewing: 'Nova is checking the result and refining it where needed.', completed: 'Your verified mission result is ready.', failed: 'Nova could not complete this mission.' };
+      const repairs = mission.repairHistory || [];
+      commandSummary.textContent = repairs.length && repairs.at(-1).status === 'running' ? `Nova is repairing a ${repairs.at(-1).failureType} before continuing.` : (explanation[mission.status] || 'Nova is progressing through your mission.');
+      commandStatus.textContent = `Current stage: ${mission.status}`;
+      commandPercent.textContent = `${mission.progress}%`;
+      commandProgress.style.width = `${mission.progress}%`;
+      commandEta.textContent = `ETA: ${estimateCompletion(mission)}`;
+      commandAgent.textContent = `Current stage: ${current ? labelFor(current) : mission.status}`;
+      commandNext.textContent = `Next: ${nextSubsystem(current, mission)}`;
+      command.classList.add('visible');
+    }
+
+    function taskStates(mission) {
+      const latestByTask = new Map();
+      (mission.logs || []).forEach((log) => {
+        if (log.metadata?.scheduler && log.metadata?.taskId && log.metadata?.state) latestByTask.set(log.metadata.taskId, log.metadata);
+      });
+      return [...latestByTask.values()].sort((a, b) => Number(a.sequence || 0) - Number(b.sequence || 0));
+    }
+    function renderExecutionGraph(mission) {
+      const tasks = taskStates(mission);
+      const stages = mission.chain?.stages || [];
+      if (!tasks.length && !stages.length) { executionGraph.innerHTML = ''; return; }
+      const stageNodes = stages.map((stage, index) => `<span class="execution-node ${stage.status}" title="Stage ${index + 1}: ${escapeHtml(stage.objective)}">${stage.status === 'completed' ? '✓' : stage.status === 'running' ? '●' : '○'} Step ${index + 1}</span>`);
+      const taskNodes = tasks.map((task) => {
+        const state = String(task.state || 'queued');
+        const dependency = Array.isArray(task.dependsOn) && task.dependsOn.length ? '←' : '•';
+        const title = escapeHtml(String(task.title || task.taskId));
+        return `<span class="execution-node ${state}" title="${title} — ${state}">${dependency} ${title}</span>`;
+      });
+      const repairNodes = (mission.repairHistory || []).map((repair) => `<span class="execution-node ${repair.status === 'succeeded' ? 'completed' : repair.status === 'failed' ? 'failed' : 'running'}" title="${escapeHtml(repair.probableCause || repair.failureType)}">${repair.status === 'succeeded' ? '✓' : repair.status === 'failed' ? '✖' : '●'} Repair ${repair.attempt}: ${escapeHtml(repair.failureType)}</span>`);
+      executionGraph.innerHTML = [...stageNodes, ...taskNodes, ...repairNodes].join('');
+    }
+    function escapeHtml(value) { return value.replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[character]); }
+
+    function labelFor(id) { return agents.find((agent) => agent.id === id)?.label || id; }
+    function nextSubsystem(current, mission) {
+      if (mission.status === 'completed') return 'Mission output';
+      const order = ['planner', 'research', 'browser', 'coding', 'terminal', 'github', 'reviewer', 'document'];
+      const index = order.indexOf(current);
+      return labelFor(order[index + 1] || 'reviewer');
+    }
+
+    function showMissionIntro(mission) {
+      const title = shortMissionTitle(mission.goal || mission.title);
+      execMissionName.textContent = title;
+      execStatus.textContent = `${title} is being coordinated across Nova's autonomous systems.`;
+      missionIntro.classList.remove('fading');
+      missionIntro.classList.add('visible');
+      if (introTimer) window.clearTimeout(introTimer);
+      introTimer = window.setTimeout(() => missionIntro.classList.add('fading'), 4200);
+    }
+
+    function shortMissionTitle(value) {
+      const stopWords = new Set(['a', 'an', 'the', 'and', 'or', 'to', 'for', 'of', 'in', 'on', 'with', 'create', 'build', 'make', 'please']);
+      const words = String(value).match(/[A-Za-z0-9]+/g)?.filter((word) => !stopWords.has(word.toLowerCase())) ?? [];
+      const title = words.slice(0, 6);
+      for (const fallback of ['Autonomous', 'Mission', 'Brief']) if (title.length < 3 && !title.includes(fallback)) title.push(fallback);
+      return title.map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    }
+
+    function subsystemEntries(id, mission) {
+      if (id === 'artifacts') {
+        return [...mission.artifacts.map((artifact) => ({ action: `${artifact.name} ready`, status: 'succeeded', metadata: { kind: artifact.mimeType || artifact.kind } })), ...mission.outputs.map((output) => ({ action: output.title, status: 'succeeded', metadata: { kind: output.type } }))].slice(-5);
+      }
+      const matches = mission.logs.filter((log) => log.metadata?.agent === id || log.metadata?.toolId === id || (id === 'terminal' && log.metadata?.toolId === 'terminal'));
+      return matches.slice(-5);
+    }
+
+    function liveLogLine(log) {
+      const tool = log.metadata?.toolId ? `[${log.metadata.toolId}] ` : '';
+      const summary = log.metadata?.reasoningSummary || log.metadata?.message || log.action;
+      return `${tool}${String(summary)}`.slice(0, 54);
+    }
+    function estimateCompletion(mission) {
+      if (mission.status === 'completed') return 'complete';
+      const elapsed = (Date.now() - new Date(mission.createdAt).getTime()) / 60000;
+      const remaining = Math.max(0, mission.estimatedDuration * (1 - mission.progress / 100) - elapsed);
+      if (remaining < 1) return 'less than a minute';
+      const minutes = Math.floor(remaining);
+      const seconds = Math.round((remaining - minutes) * 60);
+      return `${minutes} min ${seconds}s`;
+    }
+
+    const initialMissionId = new URLSearchParams(window.location.search).get('missionId');
+    if (initialMissionId) {
+      fetch(`/api/missions/${initialMissionId}`, { cache: 'no-store' })
+        .then((response) => response.ok ? response.json() : Promise.reject(new Error('Mission not found')))
+        .then((payload) => beginMission(payload.data))
+        .catch((error) => { execStatus.textContent = error.message; });
+    }
+
+    // ============================================================
+    // DISSOLVE CANVAS RENDER
+    // ============================================================
+    function renderDissolve(time) {
+      if (prefersReduced) { dissolveCanvas.style.opacity = '0'; return; }
+      if (currentState !== State.TRANSITIONING || dissolveParticles.length === 0) {
+        dissolveCanvas.style.opacity = '0';
+        return;
+      }
+
+      dissolvePhase += 0.016;
+      dissolveCanvas.style.opacity = '1';
+      dCtx.clearRect(0, 0, dissolveCanvas.width, dissolveCanvas.height);
+
+      let allDone = true;
+      dissolveParticles.forEach((p) => {
+        p.progress += p.speed * 0.016;
+        if (p.progress < 1) {
+          allDone = false;
+          const t = p.progress;
+          const ease = t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+          const x = p.x + p.targetX * 60 * ease;
+          const y = p.y - p.targetY * 40 * ease;
+          const size = p.size * (1 - ease * 0.7);
+          dCtx.fillStyle = p.color;
+          dCtx.globalAlpha = 1 - ease;
+          dCtx.beginPath();
+          dCtx.arc(x, y, size, 0, Math.PI * 2);
+          dCtx.fill();
+        }
+      });
+
+      if (allDone) {
+        dissolveCanvas.style.opacity = '0';
+      }
+    }
+
+    // ============================================================
+    // AGENT PANEL DATA ANIMATION
+    // ============================================================
+    let panelDataTimer = 0;
+
+    function updatePanelData(dt) {
+      panelDataTimer += dt;
+      panelCanvasStates.forEach((state, i) => {
+        state.dataTimer += dt;
+        if (state.dataTimer > 3) {
+          state.dataTimer = 0;
+          // Rotate data lines
+          const first = state.agent.data.shift();
+          state.agent.data.push(first);
+        }
+        renderPanelCanvas(state);
+        panelCanvasTextures[i].needsUpdate = true;
+      });
+    }
+
+    // ============================================================
+    // ANIMATION LOOP
+    // ============================================================
+    const clock = new THREE.Clock();
+    let termScroll = 0;
+
+    function animate() {
+      requestAnimationFrame(animate);
+      const dt = Math.min(clock.getDelta(), 0.05);
+      const time = clock.elapsedTime;
+      stateTime += dt;
+
+      // ---- CAMERA ----
+      updateCamera(time, dt);
+
+      // ---- MOUSE PARALLAX ----
+      if (currentState === State.INPUT) {
+        mouse.x += (mouseTarget.x - mouse.x) * 0.05;
+        mouse.y += (mouseTarget.y - mouse.y) * 0.05;
+        camera.position.x += mouse.x * 0.2;
+        camera.position.y += mouse.y * 0.15;
+      }
+
+      // ---- LIGHTING ----
+      const baseIntensity = currentState === State.COMPLETE ? 3.5 :
+                            currentState === State.EXECUTING ? 3.0 :
+                            currentState === State.TRANSITIONING ? 2.5 : 1.5;
+      keyLight.intensity = baseIntensity + Math.sin(time * 1.5) * 0.5;
+      warmFill.intensity = 0.5 + Math.sin(time * 1.5) * 0.3;
+
+      // ---- BLOOM ----
+      bloomPass.strength = currentState === State.COMPLETE ? 1.0 :
+                           currentState === State.EXECUTING ? 0.8 :
+                           currentState === State.TRANSITIONING ? 0.7 : 0.5;
+
+      // ---- FOG ----
+      scene.fog.density = 0.018;
+
+      // ---- DUST ----
+      const dustPosAttr = dustGeo.attributes.position;
+      const dustArr = dustPosAttr.array;
+      for (let i = 0; i < DUST_COUNT; i++) {
+        const i3 = i * 3;
+        dustArr[i3 + 1] += Math.sin(time * 0.1 + i) * 0.0001;
+        dustArr[i3] += Math.cos(time * 0.08 + i * 0.5) * 0.0001;
+      }
+      dustPosAttr.needsUpdate = true;
+      dustMat.opacity = 0.08 + Math.sin(time * 0.3) * 0.05;
+
+      // ---- NOVA CRYSTAL ----
+      outerCrystalMat.opacity = 0.5 + Math.sin(time * 1.5) * 0.05;
+      outerCrystalMat.emissiveIntensity = 0.15 + Math.sin(time * 1.5) * 0.1;
+      outerCrystal.rotation.x = time * 0.2;
+      outerCrystal.rotation.y = time * 0.4;
+      outerCrystal.scale.setScalar(1 + Math.sin(time * 1.5) * 0.05);
+
+      midCrystalMat.opacity = 0.6 + Math.sin(time * 2.0) * 0.05;
+      midCrystalMat.emissiveIntensity = 0.3 + Math.sin(time * 2.0) * 0.15;
+      midCrystal.rotation.x = time * -0.5;
+      midCrystal.rotation.y = time * -0.7;
+      midCrystal.scale.setScalar(1 + Math.sin(time * 2.5) * 0.08);
+
+      innerCoreMat.opacity = 0.15 + Math.sin(time * 3) * 0.05;
+      innerCore.rotation.x = time * 0.8;
+      innerCore.rotation.y = time * 1.2;
+      innerCore.scale.setScalar(1 + Math.sin(time * 3) * 0.15);
+
+      wireframe.material.opacity = 0.12 + Math.sin(time * 1.2) * 0.04;
+      wireframe.rotation.x = time * 0.15 + 0.5;
+      wireframe.rotation.y = time * 0.3 + 0.3;
+      wireframe.scale.setScalar((1 + Math.sin(time * 1.5) * 0.05) * 1.15);
+
+      // ---- RINGS ----
+      ringGroup.position.set(0, 1.5 + Math.sin(time * 0.3) * 0.05, 0);
+      ringGroup.children.forEach((ring, i) => {
+        ring.material.opacity = 0.04 + i * 0.02 + Math.sin(time * 0.5 + i) * 0.01;
+        ring.rotation.z = time * (0.2 + i * 0.1);
+        ring.rotation.x = Math.PI / 2 + (i * 0.3) + Math.sin(time * 0.5 + i) * 0.05;
+      });
+
+      // ---- PARTICLES ----
+      const posAttr = particleGeo.attributes.position;
+      const posArray = posAttr.array;
+      for (let i = 0; i < PARTICLE_COUNT; i++) {
+        const i3 = i * 3;
+        const idle = Math.sin(time * 0.5 + i * 0.01) * 0.02;
+        posArray[i3] = targets[i3] + idle;
+        posArray[i3 + 1] = targets[i3 + 1] + Math.sin(time * 0.7 + i * 0.015) * 0.02;
+        posArray[i3 + 2] = targets[i3 + 2] + Math.cos(time * 0.6 + i * 0.012) * 0.02;
+      }
+      posAttr.needsUpdate = true;
+      particleMat.opacity = 0.6;
+
+      // ---- DATA STREAMS ----
+      if (!prefersReduced) {
+      const sPos = streamGeo.attributes.position.array;
+      for (let i = 0; i < STREAM_COUNT; i++) {
+        const i3 = i * 3;
+        streamLife[i] += dt * (0.5 + Math.random() * 0.5);
+        if (streamLife[i] > 1) {
+          streamLife[i] = 0;
+          const angle = Math.random() * Math.PI * 2;
+          const radius = 0.5 + Math.random() * 3;
+          sPos[i3] = Math.cos(angle) * radius;
+          sPos[i3 + 1] = -1 + Math.random() * 0.5;
+          sPos[i3 + 2] = Math.sin(angle) * radius;
+          streamOrig[i3] = sPos[i3];
+          streamOrig[i3 + 1] = sPos[i3 + 1];
+          streamOrig[i3 + 2] = sPos[i3 + 2];
+          streamTarg[i3] = Math.cos(angle + 0.3) * (radius * 0.2);
+          streamTarg[i3 + 1] = 3 + Math.random() * 2;
+          streamTarg[i3 + 2] = Math.sin(angle + 0.3) * (radius * 0.2);
+        }
+        const t = streamLife[i];
+        const ease = t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+        sPos[i3] = streamOrig[i3] + (streamTarg[i3] - streamOrig[i3]) * ease;
+        sPos[i3 + 1] = streamOrig[i3 + 1] + (streamTarg[i3 + 1] - streamOrig[i3 + 1]) * ease;
+        sPos[i3 + 2] = streamOrig[i3 + 2] + (streamTarg[i3 + 2] - streamOrig[i3 + 2]) * ease;
+      }
+      streamGeo.attributes.position.needsUpdate = true;
+      }
+
+      // ---- DEPLOYED SUBSYSTEM PANEL ----
+      // Panels animate only while deploying or returning to Nova, then remain fixed for reading.
+      panelMeshes.forEach((p, index) => {
+        const target = p.visible ? 1 : 0;
+        p.visibility += (target - p.visibility) * Math.min(1, dt * 4.5);
+        if (p.visibility < 0.002 && !p.visible) { p.mesh.visible = false; return; }
+        p.mesh.visible = true;
+        p.mesh.position.lerpVectors(new THREE.Vector3(0, 1.5, 0), p.targetPosition, p.visibility);
+        p.mesh.scale.setScalar(Math.max(0.01, p.visibility));
+        p.mat.opacity = p.visibility * 0.92;
+        const connection = connectionLines[index];
+        const positions = connection.line.geometry.attributes.position.array;
+        positions[3] = p.mesh.position.x;
+        positions[4] = p.mesh.position.y;
+        positions[5] = p.mesh.position.z;
+        connection.line.geometry.attributes.position.needsUpdate = true;
+        connection.mat.opacity = p.visibility * 0.14;
+        if (p.visibility > 0.02) { p.state.dataTimer += dt; renderPanelCanvas(p.state); p.tex.needsUpdate = true; }
+      });
+
+      // ---- DISSOLVE ----
+      renderDissolve(time);
+
+      composer.render();
+    }
+
+    animate();
+
+    // ============================================================
+    // RESIZE
+    // ============================================================
+    window.addEventListener('resize', () => {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+      composer.setSize(w, h);
+      dissolveCanvas.width = w;
+      dissolveCanvas.height = h;
+    });
+
+    // ============================================================
+    // FOCUS INPUT
+    // ============================================================
+    setTimeout(() => { inputEl.focus(); }, 500);
+  </script>
+</body>
+</html>

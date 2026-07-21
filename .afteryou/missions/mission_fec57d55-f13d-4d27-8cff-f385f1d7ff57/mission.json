@@ -1,0 +1,36 @@
+{
+  "id": "mission_fec57d55-f13d-4d27-8cff-f385f1d7ff57",
+  "title": "Build a premium coffee shop landing page called Aurora Coffee using HTML, CSS, and JavaScript. Create index.html, styles.css, and script.js. Include a hero sect",
+  "description": "Build a premium coffee shop landing page called Aurora Coffee using HTML, CSS, and JavaScript. Create index.html, styles.css, and script.js. Include a hero section, featured drinks, about section, testimonials, contact section, smooth scrolling, and subtle modern animations.",
+  "goal": "Build a premium coffee shop landing page called Aurora Coffee using HTML, CSS, and JavaScript. Create index.html, styles.css, and script.js. Include a hero section, featured drinks, about section, testimonials, contact section, smooth scrolling, and subtle modern animations.",
+  "workspace": {
+    "workspaceName": "Coffee demo",
+    "workspacePath": "/Users/shanaypatel/Documents/Coffee demo",
+    "indexedAt": "2026-07-21T08:46:10.026Z",
+    "fileCount": 0,
+    "directoryTree": [],
+    "extensions": []
+  },
+  "status": "queued",
+  "createdAt": "2026-07-21T08:46:11.262Z",
+  "updatedAt": "2026-07-21T08:46:11.262Z",
+  "estimatedDuration": 30,
+  "progress": 0,
+  "logs": [
+    {
+      "id": "log_fe54d0cd-7854-476b-a5f3-ddc459d24850",
+      "timestamp": "2026-07-21T08:46:11.262Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Build a premium coffee shop landing page called Aurora Coffee using HTML, CSS, and JavaScript. Create index.html, styles.css, and script.js. Include a hero section, featured drinks, about section, testimonials, contact section, smooth scrolling, and subtle modern animations."
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

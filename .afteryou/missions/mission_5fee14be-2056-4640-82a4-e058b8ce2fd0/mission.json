@@ -1,0 +1,28 @@
+{
+  "id": "mission_5fee14be-2056-4640-82a4-e058b8ce2fd0",
+  "title": "Implement responsive hero with srcset background and accessible CTA",
+  "description": "Implement responsive hero with srcset background and accessible CTA",
+  "goal": "Implement responsive hero with srcset background and accessible CTA",
+  "status": "queued",
+  "createdAt": "2026-07-21T08:47:38.730Z",
+  "updatedAt": "2026-07-21T08:47:38.730Z",
+  "estimatedDuration": 30,
+  "progress": 0,
+  "logs": [
+    {
+      "id": "log_317e7894-4216-443e-89e9-8f04558d987b",
+      "timestamp": "2026-07-21T08:47:38.730Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Implement responsive hero with srcset background and accessible CTA"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

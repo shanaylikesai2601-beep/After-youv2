@@ -1,0 +1,131 @@
+{
+  "id": "mission_aa53d137-2f68-4132-bbb6-bfc91f121c2e",
+  "title": "Simple File Test",
+  "description": "Create a hello.txt file in the project root with content Hello World",
+  "goal": "Create a hello.txt file with Hello World content",
+  "status": "executing",
+  "createdAt": "2026-07-20T09:52:01.510Z",
+  "updatedAt": "2026-07-20T09:53:36.856Z",
+  "estimatedDuration": 30,
+  "progress": 46,
+  "logs": [
+    {
+      "id": "log_0b7e473a-0018-435e-a5e6-0ca7d47a250e",
+      "timestamp": "2026-07-20T09:52:01.510Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Create a hello.txt file with Hello World content"
+      }
+    },
+    {
+      "id": "log_fc754af5-3e4e-44e6-b6f7-88d7d62bcb20",
+      "timestamp": "2026-07-20T09:52:01.513Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_a00b3a40-25b4-4716-a38a-27a84008e3bf",
+      "timestamp": "2026-07-20T09:52:06.419Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Plan created with 3 tasks"
+      }
+    },
+    {
+      "id": "log_2a1bb74b-c46d-4b41-866b-718e1f51283a",
+      "timestamp": "2026-07-20T09:52:06.422Z",
+      "stage": "executing",
+      "action": "Starting 3 tasks",
+      "status": "started",
+      "metadata": {
+        "taskCount": 3
+      }
+    },
+    {
+      "id": "log_72e850cf-f059-4f52-a4a7-38697d4902f2",
+      "timestamp": "2026-07-20T09:52:06.424Z",
+      "stage": "executing",
+      "action": "Executing task: Identify project root directory",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Identify project root directory"
+      }
+    },
+    {
+      "id": "log_f2b292c9-0ffa-49fd-99af-82b4aa620e98",
+      "timestamp": "2026-07-20T09:53:36.850Z",
+      "stage": "executing",
+      "action": "Task completed: Identify project root directory",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 2
+      }
+    },
+    {
+      "id": "log_37dd2ac7-aa22-4276-aaa4-94c7a5706951",
+      "timestamp": "2026-07-20T09:53:36.856Z",
+      "stage": "executing",
+      "action": "Executing task: Create hello.txt with required content",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Create hello.txt with required content"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_73a7f6ce-c5d4-4822-a851-b5de1946ea8a",
+      "createdAt": "2026-07-20T09:53:36.852Z",
+      "key": "task-0-result",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_06c897b6-413e-49e3-aba0-cebabf852c67",
+      "createdAt": "2026-07-20T09:53:36.851Z",
+      "type": "code",
+      "title": "Identify project root directory",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": [
+          "package.json",
+          "package.json"
+        ]
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_7b048f46-86f8-4cd6-aaea-92b276363eb0",
+      "createdAt": "2026-07-20T09:53:36.847Z",
+      "name": "package.json",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "package.json"
+      }
+    },
+    {
+      "id": "artifact_ac17ee75-00c3-4e14-b09d-74ba57723eb8",
+      "createdAt": "2026-07-20T09:53:36.849Z",
+      "name": "package.json",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "package.json"
+      }
+    }
+  ],
+  "repairHistory": []
+}

@@ -1,0 +1,402 @@
+{
+  "id": "mission_6ca8aa54-33ec-48a3-b4fb-8dde33ee656d",
+  "title": "Create low-fidelity wireframes for each section using the defined copy",
+  "description": "Create low-fidelity wireframes for each section using the defined copy",
+  "goal": "Create low-fidelity wireframes for each section using the defined copy",
+  "status": "completed",
+  "createdAt": "2026-07-21T09:22:58.829Z",
+  "updatedAt": "2026-07-21T10:27:59.712Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_0576c024-118c-4224-99f8-43a0b06afbe7",
+      "timestamp": "2026-07-21T09:22:58.829Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Create low-fidelity wireframes for each section using the defined copy"
+      }
+    },
+    {
+      "id": "log_c35c4278-0b87-4eb4-a218-20dd2149624e",
+      "timestamp": "2026-07-21T10:18:04.759Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_9aeeff53-c67f-4f8b-bfc2-0085426381a6",
+      "timestamp": "2026-07-21T10:18:33.982Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Plan created with 10 tasks"
+      }
+    },
+    {
+      "id": "log_3ac2a123-e0e1-4217-a09f-501b30e29d97",
+      "timestamp": "2026-07-21T10:18:33.990Z",
+      "stage": "executing",
+      "action": "Starting 10 tasks in dependency order",
+      "status": "started",
+      "metadata": {
+        "taskCount": 10
+      }
+    },
+    {
+      "id": "log_d756a9fd-6e40-4126-964d-95181deb81d2",
+      "timestamp": "2026-07-21T10:18:33.992Z",
+      "stage": "executing",
+      "action": "Executing task: Analyze defined copy and extract section copy",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Analyze defined copy and extract section copy",
+        "goal": "Identify each section's copy to be used in wireframes, ensuring no content is missed.",
+        "expectedOutput": "A file (e.g., sections_copy.json) listing each section name and its associated copy text."
+      }
+    },
+    {
+      "id": "log_fc758cf5-215a-45ae-838a-6224149c35f4",
+      "timestamp": "2026-07-21T10:19:45.790Z",
+      "stage": "executing",
+      "action": "Task completed: Analyze defined copy and extract section copy",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 1
+      }
+    },
+    {
+      "id": "log_eab257a6-b527-4ce3-accd-21aa8c022947",
+      "timestamp": "2026-07-21T10:19:45.792Z",
+      "stage": "executing",
+      "action": "Executing task: Create wireframe project file in Figma",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Create wireframe project file in Figma",
+        "goal": "Set up a shared Figma file with frames ready for each section's wireframe.",
+        "expectedOutput": "Figma file named 'Low-Fi Wireframes' containing empty frames labeled for each section."
+      }
+    },
+    {
+      "id": "log_704a0e99-a1cf-40d7-a6aa-cd1dfca78376",
+      "timestamp": "2026-07-21T10:20:32.919Z",
+      "stage": "executing",
+      "action": "Task completed: Create wireframe project file in Figma",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_a47bc96a-b6a3-4e2f-bfce-24bcc92975c3",
+      "timestamp": "2026-07-21T10:20:32.922Z",
+      "stage": "executing",
+      "action": "Executing task: Design low-fidelity wireframe for Header section",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 2,
+        "taskTitle": "Design low-fidelity wireframe for Header section",
+        "goal": "Translate Header copy into a basic wireframe layout using placeholder shapes.",
+        "expectedOutput": "Figma frame for Header containing boxes for logo, nav, and the Header copy text."
+      }
+    },
+    {
+      "id": "log_b36ba5ed-acbe-46cd-8876-1298b8285363",
+      "timestamp": "2026-07-21T10:22:33.470Z",
+      "stage": "executing",
+      "action": "Task completed: Design low-fidelity wireframe for Header section",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_20621313-5e6a-4b76-9c9d-1a68662cca59",
+      "timestamp": "2026-07-21T10:22:33.474Z",
+      "stage": "executing",
+      "action": "Executing task: Design low-fidelity wireframe for Hero section",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 3,
+        "taskTitle": "Design low-fidelity wireframe for Hero section",
+        "goal": "Translate Hero copy into a basic wireframe layout using placeholder shapes.",
+        "expectedOutput": "Figma frame for Hero containing a large image placeholder, heading, subheading, and button placeholders with the Hero copy."
+      }
+    },
+    {
+      "id": "log_e7349a87-5a79-4931-b2a5-d977c4f69dc1",
+      "timestamp": "2026-07-21T10:23:00.692Z",
+      "stage": "executing",
+      "action": "Task failed: Design low-fidelity wireframe for Hero section",
+      "status": "failed",
+      "metadata": {
+        "error": "Provider error 500: {\"error\":\"Internal Server Error (ref: 56ce52e8-751e-48bd-8fe3-e9b9234b019f)\"}\n"
+      }
+    },
+    {
+      "id": "log_36f76768-31f4-420f-9d78-60f3404b2dc2",
+      "timestamp": "2026-07-21T10:23:00.693Z",
+      "stage": "executing",
+      "action": "Executing task: Design low-fidelity wireframe for Features section",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 4,
+        "taskTitle": "Design low-fidelity wireframe for Features section",
+        "goal": "Translate Features copy into a basic wireframe layout using placeholder shapes.",
+        "expectedOutput": "Figma frame for Features containing a heading placeholder and three feature blocks each with icon, heading, and text placeholders filled with Features copy."
+      }
+    },
+    {
+      "id": "log_75d1b72e-a773-4541-8d84-4bf3576371ac",
+      "timestamp": "2026-07-21T10:26:08.920Z",
+      "stage": "executing",
+      "action": "Task completed: Design low-fidelity wireframe for Features section",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_609a3b27-7bb2-4315-84dc-1708e76f9c30",
+      "timestamp": "2026-07-21T10:26:08.924Z",
+      "stage": "executing",
+      "action": "Executing task: Design low-fidelity wireframe for Testimonials section",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 5,
+        "taskTitle": "Design low-fidelity wireframe for Testimonials section",
+        "goal": "Translate Testimonials copy into a basic wireframe layout using placeholder shapes.",
+        "expectedOutput": "Figma frame for Testimonials containing a heading placeholder and two quote blocks each with avatar, text, and name placeholders filled with Testimonials copy."
+      }
+    },
+    {
+      "id": "log_9567437a-9b6b-491b-a7d1-91df77ad7316",
+      "timestamp": "2026-07-21T10:26:43.316Z",
+      "stage": "executing",
+      "action": "Task completed: Design low-fidelity wireframe for Testimonials section",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_1858c24b-226d-46a8-9feb-02e6abe5f0c1",
+      "timestamp": "2026-07-21T10:26:43.319Z",
+      "stage": "executing",
+      "action": "Executing task: Design low-fidelity wireframe for Footer section",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 6,
+        "taskTitle": "Design low-fidelity wireframe for Footer section",
+        "goal": "Translate Footer copy into a basic wireframe layout using placeholder shapes.",
+        "expectedOutput": "Figma frame for Footer containing placeholders for logo, navigation links, social icons, and copyright text filled with Footer copy."
+      }
+    },
+    {
+      "id": "log_e1b1e076-3d43-4ad2-80a7-49a972062846",
+      "timestamp": "2026-07-21T10:27:48.904Z",
+      "stage": "executing",
+      "action": "Task completed: Design low-fidelity wireframe for Footer section",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_aa8276bf-bbd3-4432-a907-d0a641cb3bed",
+      "timestamp": "2026-07-21T10:27:48.909Z",
+      "stage": "executing",
+      "action": "Skipping task: Review all wireframes for consistency and alignment with copy (unmet dependencies: Design low-fidelity wireframe for Hero section)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Design low-fidelity wireframe for Hero section"
+        ]
+      }
+    },
+    {
+      "id": "log_8d153bc6-c15c-4ad3-b280-27501034ef1e",
+      "timestamp": "2026-07-21T10:27:48.910Z",
+      "stage": "executing",
+      "action": "Skipping task: Export wireframes as PDF for stakeholder sharing (unmet dependencies: Review all wireframes for consistency and alignment with copy)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Review all wireframes for consistency and alignment with copy"
+        ]
+      }
+    },
+    {
+      "id": "log_8789fa04-ea56-4335-a5bb-48a88464899a",
+      "timestamp": "2026-07-21T10:27:48.910Z",
+      "stage": "executing",
+      "action": "Skipping task: Incorporate stakeholder feedback and finalize wireframes (unmet dependencies: Export wireframes as PDF for stakeholder sharing)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Export wireframes as PDF for stakeholder sharing"
+        ]
+      }
+    },
+    {
+      "id": "log_ef9dba05-ae96-44a8-901c-7d9bc094ac2e",
+      "timestamp": "2026-07-21T10:27:59.709Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "The deliverable is a JavaScript file (script.js) which does not address the mission goal of creating low-fidelity wireframes for each section using the defined copy. No wireframes, visual mockups, or copy-integrated designs were produced."
+      }
+    },
+    {
+      "id": "log_b1e437d9-b334-48f6-bc4e-0f255cb651b2",
+      "timestamp": "2026-07-21T10:27:59.711Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalTasks": 10,
+        "completedTasks": 6,
+        "failedTasks": 4,
+        "totalArtifacts": 1
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_9dc37d49-54bb-4367-9772-25860b84a79d",
+      "createdAt": "2026-07-21T10:19:45.792Z",
+      "key": "task-0-Analyze defined copy and extract section copy",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_681f261f-4326-404d-87a3-2e94b8101828",
+      "createdAt": "2026-07-21T10:20:32.921Z",
+      "key": "task-1-Create wireframe project file in Figma",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_b07e49a6-e530-408f-92a9-0168e3347f7d",
+      "createdAt": "2026-07-21T10:22:33.473Z",
+      "key": "task-2-Design low-fidelity wireframe for Header section",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_d857baf7-2df9-441a-8957-5b10ae407f57",
+      "createdAt": "2026-07-21T10:26:08.922Z",
+      "key": "task-4-Design low-fidelity wireframe for Features section",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_186ff7e2-d857-4471-a8dd-5c7227b3b9db",
+      "createdAt": "2026-07-21T10:26:43.318Z",
+      "key": "task-5-Design low-fidelity wireframe for Testimonials section",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_8e36b31e-45b2-42f2-a5e4-3c7362f4a3d6",
+      "createdAt": "2026-07-21T10:27:48.908Z",
+      "key": "task-6-Design low-fidelity wireframe for Footer section",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_537f075e-cabd-43dc-81ca-3de923d62b6b",
+      "createdAt": "2026-07-21T10:19:45.791Z",
+      "type": "code",
+      "title": "Analyze defined copy and extract section copy",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": [
+          "script.js"
+        ]
+      }
+    },
+    {
+      "id": "output_d717c1ac-5625-4fcd-88ed-f067d0f7bf83",
+      "createdAt": "2026-07-21T10:20:32.920Z",
+      "type": "code",
+      "title": "Create wireframe project file in Figma",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_12a9b6fb-aabe-4597-8cb2-492a79222baa",
+      "createdAt": "2026-07-21T10:22:33.472Z",
+      "type": "code",
+      "title": "Design low-fidelity wireframe for Header section",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_5c1a7153-0a32-4be8-8319-e23e8f4d5b26",
+      "createdAt": "2026-07-21T10:26:08.922Z",
+      "type": "code",
+      "title": "Design low-fidelity wireframe for Features section",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_0a66bc79-a4f0-4cc7-ab28-64e141137334",
+      "createdAt": "2026-07-21T10:26:43.317Z",
+      "type": "code",
+      "title": "Design low-fidelity wireframe for Testimonials section",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_a771453a-d073-4645-a87b-2c91eeb38450",
+      "createdAt": "2026-07-21T10:27:48.907Z",
+      "type": "code",
+      "title": "Design low-fidelity wireframe for Footer section",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_d240165f-fcf5-4fac-b2b9-88e74664e9c5",
+      "createdAt": "2026-07-21T10:27:59.710Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 15,\n  \"summary\": \"The deliverable is a JavaScript file (script.js) which does not address the mission goal of creating low-fidelity wireframes for each section using the defined copy. No wireframes, visual mockups, or copy-integrated designs were produced.\",\n  \"issues\": [\n    \"Incorrect artifact type: wireframes expected, but a script.js file was submitted.\",\n    \"No wireframes or visual representations of any section were created.\",\n    \"The defined copy was not incorporated into any design output.\",\n    \"File appears unrelated to the task (likely leftover from another workflow).\"\n  ],\n  \"recommendations\": [\n    \"Create low-fidelity wireframes (e.g., hand-drawn sketches, grayscale boxes in Figma/Sketch, or simple HTML/CSS mockups) for each required section.\",\n    \"Incorporate the provided copy into the wireframes as placeholder text to reflect content layout.\",\n    \"Save wireframes as image files (PNG/JPEG) or exportable design files and submit them as the deliverables.\",\n    \"Verify that each section’s wireframe matches the copy structure and annotate any interactive notes if needed.\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_4a38e94e-863b-4c58-87ea-700a7c6b62f3",
+      "createdAt": "2026-07-21T10:19:45.789Z",
+      "name": "script.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "script.js",
+        "task": "Analyze defined copy and extract section copy"
+      }
+    }
+  ],
+  "repairHistory": []
+}

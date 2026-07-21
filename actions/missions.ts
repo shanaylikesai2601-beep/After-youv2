@@ -1,8 +1,7 @@
 "use server";
 
 import { createMissionSchema, updateMissionSchema } from "@/lib/mission-validation";
-import { missionRunner } from "@/server/pipeline/mission-runner";
-import { missionService } from "@/server/mission-container";
+import { missionService, missionRunner } from "@/server/mission-container";
 import type { CreateMissionInput, Mission, UpdateMissionInput } from "@/types/mission";
 
 export async function createMissionAction(input: CreateMissionInput): Promise<Mission> {

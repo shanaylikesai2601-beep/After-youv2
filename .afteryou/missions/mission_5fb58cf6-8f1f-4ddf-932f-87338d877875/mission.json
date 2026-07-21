@@ -1,0 +1,116 @@
+{
+  "id": "mission_5fb58cf6-8f1f-4ddf-932f-87338d877875",
+  "title": "Ollama Test",
+  "description": "Verify ollama works",
+  "goal": "Read hello.txt and tell me what it says",
+  "status": "completed",
+  "createdAt": "2026-07-20T16:26:12.117Z",
+  "updatedAt": "2026-07-20T16:26:12.162Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_b43103f3-1154-480a-9d9c-529a464935df",
+      "timestamp": "2026-07-20T16:26:12.117Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Read hello.txt and tell me what it says"
+      }
+    },
+    {
+      "id": "log_fb116919-7da9-485d-be4d-8c65cc9b85de",
+      "timestamp": "2026-07-20T16:26:12.131Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_1598f3ed-56c8-49c4-b6b7-7bd33dfe5863",
+      "timestamp": "2026-07-20T16:26:12.146Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Fallback plan with 2 tasks"
+      }
+    },
+    {
+      "id": "log_3d35df40-c5a8-48da-8f16-33957897d3ae",
+      "timestamp": "2026-07-20T16:26:12.147Z",
+      "stage": "executing",
+      "action": "Starting 2 tasks",
+      "status": "started",
+      "metadata": {
+        "taskCount": 2
+      }
+    },
+    {
+      "id": "log_8aab24fe-211a-4d3d-9039-2e902d809cae",
+      "timestamp": "2026-07-20T16:26:12.149Z",
+      "stage": "executing",
+      "action": "Executing task: Research and analysis",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Research and analysis"
+      }
+    },
+    {
+      "id": "log_d1376dd8-588d-4edd-8063-0527000a9430",
+      "timestamp": "2026-07-20T16:26:12.154Z",
+      "stage": "executing",
+      "action": "Task failed: Research and analysis",
+      "status": "failed",
+      "metadata": {
+        "error": "Provider error 404: 404 page not found"
+      }
+    },
+    {
+      "id": "log_5e6dc4f0-f888-42ab-a582-979e40bbb316",
+      "timestamp": "2026-07-20T16:26:12.155Z",
+      "stage": "executing",
+      "action": "Executing task: Deliver findings",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Deliver findings"
+      }
+    },
+    {
+      "id": "log_fe707df2-6d67-4e99-b216-8ca5f194a937",
+      "timestamp": "2026-07-20T16:26:12.157Z",
+      "stage": "executing",
+      "action": "Task failed: Deliver findings",
+      "status": "failed",
+      "metadata": {
+        "error": "Provider error 404: 404 page not found"
+      }
+    },
+    {
+      "id": "log_d60214f6-8946-4831-bf9f-0b4cc0fae063",
+      "timestamp": "2026-07-20T16:26:12.161Z",
+      "stage": "reviewing",
+      "action": "Review skipped (provider unavailable)",
+      "status": "info",
+      "metadata": {}
+    },
+    {
+      "id": "log_87cc230c-1f66-4c5b-aa99-f16b8d2e02f0",
+      "timestamp": "2026-07-20T16:26:12.161Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalArtifacts": 0
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

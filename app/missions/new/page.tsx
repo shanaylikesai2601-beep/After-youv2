@@ -1,3 +1,5 @@
-import { NewMissionPage } from "@/components/missions/new-mission-page";
+import { MissionWorkspace } from "@/components/missions/mission-workspace";
 
-export default function NewMissionRoute(): React.ReactElement { return <NewMissionPage />; }
+export default function NewMissionRoute(): React.ReactElement {
+  return <MissionWorkspace />;
+}

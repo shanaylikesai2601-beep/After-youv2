@@ -1,6 +1,6 @@
 import { jsonError } from "@/lib/http";
 import { missionIdSchema, updateMissionSchema } from "@/lib/mission-validation";
-import { missionService } from "@/server/mission-container";
+import { getMissionService, missionRunner } from "@/server/mission-container";
 
 export const runtime = "nodejs";
 
@@ -12,9 +12,13 @@ async function getMissionId(context: RouteContext): Promise<string> {
   return missionIdSchema.parse((await context.params).id);
 }
 
+async function svc() {
+  return getMissionService();
+}
+
 export async function GET(_: Request, context: RouteContext): Promise<Response> {
   try {
-    return Response.json({ data: await missionService.get(await getMissionId(context)) });
+    return Response.json({ data: await (await svc()).get(await getMissionId(context)) });
   } catch (error) {
     return jsonError(error);
   }
@@ -24,7 +28,9 @@ export async function PATCH(request: Request, context: RouteContext): Promise<Re
   try {
     const id = await getMissionId(context);
     const input = updateMissionSchema.parse(await request.json());
-    return Response.json({ data: await missionService.update(id, input) });
+    const updated = await (await svc()).update(id, input);
+    if (input.status === "queued") void missionRunner.run(id);
+    return Response.json({ data: updated });
   } catch (error) {
     return jsonError(error);
   }
@@ -32,7 +38,7 @@ export async function PATCH(request: Request, context: RouteContext): Promise<Re
 
 export async function DELETE(_: Request, context: RouteContext): Promise<Response> {
   try {
-    await missionService.delete(await getMissionId(context));
+    await (await svc()).delete(await getMissionId(context));
     return new Response(null, { status: 204 });
   } catch (error) {
     return jsonError(error);

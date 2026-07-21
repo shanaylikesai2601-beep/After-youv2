@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["dom", "dom.iterable", "es2022"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2022"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -11,11 +15,40 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
-    "plugins": [{ "name": "next" }],
-    "paths": { "@/*": ["./*"] }
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".next-coding-mission_09afcb4f-0924-4282-a5f1-269f30659b30/types/**/*.ts",
+    ".next-coding-mission_2977d7dc-191f-4774-9713-698c6e3f239f/types/**/*.ts",
+    ".next-coding-mission_471fdb1c-e9e4-4be8-b81c-fb5cddc28206/types/**/*.ts",
+    ".next-coding-mission_696670bb-31ee-429d-a818-c10301eb96f9/types/**/*.ts",
+    ".next-coding-mission_7ab4d6bf-5480-4a70-bff9-97a5b36f65e9/types/**/*.ts",
+    ".next-coding-mission_898ab8cc-ef64-4a9c-8747-b01d2f160664/types/**/*.ts",
+    ".next-coding-mission_bec1d8e3-3be2-4584-8dfc-34243ea7cbe8/types/**/*.ts",
+    ".next-coding-mission_c3e42f43-51d7-4ea4-ab7e-be5f6374a4b0/types/**/*.ts",
+    ".next-coding-mission_d70f1f78-6854-41d0-9993-abb1a20a634f/types/**/*.ts",
+    ".next-coding-mission_de751f9d-1615-4107-8c9d-2233e98d4059/types/**/*.ts",
+    ".next-coding-mission_f1c3bafa-5c99-4a5f-9dd9-1723545d6e8c/types/**/*.ts",
+    ".next-coding-mission_f928b270-47f8-4422-b1f2-bb4212df5bd1/types/**/*.ts",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    ".next-dev/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

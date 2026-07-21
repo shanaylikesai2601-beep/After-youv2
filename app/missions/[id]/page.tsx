@@ -1,5 +1,8 @@
-import { MissionWorkspace } from "@/components/missions/mission-workspace";
+import { MissionOutputPage } from "@/components/missions/mission-output-page";
+
+export const dynamic = "force-dynamic";
 
 export default async function MissionPage({ params }: { params: Promise<{ id: string }> }): Promise<React.ReactElement> {
-  return <MissionWorkspace missionId={(await params).id} />;
+  const id = (await params).id;
+  return <MissionOutputPage missionId={id} />;
 }

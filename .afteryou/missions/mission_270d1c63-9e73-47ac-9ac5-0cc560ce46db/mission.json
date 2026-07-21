@@ -1,0 +1,28 @@
+{
+  "id": "mission_270d1c63-9e73-47ac-9ac5-0cc560ce46db",
+  "title": "Add comprehensive error handling and loading states",
+  "description": "Add comprehensive error handling and loading states",
+  "goal": "Add comprehensive error handling and loading states",
+  "status": "queued",
+  "createdAt": "2026-07-21T09:10:05.568Z",
+  "updatedAt": "2026-07-21T09:10:05.568Z",
+  "estimatedDuration": 30,
+  "progress": 0,
+  "logs": [
+    {
+      "id": "log_20e78a96-8777-4a80-a472-02759191d2ec",
+      "timestamp": "2026-07-21T09:10:05.568Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Add comprehensive error handling and loading states"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

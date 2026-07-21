@@ -1,0 +1,28 @@
+{
+  "id": "mission_cd71fb8a-8865-4b7d-90df-652d13139c28",
+  "title": "Implement dark/light mode toggle with CSS variables and persistent preference",
+  "description": "Implement dark/light mode toggle with CSS variables and persistent preference",
+  "goal": "Implement dark/light mode toggle with CSS variables and persistent preference",
+  "status": "queued",
+  "createdAt": "2026-07-21T09:10:05.601Z",
+  "updatedAt": "2026-07-21T09:10:05.601Z",
+  "estimatedDuration": 30,
+  "progress": 0,
+  "logs": [
+    {
+      "id": "log_c6527577-c6b4-495c-a453-6d9a69a2b832",
+      "timestamp": "2026-07-21T09:10:05.601Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Implement dark/light mode toggle with CSS variables and persistent preference"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

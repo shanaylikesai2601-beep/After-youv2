@@ -1,0 +1,67 @@
+{
+  "id": "mission_e00260b0-ea23-4dfc-af13-066dcb8a6878",
+  "title": "Test Mission",
+  "description": "Create a simple hello.txt file in the project root",
+  "goal": "Create a hello.txt file with content Hello AfterYou",
+  "status": "executing",
+  "createdAt": "2026-07-20T09:48:49.432Z",
+  "updatedAt": "2026-07-20T09:48:54.961Z",
+  "estimatedDuration": 30,
+  "progress": 30,
+  "logs": [
+    {
+      "id": "log_efe9bd9d-ef27-4b73-a6b3-b1ba40063dbe",
+      "timestamp": "2026-07-20T09:48:49.432Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Create a hello.txt file with content Hello AfterYou"
+      }
+    },
+    {
+      "id": "log_4f954ba1-0a34-4d17-9c34-5ad7e2c70098",
+      "timestamp": "2026-07-20T09:48:49.449Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_2b4086fd-74af-4918-9ef5-b36fa1370913",
+      "timestamp": "2026-07-20T09:48:54.953Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Plan created with 3 tasks"
+      }
+    },
+    {
+      "id": "log_cfd919d9-b25d-4aad-ae80-0c96777c0c44",
+      "timestamp": "2026-07-20T09:48:54.958Z",
+      "stage": "executing",
+      "action": "Starting 3 tasks",
+      "status": "started",
+      "metadata": {
+        "taskCount": 3
+      }
+    },
+    {
+      "id": "log_43de8514-fec3-4d8a-9984-ef063076829a",
+      "timestamp": "2026-07-20T09:48:54.961Z",
+      "stage": "executing",
+      "action": "Executing task: Identify project root directory",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Identify project root directory"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

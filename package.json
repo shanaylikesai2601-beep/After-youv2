@@ -1,31 +1,22 @@
 {
-  "name": "afteryou",
-  "version": "0.1.0",
+  "name": "after-you",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "start": "next start -p 3000"
   },
   "dependencies": {
-    "next": "15.5.20",
-    "docx": "9.5.1",
-    "lucide-react": "0.468.0",
-    "pdfkit": "0.17.2",
-    "playwright": "1.61.1",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
-    "zod": "3.25.76"
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "next": "^16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@types/node": "22.15.3",
-    "@types/pdfkit": "0.17.4",
-    "@types/react": "19.1.2",
-    "@types/react-dom": "19.1.2",
-    "typescript": "5.8.3"
-  },
-  "overrides": {
-    "postcss": "8.5.10"
+    "nodemon": "^3.0.1",
+    "typescript": "^5.7.3"
   }
 }

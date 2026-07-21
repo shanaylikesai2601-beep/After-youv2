@@ -1,0 +1,409 @@
+{
+  "id": "mission_615a4a09-590f-4b6a-b7c5-04e726c9db52",
+  "title": "Add scroll‑triggered reveal animations for featured drinks using Intersection Observer",
+  "description": "Add scroll‑triggered reveal animations for featured drinks using Intersection Observer",
+  "goal": "Add scroll‑triggered reveal animations for featured drinks using Intersection Observer",
+  "status": "completed",
+  "createdAt": "2026-07-21T08:36:32.108Z",
+  "updatedAt": "2026-07-21T09:15:45.993Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_0a1e0df6-f829-4b32-9777-df027c82dce9",
+      "timestamp": "2026-07-21T08:36:32.108Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Add scroll‑triggered reveal animations for featured drinks using Intersection Observer"
+      }
+    },
+    {
+      "id": "log_589ccdae-ea02-4e19-a2b9-537b3ce1fc4f",
+      "timestamp": "2026-07-21T09:02:18.680Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_f35d0e8c-5936-48b9-94b0-83051e2df992",
+      "timestamp": "2026-07-21T09:03:06.930Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Plan created with 8 tasks"
+      }
+    },
+    {
+      "id": "log_9e685406-a6af-4090-b2a8-a55940d7c29e",
+      "timestamp": "2026-07-21T09:03:06.948Z",
+      "stage": "executing",
+      "action": "Starting 8 tasks in dependency order",
+      "status": "started",
+      "metadata": {
+        "taskCount": 8
+      }
+    },
+    {
+      "id": "log_3679d0b3-cb06-4bf1-b744-eff63980c0e2",
+      "timestamp": "2026-07-21T09:03:06.955Z",
+      "stage": "executing",
+      "action": "Executing task: Analyze codebase structure for featured drinks",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Analyze codebase structure for featured drinks",
+        "goal": "Locate the featured drinks component and understand its dependencies to plan changes.",
+        "expectedOutput": "A document listing the component file path, related styles, utilities, and any existing animation code."
+      }
+    },
+    {
+      "id": "log_56137bd4-3e9d-4916-9adf-53cda6449b80",
+      "timestamp": "2026-07-21T09:04:43.935Z",
+      "stage": "executing",
+      "action": "Task completed: Analyze codebase structure for featured drinks",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_f5d0e9d9-5674-45c4-b598-985b34725a9b",
+      "timestamp": "2026-07-21T09:04:43.959Z",
+      "stage": "executing",
+      "action": "Executing task: Define animation CSS for reveal effect",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Define animation CSS for reveal effect",
+        "goal": "Create CSS keyframes and classes that will animate drinks into view.",
+        "expectedOutput": "CSS/SCSS snippet with @keyframes fadeInUp and .reveal, .reveal-active classes added to the project's stylesheet."
+      }
+    },
+    {
+      "id": "log_02a6a670-29e3-4a92-a39c-fd2ca6f3775e",
+      "timestamp": "2026-07-21T09:05:35.391Z",
+      "stage": "executing",
+      "action": "Task completed: Define animation CSS for reveal effect",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_ea0902c2-ac54-4f5f-acba-c535b6c1318e",
+      "timestamp": "2026-07-21T09:05:35.415Z",
+      "stage": "executing",
+      "action": "Executing task: Create Intersection Observer utility hook",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 2,
+        "taskTitle": "Create Intersection Observer utility hook",
+        "goal": "Build a reusable hook that observes elements and returns intersection status.",
+        "expectedOutput": "A JavaScript/TypeScript file exporting a hook (e.g., useOnScreen) that returns a ref and a boolean indicating visibility."
+      }
+    },
+    {
+      "id": "log_48d36f3f-a2b6-448a-899c-d387f661cb42",
+      "timestamp": "2026-07-21T09:06:54.759Z",
+      "stage": "executing",
+      "action": "Task completed: Create Intersection Observer utility hook",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_a6b28374-82e5-4eab-ac17-69f47ecfe423",
+      "timestamp": "2026-07-21T09:06:54.770Z",
+      "stage": "executing",
+      "action": "Executing task: Integrate hook and animation into featured drinks component",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 3,
+        "taskTitle": "Integrate hook and animation into featured drinks component",
+        "goal": "Modify the component to apply the reveal animation when elements intersect the viewport.",
+        "expectedOutput": "Updated component file using the useOnScreen hook, conditionally adding .reveal-active class based on intersection state."
+      }
+    },
+    {
+      "id": "log_6cdbf64f-b504-41c4-be10-873a50285ec9",
+      "timestamp": "2026-07-21T09:07:59.705Z",
+      "stage": "executing",
+      "action": "Task completed: Integrate hook and animation into featured drinks component",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_c5090412-77e1-40df-89e8-9aa123cb8c3e",
+      "timestamp": "2026-07-21T09:07:59.716Z",
+      "stage": "executing",
+      "action": "Executing task: Write unit tests for the Intersection Observer hook",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 4,
+        "taskTitle": "Write unit tests for the Intersection Observer hook",
+        "goal": "Verify the hook behaves correctly under various intersection scenarios.",
+        "expectedOutput": "Test file (e.g., useOnScreen.test.js) with assertions for ref attachment, boolean output, and cleanup."
+      }
+    },
+    {
+      "id": "log_377bc739-1c59-48f9-8644-c0268190e7de",
+      "timestamp": "2026-07-21T09:09:37.826Z",
+      "stage": "executing",
+      "action": "Task completed: Write unit tests for the Intersection Observer hook",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_c1fc832a-baad-4288-9b71-fe6c16aebf86",
+      "timestamp": "2026-07-21T09:09:37.839Z",
+      "stage": "executing",
+      "action": "Executing task: Run linting, type checking, and production build",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 5,
+        "taskTitle": "Run linting, type checking, and production build",
+        "goal": "Ensure code quality and that the application builds successfully after changes.",
+        "expectedOutput": "Output from ESLint, TypeScript compiler (if applicable), and build tool showing no errors and a successful production bundle."
+      }
+    },
+    {
+      "id": "log_3b80f8d6-b23c-4410-bea5-edb926efec24",
+      "timestamp": "2026-07-21T09:12:02.895Z",
+      "stage": "executing",
+      "action": "Task completed: Run linting, type checking, and production build",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_91c7d04f-07ce-4344-896d-35e609074d47",
+      "timestamp": "2026-07-21T09:12:04.207Z",
+      "stage": "executing",
+      "action": "Executing task: Manual verification of scroll-triggered animation",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 6,
+        "taskTitle": "Manual verification of scroll-triggered animation",
+        "goal": "Confirm that the reveal animation works as expected in a browser.",
+        "expectedOutput": "Verification checklist completed, noting that animations trigger when drinks scroll into view and behave correctly on scroll out."
+      }
+    },
+    {
+      "id": "log_61110749-6c61-4b67-ba6a-700ebce849e6",
+      "timestamp": "2026-07-21T09:13:31.660Z",
+      "stage": "executing",
+      "action": "Task completed: Manual verification of scroll-triggered animation",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_970bdae4-b8e5-4462-879c-6f5e1dbdc0e9",
+      "timestamp": "2026-07-21T09:13:32.874Z",
+      "stage": "executing",
+      "action": "Executing task: Document changes and suggest next steps",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 7,
+        "taskTitle": "Document changes and suggest next steps",
+        "goal": "Provide a record of the work done and ideas for future improvements.",
+        "expectedOutput": "Updated documentation (e.g., README.md or CHANGELOG.md) describing the added animation, files modified, and potential enhancements."
+      }
+    },
+    {
+      "id": "log_2bfa7c13-95ae-4215-9d04-6a1bfd50c0e6",
+      "timestamp": "2026-07-21T09:15:26.841Z",
+      "stage": "executing",
+      "action": "Task completed: Document changes and suggest next steps",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_0283d7d9-d61d-49f9-8b8b-608126becf07",
+      "timestamp": "2026-07-21T09:15:44.097Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "No artifacts were submitted, so the scroll‑triggered reveal animations for featured drinks using Intersection Observer have not been implemented. The mission requirements are unmet."
+      }
+    },
+    {
+      "id": "log_b0ce9ac2-e907-41d5-94fa-154a1ad9351c",
+      "timestamp": "2026-07-21T09:15:45.447Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalTasks": 8,
+        "completedTasks": 8,
+        "failedTasks": 0,
+        "totalArtifacts": 0
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_153133f2-7917-4b84-a118-a460eeb4f307",
+      "createdAt": "2026-07-21T09:04:43.950Z",
+      "key": "task-0-Analyze codebase structure for featured drinks",
+      "value": "Coding agent completed after 10 steps, 9 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_e26d5cda-9954-4b04-8d4b-f828fd412f3f",
+      "createdAt": "2026-07-21T09:05:35.402Z",
+      "key": "task-1-Define animation CSS for reveal effect",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_b7059989-4376-47e8-bb90-94bc6c16819b",
+      "createdAt": "2026-07-21T09:06:54.767Z",
+      "key": "task-2-Create Intersection Observer utility hook",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_fe127893-1ece-40a3-8f61-cff6563cd11d",
+      "createdAt": "2026-07-21T09:07:59.713Z",
+      "key": "task-3-Integrate hook and animation into featured drinks component",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_8329a9c3-c359-4b52-a42e-0f8616d12a46",
+      "createdAt": "2026-07-21T09:09:37.836Z",
+      "key": "task-4-Write unit tests for the Intersection Observer hook",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_b8f6acf3-4ef7-4bb1-83a2-ba3b084d7714",
+      "createdAt": "2026-07-21T09:12:03.964Z",
+      "key": "task-5-Run linting, type checking, and production build",
+      "value": "Coding agent completed after 7 steps, 6 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_d20002d7-c0b9-470d-8027-6b803ff9aaeb",
+      "createdAt": "2026-07-21T09:13:32.402Z",
+      "key": "task-6-Manual verification of scroll-triggered animation",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_9de8b6b6-3de2-4367-8c15-60747ab4dadd",
+      "createdAt": "2026-07-21T09:15:26.943Z",
+      "key": "task-7-Document changes and suggest next steps",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_b828d419-118f-40f2-923c-8da2cf41e8a0",
+      "createdAt": "2026-07-21T09:04:43.949Z",
+      "type": "code",
+      "title": "Analyze codebase structure for featured drinks",
+      "content": "Coding agent completed after 10 steps, 9 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_982d2fc1-a566-4dc9-8bb6-55724032f068",
+      "createdAt": "2026-07-21T09:05:35.399Z",
+      "type": "code",
+      "title": "Define animation CSS for reveal effect",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_24fef566-e1b6-4e57-b5a0-cd8bea41fb8a",
+      "createdAt": "2026-07-21T09:06:54.765Z",
+      "type": "code",
+      "title": "Create Intersection Observer utility hook",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_845a640e-417f-4a2d-9e18-9d39764d2192",
+      "createdAt": "2026-07-21T09:07:59.710Z",
+      "type": "code",
+      "title": "Integrate hook and animation into featured drinks component",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_8555bbf0-1c0f-44cb-a959-85076049aa2d",
+      "createdAt": "2026-07-21T09:09:37.835Z",
+      "type": "code",
+      "title": "Write unit tests for the Intersection Observer hook",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_766cd989-66b3-497b-81f7-b9b7c9f86a55",
+      "createdAt": "2026-07-21T09:12:03.608Z",
+      "type": "code",
+      "title": "Run linting, type checking, and production build",
+      "content": "Coding agent completed after 7 steps, 6 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_d45fe69c-8814-4100-a831-37a916c9e692",
+      "createdAt": "2026-07-21T09:13:32.078Z",
+      "type": "code",
+      "title": "Manual verification of scroll-triggered animation",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_e036bc11-3062-4406-acaa-6130e12d7cd0",
+      "createdAt": "2026-07-21T09:15:26.906Z",
+      "type": "code",
+      "title": "Document changes and suggest next steps",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_3f734f80-b59a-4ade-9646-799660b162da",
+      "createdAt": "2026-07-21T09:15:44.973Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 10,\n  \"summary\": \"No artifacts were submitted, so the scroll‑triggered reveal animations for featured drinks using Intersection Observer have not been implemented. The mission requirements are unmet.\",\n  \"issues\": [\n    \"No HTML, CSS, or JavaScript files were provided.\",\n    \"No Intersection Observer logic or animation definitions are present.\",\n    \"No evidence of testing or integration with the featured drinks section.\"\n  ],\n  \"recommendations\": [\n    \"Create the necessary markup for the featured drinks section (if not already present).\",\n    \"Add CSS classes that define the hidden state and the reveal animation (e.g., opacity, transform).\",\n    \"Implement JavaScript that sets up an Intersection Observer to watch each drink element and toggles the reveal class when it enters the viewport.\",\n    \"Ensure the observer is disconnected when appropriate and handle edge cases (e.g., reduced motion preferences).\",\n    \"Test the implementation across browsers and verify that animations trigger correctly on scroll.\",\n    \"Optionally, add a fallback for browsers that do not support Intersection Observer using a scroll event listener.\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [],
+  "repairHistory": []
+}

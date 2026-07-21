@@ -1,0 +1,90 @@
+{
+  "sections": [
+    "hero",
+    "features",
+    "pricing",
+    "testimonials",
+    "faq",
+    "contact",
+    "footer"
+  ],
+  "colorScheme": {
+    "light": {
+      "primary": "#2563EB",
+      "primaryDark": "#1D4ED8",
+      "secondary": "#10B981",
+      "background": "#FFFFFF",
+      "backgroundAlt": "#F9FAFB",
+      "text": "#111827",
+      "textSecondary": "#6B7280",
+      "border": "#E5E7EB",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444"
+    },
+    "dark": {
+      "primary": "#3B82F6",
+      "primaryDark": "#2563EB",
+      "secondary": "#34D399",
+      "background": "#111827",
+      "backgroundAlt": "#1F2937",
+      "text": "#F9FAFB",
+      "textSecondary": "#D1D5DB",
+      "border": "#374151",
+      "success": "#34D399",
+      "warning": "#FBBF24",
+      "error": "#F87171"
+    }
+  },
+  "typography": {
+    "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "scale": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem",
+      "6xl": "3.75rem"
+    },
+    "fontWeight": {
+      "light": 300,
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extrabold": 800
+    }
+  },
+  "breakpoints": {
+    "mobile": "0px",
+    "tablet": "640px",
+    "desktop": "1024px",
+    "wide": "1280px"
+  },
+  "accessibility": {
+    "wcagAA": [
+      "Minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text",
+      "All interactive elements have a minimum touch target of 44x44px by 44px",
+      "All form fields have associated labels",
+      "All images have appropriate alt text",
+      "Heading levels are used in a logical order",
+      "Keyboard navigation is supported for all interactive elements",
+      "Focus indicators are visible and have sufficient contrast",
+      "ARIA labels are used where necessary for screen readers",
+      "Language of the page is declared",
+      "Skip to content link is provided"
+    ],
+    "keyboardNavigation": [
+      "All interactive elements (links, buttons, form fields) are reachable via Tab key",
+      "Enter or Space key activates buttons and links",
+      "Escape key closes modals and dropdowns",
+      "Arrow keys navigate within menus and sliders",
+      "Focus order follows logical reading order",
+      "No keyboard traps"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "mission_47f5144b-83d7-460c-97b5-95c0faeca269",
+  "title": "Create a full‑screen hero section with background image and CTA button",
+  "description": "Create a full‑screen hero section with background image and CTA button",
+  "goal": "Create a full‑screen hero section with background image and CTA button",
+  "status": "queued",
+  "createdAt": "2026-07-21T08:47:38.689Z",
+  "updatedAt": "2026-07-21T08:47:38.689Z",
+  "estimatedDuration": 30,
+  "progress": 0,
+  "logs": [
+    {
+      "id": "log_f2651488-1e34-4eab-9bfd-0bb7556e8ce9",
+      "timestamp": "2026-07-21T08:47:38.689Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Create a full‑screen hero section with background image and CTA button"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

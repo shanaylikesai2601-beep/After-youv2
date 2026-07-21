@@ -1,0 +1,195 @@
+{
+  "id": "mission_ae259bf1-f2ba-4a34-b899-6f501369e5cc",
+  "title": "Generate Landing Page Coffee Company",
+  "description": "Generate a landing page for a coffee company",
+  "goal": "Generate a landing page for a coffee company\n\nImplement WCAG 2.1 AA accessibility compliance\n\nImplement ARIA landmarks and roles for page sections\n\nConduct WCAG 2.1 AA audit with automated and manual testing",
+  "status": "completed",
+  "createdAt": "2026-07-20T19:09:22.475Z",
+  "updatedAt": "2026-07-20T19:12:17.490Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_76f26029-bba8-4080-8714-d2fb66394e45",
+      "timestamp": "2026-07-20T19:09:22.475Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Generate a landing page for a coffee company"
+      }
+    },
+    {
+      "id": "log_63bb9a0e-4817-4991-bbce-3487e29d9f36",
+      "timestamp": "2026-07-20T19:09:22.487Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_1eb3f9ad-ee3a-46c8-8515-18784e9b3854",
+      "timestamp": "2026-07-20T19:09:40.500Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Plan created with 8 tasks"
+      }
+    },
+    {
+      "id": "log_94373bd2-3d44-430d-b25f-9f91f44ab491",
+      "timestamp": "2026-07-20T19:09:40.503Z",
+      "stage": "executing",
+      "action": "Starting 8 tasks in dependency order",
+      "status": "started",
+      "metadata": {
+        "taskCount": 8
+      }
+    },
+    {
+      "id": "log_6d00d336-5d7d-4a9c-8a28-5a931c318495",
+      "timestamp": "2026-07-20T19:09:40.505Z",
+      "stage": "executing",
+      "action": "Executing task: Analyze landing page requirements and define sections",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Analyze landing page requirements and define sections",
+        "goal": "Determine the content and layout needed for the coffee company landing page to guide implementation.",
+        "expectedOutput": "A requirements document (requirements.txt) listing sections (Hero, Menu, About, Contact, Footer) and required features."
+      }
+    },
+    {
+      "id": "log_2247f60d-8b61-4e9e-9cc4-546b6e10d99d",
+      "timestamp": "2026-07-20T19:12:12.931Z",
+      "stage": "executing",
+      "action": "Task failed: Analyze landing page requirements and define sections",
+      "status": "failed",
+      "metadata": {
+        "error": "Provider request timed out after 60 seconds"
+      }
+    },
+    {
+      "id": "log_e2a38ded-6dae-4986-b3ec-b3fdbf85dc08",
+      "timestamp": "2026-07-20T19:12:12.941Z",
+      "stage": "executing",
+      "action": "Skipping task: Set up project directory structure and placeholder files (unmet dependencies: Analyze landing page requirements and define sections)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Analyze landing page requirements and define sections"
+        ]
+      }
+    },
+    {
+      "id": "log_0fb35c74-2721-4138-886d-02a015f4ca23",
+      "timestamp": "2026-07-20T19:12:12.942Z",
+      "stage": "executing",
+      "action": "Skipping task: Create HTML skeleton with semantic sections (unmet dependencies: Set up project directory structure and placeholder files)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Set up project directory structure and placeholder files"
+        ]
+      }
+    },
+    {
+      "id": "log_ee9964b1-7c51-406a-baad-4440d6fcd033",
+      "timestamp": "2026-07-20T19:12:12.942Z",
+      "stage": "executing",
+      "action": "Skipping task: Implement CSS styling for layout, typography, and responsiveness (unmet dependencies: Create HTML skeleton with semantic sections)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Create HTML skeleton with semantic sections"
+        ]
+      }
+    },
+    {
+      "id": "log_fd32b7b5-7c54-450c-978d-21afca92612c",
+      "timestamp": "2026-07-20T19:12:12.947Z",
+      "stage": "executing",
+      "action": "Skipping task: Add actual content: branding, menu items, about text, contact form (unmet dependencies: Implement CSS styling for layout, typography, and responsiveness)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Implement CSS styling for layout, typography, and responsiveness"
+        ]
+      }
+    },
+    {
+      "id": "log_9add47db-a1ec-41af-afcb-2a900c7c5950",
+      "timestamp": "2026-07-20T19:12:12.948Z",
+      "stage": "executing",
+      "action": "Skipping task: Implement interactive elements: mobile menu toggle and form validation (unmet dependencies: Add actual content: branding, menu items, about text, contact form)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Add actual content: branding, menu items, about text, contact form"
+        ]
+      }
+    },
+    {
+      "id": "log_15b29ed3-4dd5-4ab7-b476-289521b18120",
+      "timestamp": "2026-07-20T19:12:12.949Z",
+      "stage": "executing",
+      "action": "Skipping task: Test landing page across browsers and verify responsiveness (unmet dependencies: Implement interactive elements: mobile menu toggle and form validation)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Implement interactive elements: mobile menu toggle and form validation"
+        ]
+      }
+    },
+    {
+      "id": "log_511b9ae6-734a-4e32-ad7a-080a4bcd9d34",
+      "timestamp": "2026-07-20T19:12:12.950Z",
+      "stage": "executing",
+      "action": "Skipping task: Finalize and package the landing page for delivery (unmet dependencies: Test landing page across browsers and verify responsiveness)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Test landing page across browsers and verify responsiveness"
+        ]
+      }
+    },
+    {
+      "id": "log_67ecce12-3570-4238-bfe5-4dc27925b287",
+      "timestamp": "2026-07-20T19:12:17.483Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "No artifacts were provided for review. The mission required a landing page for a coffee company with WCAG 2.1 AA compliance, ARIA landmarks/roles, and an accessibility audit. Since no files (HTML, CSS, JS, audit reports, etc.) were submitted, the work cannot be evaluated as complete or functional."
+      }
+    },
+    {
+      "id": "log_c3a2cf9b-a4d1-4bc1-a6a5-7f6c193956c0",
+      "timestamp": "2026-07-20T19:12:17.489Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalTasks": 8,
+        "completedTasks": 0,
+        "failedTasks": 8,
+        "totalArtifacts": 0
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [
+    {
+      "id": "output_78e5f83a-0283-4a3d-ba70-1895b466c047",
+      "createdAt": "2026-07-20T19:12:17.488Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 15,\n  \"summary\": \"No artifacts were provided for review. The mission required a landing page for a coffee company with WCAG 2.1 AA compliance, ARIA landmarks/roles, and an accessibility audit. Since no files (HTML, CSS, JS, audit reports, etc.) were submitted, the work cannot be evaluated as complete or functional.\",\n  \"issues\": [\n    \"No source code or design files were submitted.\",\n    \"No evidence of WCAG 2.1 AA implementation (semantic markup, contrast, keyboard navigation, etc.).\",\n    \"No ARIA landmarks or roles present in any provided artifacts.\",\n    \"No accessibility audit results (automated or manual) were included.\"\n  ],\n  \"recommendations\": [\n    \"Create the landing page using HTML5 semantic elements and ensure all content meets WCAG 2.1 AA contrast ratios (minimum 4.5:1 for normal text).\",\n    \"Add ARIA landmarks (banner, nav, main, complementary, contentinfo) and appropriate roles (e.g., role=\\\"search\\\" for search form) to define page structure.\",\n    \"Implement keyboard‑accessible navigation, focus management, and accessible forms with proper labels and error handling.\",\n    \"Run automated tests (e.g., axe, Lighthouse) and perform manual testing (screen reader, keyboard-only) to verify compliance; document findings and remediate any issues.\",\n    \"Provide the final codebase (HTML, CSS, JS) along with an accessibility audit report summarizing automated and manual test results.\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [],
+  "repairHistory": []
+}

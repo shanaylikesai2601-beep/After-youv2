@@ -1,4 +1,5 @@
 import type { CreateMissionInput, Mission, UpdateMissionInput } from "@/types/mission";
+import type { RefineResponse } from "@/server/ai/agents/refiner";
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(path, {
@@ -20,4 +21,12 @@ export const missionsApi = {
     const response = await fetch(`/api/missions/${id}`, { method: "DELETE" });
     if (!response.ok) throw new Error("Mission could not be deleted");
   },
+  refine: async (input: {
+    goal: string;
+    round: number;
+    missionId?: string;
+    previousSelections?: string[];
+    workspacePath?: string;
+  }): Promise<RefineResponse> =>
+    (await request<{ data: RefineResponse }>("/api/missions/refine", { method: "POST", body: JSON.stringify(input) })).data,
 };

@@ -1,0 +1,28 @@
+{
+  "id": "mission_7eff2609-9bb1-44bb-b652-298d933b0e12",
+  "title": "Create a responsive featured drinks grid with hover cards",
+  "description": "Create a responsive featured drinks grid with hover cards",
+  "goal": "Create a responsive featured drinks grid with hover cards",
+  "status": "queued",
+  "createdAt": "2026-07-21T08:47:38.780Z",
+  "updatedAt": "2026-07-21T08:47:38.780Z",
+  "estimatedDuration": 30,
+  "progress": 0,
+  "logs": [
+    {
+      "id": "log_03a982c6-a3e6-4fd2-8785-38b8edb69a18",
+      "timestamp": "2026-07-21T08:47:38.780Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Create a responsive featured drinks grid with hover cards"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

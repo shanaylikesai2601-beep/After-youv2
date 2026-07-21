@@ -1,0 +1,629 @@
+{
+  "id": "mission_052b0e09-9f43-4f40-8f55-2f077c14a05f",
+  "title": "Create an extensive landing page with 3d premium graphics and extensive applications of three.js etc. I want proper font and good scroll based animations.",
+  "description": "Create an extensive landing page with 3d premium graphics and extensive applications of three.js etc. I want proper font and good scroll based animations.",
+  "goal": "Create an extensive landing page with 3d premium graphics and extensive applications of three.js etc. I want proper font and good scroll based animations.\n\nBuild hero 3D showcase with interactive product model\n\nImplement scroll-triggered 3D model animations with GSAP ScrollTrigger\n\nImplement optimized variable font loading with @font-face and preload",
+  "workspace": {
+    "workspaceName": "Coffee demo website",
+    "workspacePath": "/Users/shanaypatel/Documents/Coffee demo website",
+    "indexedAt": "2026-07-21T06:11:13.990Z",
+    "fileCount": 0,
+    "directoryTree": [],
+    "extensions": []
+  },
+  "status": "completed",
+  "createdAt": "2026-07-21T06:37:05.875Z",
+  "updatedAt": "2026-07-21T06:56:40.938Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_ba162e35-a38d-437a-9e19-e445cea845d2",
+      "timestamp": "2026-07-21T06:37:05.875Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Create an extensive landing page with 3d premium graphics and extensive applications of three.js etc. I want proper font and good scroll based animations."
+      }
+    },
+    {
+      "id": "log_19c0b87b-7c6f-4e6f-b2af-d1c98ea0b347",
+      "timestamp": "2026-07-21T06:45:29.971Z",
+      "stage": "planning",
+      "action": "Using pre-built plan from skeleton",
+      "status": "succeeded",
+      "metadata": {
+        "taskCount": 10
+      }
+    },
+    {
+      "id": "log_a3a2a7b3-2a8f-40c0-8759-955eae99d32e",
+      "timestamp": "2026-07-21T06:45:29.972Z",
+      "stage": "executing",
+      "action": "Starting 10 tasks in dependency order",
+      "status": "started",
+      "metadata": {
+        "taskCount": 10
+      }
+    },
+    {
+      "id": "log_ca395e6b-7e4d-4af3-88b2-583df823f434",
+      "timestamp": "2026-07-21T06:45:29.979Z",
+      "stage": "executing",
+      "action": "Executing task: Set up project boilerplate and install dependencies",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Set up project boilerplate and install dependencies",
+        "goal": "Create the basic file structure, HTML/CSS/JS entry points, and add Three.js and GSAP via npm/yarn to enable 3D and animation capabilities.",
+        "expectedOutput": "Project directory containing package.json, index.html, src/css/main.css, src/js/main.js, with three.js and gsap installed in node_modules."
+      }
+    },
+    {
+      "id": "log_0271b338-e68c-46bd-9cd4-31909f412e57",
+      "timestamp": "2026-07-21T06:46:57.486Z",
+      "stage": "executing",
+      "action": "Task completed: Set up project boilerplate and install dependencies",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 5
+      }
+    },
+    {
+      "id": "log_f9412399-aed1-48d0-9cde-49a4c0337491",
+      "timestamp": "2026-07-21T06:46:57.501Z",
+      "stage": "executing",
+      "action": "Executing task: Create hero section HTML structure and initialize Three.js scene",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Create hero section HTML structure and initialize Three.js scene",
+        "goal": "Add a hero container in index.html, set up a basic Three.js scene (camera, renderer, lights) and load a GLTF product model to verify rendering.",
+        "expectedOutput": "Hero section visible on page with a static 3D model rendered inside a canvas element."
+      }
+    },
+    {
+      "id": "log_c602a1ce-971c-4149-9710-344f5e272042",
+      "timestamp": "2026-07-21T06:47:44.925Z",
+      "stage": "executing",
+      "action": "Task completed: Create hero section HTML structure and initialize Three.js scene",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 1
+      }
+    },
+    {
+      "id": "log_093e7939-7eca-4856-9bd9-63cc739f97e6",
+      "timestamp": "2026-07-21T06:47:44.980Z",
+      "stage": "executing",
+      "action": "Executing task: Add interactive OrbitControls to the hero model",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 2,
+        "taskTitle": "Add interactive OrbitControls to the hero model",
+        "goal": "Integrate Three.js OrbitControls to allow users to rotate, zoom, and pan the product model using mouse/touch.",
+        "expectedOutput": "Hero model responds to user input with smooth rotation/zoom/pan."
+      }
+    },
+    {
+      "id": "log_84ab2b74-fb36-4c81-923f-cd5d353d66fd",
+      "timestamp": "2026-07-21T06:48:31.035Z",
+      "stage": "executing",
+      "action": "Task completed: Add interactive OrbitControls to the hero model",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_0c6947ff-6a1e-4121-9466-be8ad003b8d4",
+      "timestamp": "2026-07-21T06:48:31.043Z",
+      "stage": "executing",
+      "action": "Executing task: Implement scroll-triggered 3D animations with GSAP ScrollTrigger",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 3,
+        "taskTitle": "Implement scroll-triggered 3D animations with GSAP ScrollTrigger",
+        "goal": "Use GSAP ScrollTrigger to animate the hero model's rotation, scale, and position based on scroll progress, creating a dynamic scroll‑linked experience.",
+        "expectedOutput": "As user scrolls, the model rotates, scales, or moves smoothly in sync with scroll position."
+      }
+    },
+    {
+      "id": "log_93cf4c14-adc8-4791-ae7c-0f581fcd328a",
+      "timestamp": "2026-07-21T06:49:05.526Z",
+      "stage": "executing",
+      "action": "Task completed: Implement scroll-triggered 3D animations with GSAP ScrollTrigger",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_49ffacbd-f404-4874-b029-240faa4813a9",
+      "timestamp": "2026-07-21T06:49:05.562Z",
+      "stage": "executing",
+      "action": "Executing task: Implement optimized variable font loading with @font-face and preload",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 4,
+        "taskTitle": "Implement optimized variable font loading with @font-face and preload",
+        "goal": "Add a @font-face rule for a variable font, include a <link rel=\"preload\"> in HTML, and apply the font to headings/body to ensure fast, FOIT‑free typography.",
+        "expectedOutput": "Custom variable font loads before first paint, CSS uses the font-family, and no fallback flash is visible."
+      }
+    },
+    {
+      "id": "log_9a6f7941-7c14-4a80-b32c-0c43d308f1af",
+      "timestamp": "2026-07-21T06:49:13.963Z",
+      "stage": "executing",
+      "action": "Task failed: Implement optimized variable font loading with @font-face and preload",
+      "status": "failed",
+      "metadata": {
+        "error": "Provider error 500: {\"error\":\"Internal Server Error (ref: 6a5a086e-8a08-4d18-b249-685c356df537)\"}\n"
+      }
+    },
+    {
+      "id": "log_52777559-4e7f-4665-92e6-d4dc176c6cb0",
+      "timestamp": "2026-07-21T06:49:13.969Z",
+      "stage": "executing",
+      "action": "Executing task: Add scroll‑based UI animations (fade‑in, parallax) using GSAP ScrollTrigger",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 5,
+        "taskTitle": "Add scroll‑based UI animations (fade‑in, parallax) using GSAP ScrollTrigger",
+        "goal": "Enhance landing page sections with GSAP‑driven fade‑in, slide‑up, or parallax effects triggered by scroll to complement the 3D hero.",
+        "expectedOutput": "Each section animates in (opacity/transform) or moves parallax‑wise as user scrolls, creating a cohesive visual flow."
+      }
+    },
+    {
+      "id": "log_e82d5413-4ab6-4c7e-ba55-a6df4a73303d",
+      "timestamp": "2026-07-21T06:50:50.179Z",
+      "stage": "executing",
+      "action": "Task completed: Add scroll‑based UI animations (fade‑in, parallax) using GSAP ScrollTrigger",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_3513eac5-33d0-4259-afbe-5bfa8b84ae94",
+      "timestamp": "2026-07-21T06:50:50.183Z",
+      "stage": "executing",
+      "action": "Executing task: Optimize performance: texture compression, Draco, lazy loading, and resize handling",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 6,
+        "taskTitle": "Optimize performance: texture compression, Draco, lazy loading, and resize handling",
+        "goal": "Reduce load times and maintain high FPS by compressing textures, using Draco mesh compression, lazy‑loading off‑screen assets, and updating renderer size on window resize.",
+        "expectedOutput": "Page loads faster (<3 s on 3G), textures are .ktx2 or .glb with Draco, renderer adapts to viewport changes without distortion."
+      }
+    },
+    {
+      "id": "log_a7786427-2a33-4c54-82c4-63843b977be1",
+      "timestamp": "2026-07-21T06:56:13.664Z",
+      "stage": "executing",
+      "action": "Task failed: Optimize performance: texture compression, Draco, lazy loading, and resize handling",
+      "status": "failed",
+      "metadata": {
+        "error": "Provider request timed out after 60 seconds"
+      }
+    },
+    {
+      "id": "log_9b26b0a7-40ae-475b-85fc-a6b81345c52a",
+      "timestamp": "2026-07-21T06:56:13.672Z",
+      "stage": "executing",
+      "action": "Skipping task: undefined (unmet dependencies: Optimize performance: texture compression, Draco, lazy loading, and resize handling)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Optimize performance: texture compression, Draco, lazy loading, and resize handling"
+        ]
+      }
+    },
+    {
+      "id": "log_13684531-6df4-4486-a58c-d8760ab328db",
+      "timestamp": "2026-07-21T06:56:13.678Z",
+      "stage": "executing",
+      "action": "Executing task: Run linting, type checking (if TypeScript), and production build",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 8,
+        "taskTitle": "Run linting, type checking (if TypeScript), and production build",
+        "goal": "Validate code quality, catch errors, and ensure the app builds successfully for production.",
+        "expectedOutput": "Clean lint output, no TypeScript errors, and a successful production bundle (e.g., via vite/webpack) with minified assets."
+      }
+    },
+    {
+      "id": "log_78915e2f-74ee-40bd-b88b-f47af6d26d32",
+      "timestamp": "2026-07-21T06:56:27.622Z",
+      "stage": "executing",
+      "action": "Task failed: Run linting, type checking (if TypeScript), and production build",
+      "status": "failed",
+      "metadata": {
+        "error": "Provider error 502: {\"error\":\"Post \\\"https://ollama.com:443/v1/chat/completions?ts=1784616973\\\": read tcp 192.168.29.51:50554-\\u003e34.36.133.15:443: read: connection reset by peer\"}"
+      }
+    },
+    {
+      "id": "log_1d3c0f34-e50e-443a-b0a0-9ddbf07545be",
+      "timestamp": "2026-07-21T06:56:27.632Z",
+      "stage": "executing",
+      "action": "Skipping task: Document implementation and suggest next steps (unmet dependencies: Run linting, type checking (if TypeScript), and production build)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Run linting, type checking (if TypeScript), and production build"
+        ]
+      }
+    },
+    {
+      "id": "log_8006d495-a946-4f6a-ab0c-b3a737d74dcf",
+      "timestamp": "2026-07-21T06:56:40.930Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "The repository currently contains only empty scaffolding (package.json, folder structure, and placeholder CSS/JS files). No actual landing‑page markup, Three.js scene, GSAP ScrollTrigger logic, variable‑font @font-face rules, or preload tags have been implemented. Consequently, the mission requirements for a hero 3D showcase, scroll‑triggered 3D animations, and optimized font loading are not satisfied."
+      }
+    },
+    {
+      "id": "log_3db1eeb3-9f3b-46b5-851a-617d5490e5ca",
+      "timestamp": "2026-07-21T06:56:40.937Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalTasks": 10,
+        "completedTasks": 5,
+        "failedTasks": 5,
+        "totalArtifacts": 6
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_398a8631-488c-45bc-b829-8b79ab07d084",
+      "createdAt": "2026-07-21T06:46:57.496Z",
+      "key": "task-0-Set up project boilerplate and install dependencies",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_42c24b54-4446-46a3-bd7a-3fd69308f7b2",
+      "createdAt": "2026-07-21T06:47:44.978Z",
+      "key": "task-1-Create hero section HTML structure and initialize Three.js scene",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_7b37d38d-100f-4782-b3fa-261fb50b31fc",
+      "createdAt": "2026-07-21T06:48:31.040Z",
+      "key": "task-2-Add interactive OrbitControls to the hero model",
+      "value": "Coding agent completed after 8 steps, 7 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_5b5d2d32-66ee-4c59-b8be-bacdf6727090",
+      "createdAt": "2026-07-21T06:49:05.561Z",
+      "key": "task-3-Implement scroll-triggered 3D animations with GSAP ScrollTrigger",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_9781b33a-db20-422a-a8d9-7ad3c1e75cba",
+      "createdAt": "2026-07-21T06:50:50.182Z",
+      "key": "task-5-Add scroll‑based UI animations (fade‑in, parallax) using GSAP ScrollTrigger",
+      "value": "Coding agent completed after 1 steps, 0 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_ef89a4f1-7ace-41e6-93e0-d29313e29a22",
+      "createdAt": "2026-07-21T06:46:57.494Z",
+      "type": "code",
+      "title": "Set up project boilerplate and install dependencies",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": [
+          "package.json",
+          "src",
+          "index.html",
+          "src/css",
+          "src/css/style.css"
+        ]
+      }
+    },
+    {
+      "id": "output_c48fab3f-900d-4610-a45d-b0eae7f8845a",
+      "createdAt": "2026-07-21T06:47:44.926Z",
+      "type": "code",
+      "title": "Create hero section HTML structure and initialize Three.js scene",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": [
+          "src/js/main.js"
+        ]
+      }
+    },
+    {
+      "id": "output_5137c94d-f0fc-4ce4-bbf2-d9b6eec86eae",
+      "createdAt": "2026-07-21T06:48:31.038Z",
+      "type": "code",
+      "title": "Add interactive OrbitControls to the hero model",
+      "content": "Coding agent completed after 8 steps, 7 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_af89ace1-ca10-4022-86bd-4d51a193a127",
+      "createdAt": "2026-07-21T06:49:05.534Z",
+      "type": "code",
+      "title": "Implement scroll-triggered 3D animations with GSAP ScrollTrigger",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_d5eaeb39-7f1d-49df-aff2-bf815a39e95c",
+      "createdAt": "2026-07-21T06:50:50.182Z",
+      "type": "code",
+      "title": "Add scroll‑based UI animations (fade‑in, parallax) using GSAP ScrollTrigger",
+      "content": "Coding agent completed after 1 steps, 0 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_0f239d2f-e94f-4be4-a2d6-7857bcd47329",
+      "createdAt": "2026-07-21T06:56:40.935Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 15,\n  \"summary\": \"The repository currently contains only empty scaffolding (package.json, folder structure, and placeholder CSS/JS files). No actual landing‑page markup, Three.js scene, GSAP ScrollTrigger logic, variable‑font @font-face rules, or preload tags have been implemented. Consequently, the mission requirements for a hero 3D showcase, scroll‑triggered 3D animations, and optimized font loading are not satisfied.\",\n  \"issues\": [\n    \"index.html lacks any HTML structure (no hero section, container for Three.js canvas, or scrollable content).\",\n    \"src/css/style.css is empty or contains only minimal reset; no styling for layout, typography, or 3D canvas.\",\n    \"src/js/main.js does not import Three.js, GSAP, or set up a scene, camera, renderer, or ScrollTrigger animations.\",\n    \"No variable font files are referenced, no @font-face declarations, and no <link rel=\\\"preload\\\"> tags for font assets.\",\n    \"No 3D model (e.g., GLTF/OBJ) is included or loaded, so there is nothing to animate.\",\n    \"Missing build/dev scripts (e.g., start, build) in package.json to run a dev server or bundle assets.\",\n    \"No evidence of performance optimizations (e.g., model compression, texture optimization, lazy loading).\"\n  ],\n  \"recommendations\": [\n    \"Add a proper HTML5 boilerplate to index.html with a hero section containing a <canvas id=\\\"three-canvas\\\"></canvas> and scrollable sections for content.\",\n    \"Install three.js and gsap via npm (or yarn) and import them in main.js; set up a basic Three.js scene (scene, camera, renderer, lights) and load a sample product model (GLTF).\",\n    \"Implement GSAP ScrollTrigger to animate the model’s position, rotation, or scale based on scroll progress; tie triggers to specific sections.\",\n    \"Choose a variable font (e.g., Inter Variable, Roboto Flex), place the .woff2 files in a /fonts folder, declare @font-face with appropriate font-weight/font-stretch ranges, and add <link rel=\\\"preload\\\" as=\\\"font\\\" ...> tags in the head.\",\n    \"Style the page in style.css: set up a full‑height hero, ensure the canvas is positioned fixed or absolute, add typography using the variable font, and create scroll‑aware sections.\",\n    \"Add useful npm scripts: \\\"dev\\\" (e.g., vite or parcel dev server), \\\"build\\\" (production bundle), and \\\"preview\\\". Consider using a bundler like Vite for automatic asset handling.\",\n    \"Optimize the 3D model: compress textures, use Draco mesh compression, and consider lazy‑loading the model until it enters the viewport.\",\n    \"Test performance (Lighthouse) and adjust renderer settings (antialias, pixel ratio) and animation frame rates for smooth scroll‑linked animations.\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_e0f522ce-91e2-4596-ad74-64a02535ab12",
+      "createdAt": "2026-07-21T06:46:57.479Z",
+      "name": "package.json",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "package.json",
+        "task": "Set up project boilerplate and install dependencies"
+      }
+    },
+    {
+      "id": "artifact_c2b8130e-5c49-4670-b835-1fcf82732b55",
+      "createdAt": "2026-07-21T06:46:57.480Z",
+      "name": "src",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src",
+        "task": "Set up project boilerplate and install dependencies"
+      }
+    },
+    {
+      "id": "artifact_07ace200-f5ab-4b34-a6d3-cb59fbba1de7",
+      "createdAt": "2026-07-21T06:46:57.482Z",
+      "name": "index.html",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "index.html",
+        "task": "Set up project boilerplate and install dependencies"
+      }
+    },
+    {
+      "id": "artifact_e4c12cc2-78af-4479-aa16-ebef71d08b3f",
+      "createdAt": "2026-07-21T06:46:57.483Z",
+      "name": "src/css",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/css",
+        "task": "Set up project boilerplate and install dependencies"
+      }
+    },
+    {
+      "id": "artifact_bd79b8ec-26fc-4c57-8b48-c558d1173995",
+      "createdAt": "2026-07-21T06:46:57.485Z",
+      "name": "src/css/style.css",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/css/style.css",
+        "task": "Set up project boilerplate and install dependencies"
+      }
+    },
+    {
+      "id": "artifact_2b43262e-8696-4231-907f-e4d5e5977f5f",
+      "createdAt": "2026-07-21T06:47:44.922Z",
+      "name": "src/js/main.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/js/main.js",
+        "task": "Create hero section HTML structure and initialize Three.js scene"
+      }
+    }
+  ],
+  "repairHistory": [],
+  "finalPlan": [
+    {
+      "id": "stage-1",
+      "title": "Analyze existing codebase patterns",
+      "objective": "Read existing files to understand the project structure, design system, component patterns, and routing conventions before making any changes.",
+      "explanation": "List of files examined and key patterns identified (framework, styling, component structure, navigation).",
+      "complexity": "low",
+      "estimatedDuration": 6,
+      "dependencies": [],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Read app/layout.tsx",
+        "Read existing page files",
+        "Read CSS/design system files",
+        "Read existing component files"
+      ]
+    },
+    {
+      "id": "stage-2",
+      "title": "Identify affected files and create implementation plan",
+      "objective": "Determine exactly which files need to be created or modified based on the feature requirements and existing patterns.",
+      "explanation": "List of files to create (new components, pages) and files to modify (layout, navigation, types).",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-1"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "All required new files identified",
+        "All existing files to modify identified",
+        "Dependencies between files documented"
+      ]
+    },
+    {
+      "id": "stage-3",
+      "title": "Create new routes and pages",
+      "objective": "Create new Next.js App Router pages (e.g., app/notes/page.tsx) following existing routing patterns.",
+      "explanation": "New page file(s) with proper imports and initial structure matching existing conventions.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-2"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "New route directory created",
+        "Page component exported as default",
+        "Page follows existing layout patterns"
+      ]
+    },
+    {
+      "id": "stage-4",
+      "title": "Create reusable components",
+      "objective": "Build reusable UI components (e.g., NoteCard, NotesList) in components/ directory following existing component patterns.",
+      "explanation": "Component files with props interface, styling using design system CSS tokens, and proper exports.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-3"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Components accept typed props",
+        "Components use workspace.css design tokens",
+        "Components handle loading/empty states",
+        "Components are exported for reuse"
+      ]
+    },
+    {
+      "id": "stage-5",
+      "title": "Implement search and input features",
+      "objective": "Add interactive features like search bars, filters, modals or inline editors using React state management.",
+      "explanation": "Search/filter logic wired to component state, input handlers, and data flow for creating/editing items.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-4"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Search/filter updates on input",
+        "New item creation works",
+        "State management is consistent"
+      ]
+    },
+    {
+      "id": "stage-6",
+      "title": "Update navigation and global layout",
+      "objective": "Add navigation links in the root layout so the new page is accessible from anywhere in the app.",
+      "explanation": "Updated layout file with nav links styled using design system tokens.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-3"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Nav link added to new page",
+        "Navigation style matches design system",
+        "All existing links still work"
+      ]
+    },
+    {
+      "id": "stage-7",
+      "title": "Update shared types and data structures",
+      "objective": "Create or update type definitions and mock data for the new feature in types/ or lib/.",
+      "explanation": "TypeScript interfaces for the new data model and mock data for development.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-4"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Types defined and exported",
+        "Mock data created if applicable",
+        "Types used by components"
+      ]
+    },
+    {
+      "id": "stage-8",
+      "title": "Run type checking and fix errors",
+      "objective": "Run npx tsc --noEmit to check for TypeScript errors and fix any that arise.",
+      "explanation": "Clean type check output with zero errors.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-7",
+        "stage-6"
+      ],
+      "suggestedTools": [
+        "terminal"
+      ],
+      "completionCriteria": [
+        "npx tsc --noEmit passes",
+        "All type errors resolved"
+      ]
+    },
+    {
+      "id": "stage-9",
+      "title": "Run production build and verify",
+      "objective": "Run npx next build to verify the project compiles without errors in production mode.",
+      "explanation": "Successful build output with no errors.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-8"
+      ],
+      "suggestedTools": [
+        "terminal"
+      ],
+      "completionCriteria": [
+        "npx next build succeeds",
+        "No build warnings about new code"
+      ]
+    }
+  ]
+}

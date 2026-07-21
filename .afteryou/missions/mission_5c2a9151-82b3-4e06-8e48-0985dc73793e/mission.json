@@ -1,0 +1,750 @@
+{
+  "id": "mission_5c2a9151-82b3-4e06-8e48-0985dc73793e",
+  "title": "Look at this website, fix everything that's wrong with it and enhance it to something that looks like a premium product ready for shipping. Use 3D animations an",
+  "description": "Look at this website, fix everything that's wrong with it and enhance it to something that looks like a premium product ready for shipping. Use 3D animations and Three.js tools.",
+  "goal": "Look at this website, fix everything that's wrong with it and enhance it to something that looks like a premium product ready for shipping. Use 3D animations and Three.js tools.\n\nAdd comprehensive error handling and loading states\n\nImplement per‑asset loading progress with retry for Three.js resources\n\nAdd interactive 3D product hotspots with tooltip overlays",
+  "workspace": {
+    "workspaceName": "Coffee demo website",
+    "workspacePath": "/Users/shanaypatel/Documents/Coffee demo website",
+    "indexedAt": "2026-07-21T07:35:47.325Z",
+    "fileCount": 2,
+    "directoryTree": [
+      ".afteryou/",
+      ".afteryou/checkpoints/",
+      "index.html",
+      "package.json",
+      "src/",
+      "src/css/",
+      "src/js/"
+    ],
+    "extensions": [
+      ".html",
+      ".json"
+    ]
+  },
+  "status": "completed",
+  "createdAt": "2026-07-21T07:36:35.863Z",
+  "updatedAt": "2026-07-21T07:52:50.939Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_e01de08b-df62-4fad-b91b-32fa298a03c7",
+      "timestamp": "2026-07-21T07:36:35.863Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Look at this website, fix everything that's wrong with it and enhance it to something that looks like a premium product ready for shipping. Use 3D animations and Three.js tools."
+      }
+    },
+    {
+      "id": "log_2b2e969a-c535-4d52-af31-54ca08d6be68",
+      "timestamp": "2026-07-21T07:41:37.772Z",
+      "stage": "planning",
+      "action": "Using pre-built plan from skeleton",
+      "status": "succeeded",
+      "metadata": {
+        "taskCount": 12
+      }
+    },
+    {
+      "id": "log_0101608f-15fb-4eba-bc05-ac1392ec34d4",
+      "timestamp": "2026-07-21T07:41:37.871Z",
+      "stage": "executing",
+      "action": "Starting 12 tasks in dependency order",
+      "status": "started",
+      "metadata": {
+        "taskCount": 12
+      }
+    },
+    {
+      "id": "log_d68462fb-559c-4432-b46c-fe8449cb893e",
+      "timestamp": "2026-07-21T07:41:37.896Z",
+      "stage": "executing",
+      "action": "Executing task: Analyze existing website codebase and identify issues and improvement areas",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Analyze existing website codebase and identify issues and improvement areas",
+        "goal": "Understand current tech stack, structure, and deficiencies to inform the redesign and feature implementation.",
+        "expectedOutput": "Analysis document (analysis.md) listing code issues, missing features, performance concerns, and technology gaps."
+      }
+    },
+    {
+      "id": "log_fe51bdcb-45bf-4e5a-89c5-347c6326a849",
+      "timestamp": "2026-07-21T07:42:51.734Z",
+      "stage": "executing",
+      "action": "Task completed: Analyze existing website codebase and identify issues and improvement areas",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 1
+      }
+    },
+    {
+      "id": "log_04af4e6a-a1cf-4c2e-8d64-89283ccaa214",
+      "timestamp": "2026-07-21T07:42:51.744Z",
+      "stage": "executing",
+      "action": "Executing task: Define technical specification for premium 3D product showcase",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Define technical specification for premium 3D product showcase",
+        "goal": "Create a clear roadmap detailing required assets, animations, hotspot behavior, error handling, loading states, and UI/UX standards.",
+        "expectedOutput": "Specification file (spec.md) outlining feature list, asset list, interaction flows, and non‑functional requirements."
+      }
+    },
+    {
+      "id": "log_3beb5982-bcf9-4bde-8cc4-daba441605af",
+      "timestamp": "2026-07-21T07:43:07.290Z",
+      "stage": "executing",
+      "action": "Task completed: Define technical specification for premium 3D product showcase",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_1db95693-59c3-4d70-a85b-adb4b64da03d",
+      "timestamp": "2026-07-21T07:43:07.328Z",
+      "stage": "executing",
+      "action": "Executing task: Set up project scaffolding: install Three.js, @react-three/fiber (if React), GSAP, and configure build tool",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 2,
+        "taskTitle": "Set up project scaffolding: install Three.js, @react-three/fiber (if React), GSAP, and configure build tool",
+        "goal": "Establish a clean development environment with all necessary dependencies and a basic Three.js canvas.",
+        "expectedOutput": "Updated package.json, src/threejs/basicScene.js that renders an empty canvas, and a working dev server."
+      }
+    },
+    {
+      "id": "log_d5ac9b21-32bd-4268-b942-ecd9f51c269b",
+      "timestamp": "2026-07-21T07:44:57.479Z",
+      "stage": "executing",
+      "action": "Task completed: Set up project scaffolding: install Three.js, @react-three/fiber (if React), GSAP, and configure build tool",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_0d4ed690-c737-44ae-8955-7beea011e59d",
+      "timestamp": "2026-07-21T07:44:57.490Z",
+      "stage": "executing",
+      "action": "Executing task: Implement Three.js loading manager with progress tracking and retry logic for assets",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 3,
+        "taskTitle": "Implement Three.js loading manager with progress tracking and retry logic for assets",
+        "goal": "Provide a reusable loader that reports per‑asset progress, handles failures with retry attempts, and integrates with React state.",
+        "expectedOutput": "src/loading/AssetLoader.js (or .ts) exposing loadAsset(url, options) returning a promise with progress callbacks and configurable retry count."
+      }
+    },
+    {
+      "id": "log_63c87dca-8fe5-43fd-bf58-9422fa63010e",
+      "timestamp": "2026-07-21T07:45:28.938Z",
+      "stage": "executing",
+      "action": "Task completed: Implement Three.js loading manager with progress tracking and retry logic for assets",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_511c5977-adfc-4c2b-9aad-f7d6a6e8659a",
+      "timestamp": "2026-07-21T07:45:28.953Z",
+      "stage": "executing",
+      "action": "Executing task: Create global error boundary and loading state UI component",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 4,
+        "taskTitle": "Create global error boundary and loading state UI component",
+        "goal": "Ensure graceful degradation when Three.js assets fail and provide a consistent loading overlay during asset initialization.",
+        "expectedOutput": "src/components/ErrorBoundary.jsx (or .tsx) and src/components/LoadingOverlay.jsx that display fallback UI and loading spinner/progress."
+      }
+    },
+    {
+      "id": "log_542e1295-d840-4da0-bb98-10f73c6406cb",
+      "timestamp": "2026-07-21T07:46:28.611Z",
+      "stage": "executing",
+      "action": "Task completed: Create global error boundary and loading state UI component",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_40befcf5-9e9d-467a-a912-36e73a875cfe",
+      "timestamp": "2026-07-21T07:46:28.618Z",
+      "stage": "executing",
+      "action": "Executing task: Load primary 3D product model using AssetLoader, integrate with scene, and apply initial transformations",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 5,
+        "taskTitle": "Load primary 3D product model using AssetLoader, integrate with scene, and apply initial transformations",
+        "goal": "Bring the main product into the Three.js scene, showing it only after successful load with appropriate loading/error states.",
+        "expectedOutput": "src/scene/ProductModel.js that uses AssetLoader to load the model, adds it to the scene, and centers/scale it."
+      }
+    },
+    {
+      "id": "log_783cd944-b1af-41bb-a158-6a59f51bbbde",
+      "timestamp": "2026-07-21T07:46:52.171Z",
+      "stage": "executing",
+      "action": "Task completed: Load primary 3D product model using AssetLoader, integrate with scene, and apply initial transformations",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_85b84c74-5ecf-44ed-856f-0a9a52abac94",
+      "timestamp": "2026-07-21T07:46:52.249Z",
+      "stage": "executing",
+      "action": "Executing task: Design and implement hotspot data structure and interaction system (raycaster, click detection, tooltip positioning)",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 6,
+        "taskTitle": "Design and implement hotspot data structure and interaction system (raycaster, click detection, tooltip positioning)",
+        "goal": "Enable users to click on specific parts of the 3D model to reveal contextual information via tooltips.",
+        "expectedOutput": "src/hotspots/HotspotManager.js (raycaster setup, click handling, hotspot list) and src/hotspots/Tooltip.jsx (positioning logic)."
+      }
+    },
+    {
+      "id": "log_41cb4f53-3a39-4e4e-a174-fde047322fd2",
+      "timestamp": "2026-07-21T07:49:01.815Z",
+      "stage": "executing",
+      "action": "Task failed: Design and implement hotspot data structure and interaction system (raycaster, click detection, tooltip positioning)",
+      "status": "failed",
+      "metadata": {
+        "error": "Provider request timed out after 60 seconds"
+      }
+    },
+    {
+      "id": "log_9fa58991-d47f-4763-9699-ba93ef9a6c32",
+      "timestamp": "2026-07-21T07:49:02.197Z",
+      "stage": "executing",
+      "action": "Skipping task: Create tooltip overlay component with styling, animations, and accessibility (ARIA) (unmet dependencies: Design and implement hotspot data structure and interaction system (raycaster, click detection, tooltip positioning))",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Design and implement hotspot data structure and interaction system (raycaster, click detection, tooltip positioning)"
+        ]
+      }
+    },
+    {
+      "id": "log_d8639024-306d-4443-83e5-b2178c48346f",
+      "timestamp": "2026-07-21T07:49:02.463Z",
+      "stage": "executing",
+      "action": "Executing task: Add 3D animations: model rotation, hotspot pulsing, scene ambient animation using GSAP or Three.js clock",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 8,
+        "taskTitle": "Add 3D animations: model rotation, hotspot pulsing, scene ambient animation using GSAP or Three.js clock",
+        "goal": "Enhance visual appeal with subtle, continuous motions that signal interactivity and premium quality.",
+        "expectedOutput": "src/animations/SceneAnimator.js that drives model rotation, hotspot scale pulse, and optional ambient light animation."
+      }
+    },
+    {
+      "id": "log_717da234-85c4-4dfd-b39a-ab7193f6d5da",
+      "timestamp": "2026-07-21T07:50:29.095Z",
+      "stage": "executing",
+      "action": "Task completed: Add 3D animations: model rotation, hotspot pulsing, scene ambient animation using GSAP or Three.js clock",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 1
+      }
+    },
+    {
+      "id": "log_ce5b4cf0-a25e-4357-adcf-1dc8fabaae5c",
+      "timestamp": "2026-07-21T07:50:29.117Z",
+      "stage": "executing",
+      "action": "Executing task: Implement per‑asset loading progress UI (progress bar per model/texture) and display overall loading progress",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 9,
+        "taskTitle": "Implement per‑asset loading progress UI (progress bar per model/texture) and display overall loading progress",
+        "goal": "Give users fine‑grained feedback on asset loading and reassure them of retry mechanisms.",
+        "expectedOutput": "src/components/AssetProgressBar.jsx that accepts asset name, progress, and retry count; integrated into LoadingOverlay to show a list of assets and overall percentage."
+      }
+    },
+    {
+      "id": "log_7f209377-1fb5-4e11-a3c7-40ed0c18ba95",
+      "timestamp": "2026-07-21T07:52:41.512Z",
+      "stage": "executing",
+      "action": "Task completed: Implement per‑asset loading progress UI (progress bar per model/texture) and display overall loading progress",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_b6ff97fe-4685-4e2a-9d18-9082baeeda06",
+      "timestamp": "2026-07-21T07:52:41.527Z",
+      "stage": "executing",
+      "action": "Skipping task: Polish UI/UX: apply premium design (theme, typography, responsive layout), ensure accessibility, add fallback for non‑WebGL (unmet dependencies: Create tooltip overlay component with styling, animations, and accessibility (ARIA))",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Create tooltip overlay component with styling, animations, and accessibility (ARIA)"
+        ]
+      }
+    },
+    {
+      "id": "log_9321e192-1e80-4cbc-91ca-1259d8cb0dd7",
+      "timestamp": "2026-07-21T07:52:41.528Z",
+      "stage": "executing",
+      "action": "Skipping task: Run verification: type checking, linting, production build, cross‑browser testing, validate error handling and loading states (unmet dependencies: Polish UI/UX: apply premium design (theme, typography, responsive layout), ensure accessibility, add fallback for non‑WebGL)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Polish UI/UX: apply premium design (theme, typography, responsive layout), ensure accessibility, add fallback for non‑WebGL"
+        ]
+      }
+    },
+    {
+      "id": "log_f6e187ef-c5a6-4545-a3f9-314b3994e436",
+      "timestamp": "2026-07-21T07:52:50.928Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Only two placeholder JavaScript files were created. No Three.js scene, loading progress UI, error handling, retry logic, or interactive hotspots with tooltips were implemented. The work does not meet the mission requirements for a premium, shipping‑ready 3D‑enhanced website."
+      }
+    },
+    {
+      "id": "log_736c9c40-4906-4265-b96f-d3f880efd2dd",
+      "timestamp": "2026-07-21T07:52:50.935Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalTasks": 12,
+        "completedTasks": 8,
+        "failedTasks": 4,
+        "totalArtifacts": 2
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_410b2376-045a-4e93-bc28-690abc65a285",
+      "createdAt": "2026-07-21T07:42:51.741Z",
+      "key": "task-0-Analyze existing website codebase and identify issues and improvement areas",
+      "value": "Coding agent completed after 10 steps, 9 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_9dfd0a0e-1211-4a4e-9df8-df963737662c",
+      "createdAt": "2026-07-21T07:43:07.311Z",
+      "key": "task-1-Define technical specification for premium 3D product showcase",
+      "value": "Coding agent completed after 5 steps, 4 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_682f7ca4-ee31-42b2-bfc1-362f79bc44d1",
+      "createdAt": "2026-07-21T07:44:57.484Z",
+      "key": "task-2-Set up project scaffolding: install Three.js, @react-three/fiber (if React), GSAP, and configure build tool",
+      "value": "Coding agent completed after 7 steps, 6 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_9f444550-7cea-4512-8749-e3319b0cce40",
+      "createdAt": "2026-07-21T07:45:28.951Z",
+      "key": "task-3-Implement Three.js loading manager with progress tracking and retry logic for assets",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_b1e58532-5e58-4515-8211-7ac655e717fe",
+      "createdAt": "2026-07-21T07:46:28.616Z",
+      "key": "task-4-Create global error boundary and loading state UI component",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_7810295d-2e1e-41d8-a5cb-6e3d1ab89d80",
+      "createdAt": "2026-07-21T07:46:52.225Z",
+      "key": "task-5-Load primary 3D product model using AssetLoader, integrate with scene, and apply initial transformations",
+      "value": "Coding agent completed after 1 steps, 0 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_e245d3ec-7ae7-46ad-880c-fbaff44e8373",
+      "createdAt": "2026-07-21T07:50:29.105Z",
+      "key": "task-8-Add 3D animations: model rotation, hotspot pulsing, scene ambient animation using GSAP or Three.js clock",
+      "value": "Coding agent completed after 9 steps, 8 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_57cc37ba-ff7f-46de-9d02-83fb27fc5c61",
+      "createdAt": "2026-07-21T07:52:41.525Z",
+      "key": "task-9-Implement per‑asset loading progress UI (progress bar per model/texture) and display overall loading progress",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_654c5955-d0c3-445a-bffa-510a513a3ba1",
+      "createdAt": "2026-07-21T07:42:51.738Z",
+      "type": "code",
+      "title": "Analyze existing website codebase and identify issues and improvement areas",
+      "content": "Coding agent completed after 10 steps, 9 tool calls",
+      "metadata": {
+        "artifacts": [
+          "src/js/main.js"
+        ]
+      }
+    },
+    {
+      "id": "output_24aa0457-b596-4328-a756-c6a86f7c1e14",
+      "createdAt": "2026-07-21T07:43:07.310Z",
+      "type": "code",
+      "title": "Define technical specification for premium 3D product showcase",
+      "content": "Coding agent completed after 5 steps, 4 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_ae26280d-bbe1-49e1-9eb9-135e91449417",
+      "createdAt": "2026-07-21T07:44:57.481Z",
+      "type": "code",
+      "title": "Set up project scaffolding: install Three.js, @react-three/fiber (if React), GSAP, and configure build tool",
+      "content": "Coding agent completed after 7 steps, 6 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_938c5988-2d72-418a-bca1-bc396c70e3dc",
+      "createdAt": "2026-07-21T07:45:28.943Z",
+      "type": "code",
+      "title": "Implement Three.js loading manager with progress tracking and retry logic for assets",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_55f9ce1b-ab34-48de-a39d-dc6d2baa2ab6",
+      "createdAt": "2026-07-21T07:46:28.613Z",
+      "type": "code",
+      "title": "Create global error boundary and loading state UI component",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_f6419dbc-95e1-4984-8cba-f54d5b18a57a",
+      "createdAt": "2026-07-21T07:46:52.192Z",
+      "type": "code",
+      "title": "Load primary 3D product model using AssetLoader, integrate with scene, and apply initial transformations",
+      "content": "Coding agent completed after 1 steps, 0 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_5b7a2972-dd7a-4e0b-8fd1-b3a550eed49b",
+      "createdAt": "2026-07-21T07:50:29.098Z",
+      "type": "code",
+      "title": "Add 3D animations: model rotation, hotspot pulsing, scene ambient animation using GSAP or Three.js clock",
+      "content": "Coding agent completed after 9 steps, 8 tool calls",
+      "metadata": {
+        "artifacts": [
+          "src/animations/loadingAnimation.js"
+        ]
+      }
+    },
+    {
+      "id": "output_782682f1-7e04-462e-9061-6816c9af515d",
+      "createdAt": "2026-07-21T07:52:41.524Z",
+      "type": "code",
+      "title": "Implement per‑asset loading progress UI (progress bar per model/texture) and display overall loading progress",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_2829939c-0740-403c-83ca-49bb71521e79",
+      "createdAt": "2026-07-21T07:52:50.932Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 25,\n  \"summary\": \"Only two placeholder JavaScript files were created. No Three.js scene, loading progress UI, error handling, retry logic, or interactive hotspots with tooltips were implemented. The work does not meet the mission requirements for a premium, shipping‑ready 3D‑enhanced website.\",\n  \"issues\": [\n    \"Missing Three.js initialization and rendering loop.\",\n    \"No per‑asset loading progress indicator or retry mechanism for textures/models.\",\n    \"No comprehensive error handling (e.g., try/catch around asset loads, fallback UI).\",\n    \"No interactive 3D product hotspots or tooltip overlays.\",\n    \"Loading animation file exists but is not integrated into the main app.\",\n    \"No evidence of CSS/styling or HTML structure to host the 3D canvas.\",\n    \"No build/bundling configuration (e.g., Webpack, Vite) shown for production readiness.\"\n  ],\n  \"recommendations\": [\n    \"Set up a basic Three.js scene in src/js/main.js (camera, renderer, resize handling).\",\n    \"Implement a LoadingManager to track per‑asset progress, display a progress bar, and retry failed loads a configurable number of times.\",\n    \"Wrap asset loaders in try/catch blocks and show user‑friendly error messages with a retry button.\",\n    \"Create a hotspot system: raycast on mouse move, detect intersections with invisible meshes, show tooltip overlays (HTML or CSS) positioned near the intersected point.\",\n    \"Develop src/animations/loadingAnimation.js into a reusable UI component (e.g., a spinner or progress bar) and import it into main.js.\",\n    \"Add basic styling (CSS) and ensure the canvas is responsive and accessible.\",\n    \"Configure a build tool (e.g., Vite) with production minification and asset hashing, then verify the bundle works in a clean environment.\",\n    \"Write unit/integration tests for loading retry logic and hotspot interaction.\",\n    \"Perform cross‑browser testing and validate performance (FPS) on target devices.\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_957639cd-1216-49fe-a195-96cb2c5bb65f",
+      "createdAt": "2026-07-21T07:42:51.732Z",
+      "name": "src/js/main.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/js/main.js",
+        "task": "Analyze existing website codebase and identify issues and improvement areas"
+      }
+    },
+    {
+      "id": "artifact_6a577466-ac9d-4c67-bc5e-60f0c9dee02d",
+      "createdAt": "2026-07-21T07:50:29.091Z",
+      "name": "src/animations/loadingAnimation.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/animations/loadingAnimation.js",
+        "task": "Add 3D animations: model rotation, hotspot pulsing, scene ambient animation using GSAP or Three.js clock"
+      }
+    }
+  ],
+  "repairHistory": [],
+  "finalPlan": [
+    {
+      "id": "stage-1",
+      "title": "Analyze existing website codebase and identify issues and improvement areas",
+      "objective": "Understand current tech stack, structure, and deficiencies to inform the redesign and feature implementation.",
+      "explanation": "Analysis document (analysis.md) listing code issues, missing features, performance concerns, and technology gaps.",
+      "complexity": "medium",
+      "estimatedDuration": 5,
+      "dependencies": [],
+      "suggestedTools": [
+        "filesystem",
+        "editor"
+      ],
+      "completionCriteria": [
+        "Analysis document created and saved to repo root",
+        "Document includes at least five specific actionable items"
+      ]
+    },
+    {
+      "id": "stage-2",
+      "title": "Define technical specification for premium 3D product showcase",
+      "objective": "Create a clear roadmap detailing required assets, animations, hotspot behavior, error handling, loading states, and UI/UX standards.",
+      "explanation": "Specification file (spec.md) outlining feature list, asset list, interaction flows, and non‑functional requirements.",
+      "complexity": "medium",
+      "estimatedDuration": 6,
+      "dependencies": [
+        "stage-1"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "editor"
+      ],
+      "completionCriteria": [
+        "Spec document completed and reviewed",
+        "Spec includes sections for 3D scene, loading, error handling, hotspots, animations, and accessibility"
+      ]
+    },
+    {
+      "id": "stage-3",
+      "title": "Set up project scaffolding: install Three.js, @react-three/fiber (if React), GSAP, and configure build tool",
+      "objective": "Establish a clean development environment with all necessary dependencies and a basic Three.js canvas.",
+      "explanation": "Updated package.json, src/threejs/basicScene.js that renders an empty canvas, and a working dev server.",
+      "complexity": "medium",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-2"
+      ],
+      "suggestedTools": [
+        "terminal",
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Dev server starts without errors",
+        "Empty Three.js canvas visible in browser",
+        "GSAP and Three.js packages installed"
+      ]
+    },
+    {
+      "id": "stage-4",
+      "title": "Implement Three.js loading manager with progress tracking and retry logic for assets",
+      "objective": "Provide a reusable loader that reports per‑asset progress, handles failures with retry attempts, and integrates with React state.",
+      "explanation": "src/loading/AssetLoader.js (or .ts) exposing loadAsset(url, options) returning a promise with progress callbacks and configurable retry count.",
+      "complexity": "medium",
+      "estimatedDuration": 6,
+      "dependencies": [
+        "stage-3"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "editor"
+      ],
+      "completionCriteria": [
+        "Loader successfully loads a test GLTF model",
+        "Progress callback fires with values 0‑1",
+        "On simulated network error, loader retries up to 3 times before rejecting"
+      ]
+    },
+    {
+      "id": "stage-5",
+      "title": "Create global error boundary and loading state UI component",
+      "objective": "Ensure graceful degradation when Three.js assets fail and provide a consistent loading overlay during asset initialization.",
+      "explanation": "src/components/ErrorBoundary.jsx (or .tsx) and src/components/LoadingOverlay.jsx that display fallback UI and loading spinner/progress.",
+      "complexity": "medium",
+      "estimatedDuration": 6,
+      "dependencies": [
+        "stage-4"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "editor"
+      ],
+      "completionCriteria": [
+        "ErrorBoundary catches a thrown error in a child component and shows fallback message",
+        "LoadingOverlay displays when a loading prop is true and hides when false",
+        "Both components are exported and importable"
+      ]
+    },
+    {
+      "id": "stage-6",
+      "title": "Load primary 3D product model using AssetLoader, integrate with scene, and apply initial transformations",
+      "objective": "Bring the main product into the Three.js scene, showing it only after successful load with appropriate loading/error states.",
+      "explanation": "src/scene/ProductModel.js that uses AssetLoader to load the model, adds it to the scene, and centers/scale it.",
+      "complexity": "medium",
+      "estimatedDuration": 6,
+      "dependencies": [
+        "stage-5",
+        "stage-4"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "editor"
+      ],
+      "completionCriteria": [
+        "Model appears in the canvas after loading completes",
+        "LoadingOverlay shows while model is loading and hides after",
+        "If model fails to load, ErrorBoundary displays fallback"
+      ]
+    },
+    {
+      "id": "stage-7",
+      "title": "Design and implement hotspot data structure and interaction system (raycaster, click detection, tooltip positioning)",
+      "objective": "Enable users to click on specific parts of the 3D model to reveal contextual information via tooltips.",
+      "explanation": "src/hotspots/HotspotManager.js (raycaster setup, click handling, hotspot list) and src/hotspots/Tooltip.jsx (positioning logic).",
+      "complexity": "medium",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-6"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "editor"
+      ],
+      "completionCriteria": [
+        "Clicking on a predefined hotspot coordinates triggers a console log with hotspot ID",
+        "Tooltip component receives position data and is rendered near the hotspot",
+        "HotspotManager cleans up raycaster on unmount"
+      ]
+    },
+    {
+      "id": "stage-8",
+      "title": "Create tooltip overlay component with styling, animations, and accessibility (ARIA)",
+      "objective": "Provide a polished, accessible tooltip that fades in/out and follows hotspot interactions.",
+      "explanation": "src/components/Tooltip.jsx styled with CSS modules or styled-components, featuring fade animation, role=\"tooltip\", and proper focus management.",
+      "complexity": "medium",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-7"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "editor"
+      ],
+      "completionCriteria": [
+        "Tooltip appears with fade‑in animation when hotspot is active",
+        "Tooltip hides with fade‑out on click away or timeout",
+        "Tooltip is keyboard navigable and announces via ARIA live region"
+      ]
+    },
+    {
+      "id": "stage-9",
+      "title": "Add 3D animations: model rotation, hotspot pulsing, scene ambient animation using GSAP or Three.js clock",
+      "objective": "Enhance visual appeal with subtle, continuous motions that signal interactivity and premium quality.",
+      "explanation": "src/animations/SceneAnimator.js that drives model rotation, hotspot scale pulse, and optional ambient light animation.",
+      "complexity": "medium",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-6"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "editor"
+      ],
+      "completionCriteria": [
+        "Model rotates smoothly at a constant speed",
+        "Each hotspot scales up/down in a pulsing loop",
+        "Animations pause when the tab is hidden and resume on focus"
+      ]
+    },
+    {
+      "id": "stage-10",
+      "title": "Implement per‑asset loading progress UI (progress bar per model/texture) and display overall loading progress",
+      "objective": "Give users fine‑grained feedback on asset loading and reassure them of retry mechanisms.",
+      "explanation": "src/components/AssetProgressBar.jsx that accepts asset name, progress, and retry count; integrated into LoadingOverlay to show a list of assets and overall percentage.",
+      "complexity": "medium",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-4"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "editor"
+      ],
+      "completionCriteria": [
+        "LoadingOverlay shows a progress bar for each asset (model, textures)",
+        "Overall progress percentage updates as assets load",
+        "When an asset fails and retries, the UI reflects retry attempts"
+      ]
+    },
+    {
+      "id": "stage-11",
+      "title": "Polish UI/UX: apply premium design (theme, typography, responsive layout), ensure accessibility, add fallback for non‑WebGL",
+      "objective": "Refine the visual presentation to match a premium product, ensure usability across devices, and provide a graceful fallback when WebGL is unavailable.",
+      "explanation": "src/styles/theme.css (or theme.js), updated App.jsx with responsive container, and a WebGL fallback message displayed when needed.",
+      "complexity": "high",
+      "estimatedDuration": 6,
+      "dependencies": [
+        "stage-8",
+        "stage-10"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "editor",
+        "browser devtools"
+      ],
+      "completionCriteria": [
+        "Site adheres to a defined color scheme and typography scale",
+        "Layout adapts to mobile, tablet, and desktop breakpoints",
+        "Automated accessibility check (axe) reports no violations of severity ≥ moderate",
+        "When WebGL is unsupported, a clear fallback message appears instead of a blank canvas"
+      ]
+    },
+    {
+      "id": "stage-12",
+      "title": "Run verification: type checking, linting, production build, cross‑browser testing, validate error handling and loading states",
+      "objective": "Confirm the implementation is production‑ready, free of regressions, and meets all functional and non‑functional requirements.",
+      "explanation": "Production build artifacts (dist/), lint and type‑check reports, and a test summary documenting successful load, error, and hotspot interactions in Chrome, Firefox, Safari, and Edge.",
+      "complexity": "medium",
+      "estimatedDuration": 6,
+      "dependencies": [
+        "stage-11"
+      ],
+      "suggestedTools": [
+        "terminal",
+        "browser"
+      ],
+      "completionCriteria": [
+        "Production build completes without errors",
+        "ESLint reports zero new warnings",
+        "TypeScript (if used) shows no new type errors",
+        "Manual testing confirms: loading overlay shows progress, error boundary triggers on asset failure, hotspots display tooltips, animations run smoothly",
+        "All tested browsers render the scene correctly and fallback appears when WebGL disabled"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "id": "mission_2e180674-afa9-432b-9c83-4c18acdd201e",
+  "title": "Ollama Fix",
+  "description": "Verify ollama now works",
+  "goal": "Read hello.txt and report its contents",
+  "status": "completed",
+  "createdAt": "2026-07-20T16:27:24.834Z",
+  "updatedAt": "2026-07-20T16:28:52.909Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_4d2f429f-3875-4c85-861f-97fcd69c58d9",
+      "timestamp": "2026-07-20T16:27:24.834Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Read hello.txt and report its contents"
+      }
+    },
+    {
+      "id": "log_4b9f1766-6994-4a0c-9f01-a904f649a18c",
+      "timestamp": "2026-07-20T16:27:24.860Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_d8094100-9af2-4947-af91-729d2ae4f0fe",
+      "timestamp": "2026-07-20T16:27:33.020Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Plan created with 2 tasks"
+      }
+    },
+    {
+      "id": "log_b1c58b04-b595-4b6e-89ea-0ebd60767abb",
+      "timestamp": "2026-07-20T16:27:33.027Z",
+      "stage": "executing",
+      "action": "Starting 2 tasks",
+      "status": "started",
+      "metadata": {
+        "taskCount": 2
+      }
+    },
+    {
+      "id": "log_3338d0ff-bf1c-46e1-aef6-81167f6f7634",
+      "timestamp": "2026-07-20T16:27:33.029Z",
+      "stage": "executing",
+      "action": "Executing task: Check if ollama is installed and working",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Check if ollama is installed and working"
+      }
+    },
+    {
+      "id": "log_56154b32-a6a0-455c-b11a-745153143dd5",
+      "timestamp": "2026-07-20T16:28:11.589Z",
+      "stage": "executing",
+      "action": "Task completed: Check if ollama is installed and working",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 1
+      }
+    },
+    {
+      "id": "log_ba3c7563-4a49-4d24-98b2-9e1b8202d2e5",
+      "timestamp": "2026-07-20T16:28:11.594Z",
+      "stage": "executing",
+      "action": "Executing task: Read hello.txt file contents",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Read hello.txt file contents"
+      }
+    },
+    {
+      "id": "log_56e5ad52-0476-4660-822b-e09344036137",
+      "timestamp": "2026-07-20T16:28:42.830Z",
+      "stage": "executing",
+      "action": "Task completed: Read hello.txt file contents",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 2
+      }
+    },
+    {
+      "id": "log_1a54859c-63ed-49dc-b8f4-77f2a7ef9e0b",
+      "timestamp": "2026-07-20T16:28:52.907Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "The work does not fulfill the mission requirements as it created files unrelated to reading 'hello.txt'. The README.md file is incomplete and lacks information on how to read 'hello.txt'. The hello.txt file was created but its contents are unknown. The greeting.txt file seems irrelevant."
+      }
+    },
+    {
+      "id": "log_c463f3d9-a88e-41c5-9f44-4acbd38a0466",
+      "timestamp": "2026-07-20T16:28:52.908Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalArtifacts": 3
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_9ea824a8-e124-424c-ad50-4f6e2d2a3c8d",
+      "createdAt": "2026-07-20T16:28:11.591Z",
+      "key": "task-0-result",
+      "value": "Coding agent completed after 12 steps, 15 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_b2d6e172-7897-4ca7-a7ec-b7601c650d19",
+      "createdAt": "2026-07-20T16:28:42.834Z",
+      "key": "task-1-result",
+      "value": "Coding agent completed after 12 steps, 14 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_33002b48-adf9-4d16-a303-6d8923a24343",
+      "createdAt": "2026-07-20T16:28:11.590Z",
+      "type": "code",
+      "title": "Check if ollama is installed and working",
+      "content": "Coding agent completed after 12 steps, 15 tool calls",
+      "metadata": {
+        "artifacts": [
+          "README.md"
+        ]
+      }
+    },
+    {
+      "id": "output_36a5cfd5-1c50-49aa-a6e3-6e5ff966ed65",
+      "createdAt": "2026-07-20T16:28:42.833Z",
+      "type": "code",
+      "title": "Read hello.txt file contents",
+      "content": "Coding agent completed after 12 steps, 14 tool calls",
+      "metadata": {
+        "artifacts": [
+          "hello.txt",
+          "greeting.txt"
+        ]
+      }
+    },
+    {
+      "id": "output_c8f20fc3-63cd-4a11-a2ee-0312f96f04cc",
+      "createdAt": "2026-07-20T16:28:52.908Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 20,\n  \"summary\": \"The work does not fulfill the mission requirements as it created files unrelated to reading 'hello.txt'. The README.md file is incomplete and lacks information on how to read 'hello.txt'. The hello.txt file was created but its contents are unknown. The greeting.txt file seems irrelevant.\",\n  \"issues\": [\n    \"'README.md' should contain instructions for reading 'hello.txt'\",\n    \"'hello.txt' should be the actual text content that needs to be read\",\n    \"'greeting.txt' does not serve a purpose in this scenario\"\n  ],\n  \"recommendations\": [\n    \"Modify README.md to include how to read from 'hello.txt'\",\n    \"Ensure 'hello.txt' contains the expected text for reading\",\n    \"Consider removing or renaming 'greeting.txt'\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_882f341a-f26d-445d-b283-4ce7c06c14d6",
+      "createdAt": "2026-07-20T16:28:11.587Z",
+      "name": "README.md",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "README.md"
+      }
+    },
+    {
+      "id": "artifact_8ee89e42-e4aa-44f1-9333-2a3ebcaccf49",
+      "createdAt": "2026-07-20T16:28:42.827Z",
+      "name": "hello.txt",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "hello.txt"
+      }
+    },
+    {
+      "id": "artifact_6154cfbc-bd0b-4864-9847-5736f58ef72e",
+      "createdAt": "2026-07-20T16:28:42.829Z",
+      "name": "greeting.txt",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "greeting.txt"
+      }
+    }
+  ],
+  "repairHistory": []
+}

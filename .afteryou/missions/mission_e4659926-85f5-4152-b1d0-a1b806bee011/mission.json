@@ -1,0 +1,685 @@
+{
+  "id": "mission_e4659926-85f5-4152-b1d0-a1b806bee011",
+  "title": "Create a landing page for a coffee company using intricate and premium 3D graphics as well as premium font and scroll based animations",
+  "description": "Create a landing page for a coffee company using intricate and premium 3D graphics as well as premium font and scroll based animations",
+  "goal": "Create a landing page for a coffee company using intricate and premium 3D graphics as well as premium font and scroll based animations\n\nImplement an interactive 3D coffee bean model with Three.js\n\nAdd scroll‑triggered animations using GSAP ScrollTrigger\n\nInclude analytics and usage tracking",
+  "workspace": {
+    "workspaceName": "untitled folder",
+    "workspacePath": "/Users/shanaypatel/untitled folder",
+    "indexedAt": "2026-07-21T04:39:16.620Z",
+    "fileCount": 0,
+    "directoryTree": [],
+    "extensions": []
+  },
+  "status": "completed",
+  "createdAt": "2026-07-21T04:40:40.642Z",
+  "updatedAt": "2026-07-21T04:53:45.752Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_03177f52-acd9-4293-9bf7-62046c2ade8a",
+      "timestamp": "2026-07-21T04:40:40.642Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Create a landing page for a coffee company using intricate and premium 3D graphics as well as premium font and scroll based animations"
+      }
+    },
+    {
+      "id": "log_60e55066-fe72-4637-9d46-2b7db49066da",
+      "timestamp": "2026-07-21T04:44:55.344Z",
+      "stage": "planning",
+      "action": "Using pre-built plan from skeleton",
+      "status": "succeeded",
+      "metadata": {
+        "taskCount": 10
+      }
+    },
+    {
+      "id": "log_c7615ce6-b3fe-4a9d-b827-8d8770fa9e11",
+      "timestamp": "2026-07-21T04:44:55.345Z",
+      "stage": "executing",
+      "action": "Starting 10 tasks in dependency order",
+      "status": "started",
+      "metadata": {
+        "taskCount": 10
+      }
+    },
+    {
+      "id": "log_f949c387-d43a-41ce-bc6f-4d9af34a359f",
+      "timestamp": "2026-07-21T04:44:55.348Z",
+      "stage": "executing",
+      "action": "Executing task: Analyze requirements and define tech stack",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Analyze requirements and define tech stack",
+        "goal": "Determine the libraries, project structure, and tools needed for the landing page.",
+        "expectedOutput": "A tech-stack.md document listing chosen tools (e.g., Vite, React, Three.js, GSAP, font source, analytics provider) and their versions."
+      }
+    },
+    {
+      "id": "log_c55fe2bc-a671-478d-894d-ea5467381fa0",
+      "timestamp": "2026-07-21T04:46:58.497Z",
+      "stage": "executing",
+      "action": "Task completed: Analyze requirements and define tech stack",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 1
+      }
+    },
+    {
+      "id": "log_bef21ec9-b477-4cdf-a634-b6123ea51899",
+      "timestamp": "2026-07-21T04:46:58.504Z",
+      "stage": "executing",
+      "action": "Executing task: Initialize project repository and set up build tool",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Initialize project repository and set up build tool",
+        "goal": "Create a starter project with a dev server and basic file structure.",
+        "expectedOutput": "Initialized folder containing package.json, vite.config.js, index.html, and src/main.js that can run locally."
+      }
+    },
+    {
+      "id": "log_c2fb4544-6973-40f6-8b12-137b36494ff2",
+      "timestamp": "2026-07-21T04:48:30.761Z",
+      "stage": "executing",
+      "action": "Task completed: Initialize project repository and set up build tool",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 4
+      }
+    },
+    {
+      "id": "log_aa96f59c-8648-4b53-a98e-340c1f21a3c8",
+      "timestamp": "2026-07-21T04:48:30.765Z",
+      "stage": "executing",
+      "action": "Executing task: Install and configure Three.js and GSAP dependencies",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 2,
+        "taskTitle": "Install and configure Three.js and GSAP dependencies",
+        "goal": "Add the core 3D and animation libraries to the project.",
+        "expectedOutput": "package.json updated with three and gsap; node_modules installed; ability to import them in src/main.js without errors."
+      }
+    },
+    {
+      "id": "log_e4008beb-f5b4-4f1e-9a8b-7eb23e816d7b",
+      "timestamp": "2026-07-21T04:49:35.181Z",
+      "stage": "executing",
+      "action": "Task completed: Install and configure Three.js and GSAP dependencies",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 1
+      }
+    },
+    {
+      "id": "log_8a534d91-6e99-4ed5-ba6c-93026597511d",
+      "timestamp": "2026-07-21T04:49:35.192Z",
+      "stage": "executing",
+      "action": "Executing task: Add premium font and basic CSS styling",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 3,
+        "taskTitle": "Add premium font and basic CSS styling",
+        "goal": "Apply a high-quality typeface and baseline styling for the landing page.",
+        "expectedOutput": "CSS file (e.g., src/styles.css) with @font-face or Google Fonts link applied to body and heading selectors."
+      }
+    },
+    {
+      "id": "log_27228be3-875e-4aef-a46a-2d8f453530c2",
+      "timestamp": "2026-07-21T04:50:23.899Z",
+      "stage": "executing",
+      "action": "Task completed: Add premium font and basic CSS styling",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_531d2ff8-74ce-4fbf-8284-a618edcebc15",
+      "timestamp": "2026-07-21T04:50:23.914Z",
+      "stage": "executing",
+      "action": "Executing task: Create Three.js scene container and load a coffee bean 3D model",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 4,
+        "taskTitle": "Create Three.js scene container and load a coffee bean 3D model",
+        "goal": "Display an interactive 3D coffee bean model on the page.",
+        "expectedOutput": "src/ThreeCoffeeBean.js that initializes a Three.js scene, camera, renderer, loads a GLTF coffee bean model via GLTFLoader, and renders it to a canvas element."
+      }
+    },
+    {
+      "id": "log_c6fd1cb4-ca5a-433e-b4bc-c246d735fe7a",
+      "timestamp": "2026-07-21T04:52:02.683Z",
+      "stage": "executing",
+      "action": "Task completed: Create Three.js scene container and load a coffee bean 3D model",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_9b65c4e2-2501-4d2a-8558-f1b34101ee62",
+      "timestamp": "2026-07-21T04:52:02.688Z",
+      "stage": "executing",
+      "action": "Executing task: Implement lighting, materials, and basic interactivity",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 5,
+        "taskTitle": "Implement lighting, materials, and basic interactivity",
+        "goal": "Enhance the 3D model with realistic lighting and enable mouse drag rotation.",
+        "expectedOutput": "Updated ThreeCoffeeBean.js containing ambient and directional lights, material adjustments, and pointer controls (OrbitControls or custom) for model rotation."
+      }
+    },
+    {
+      "id": "log_d416bb03-645d-4b0e-bd68-8b4ef2daee69",
+      "timestamp": "2026-07-21T04:52:26.905Z",
+      "stage": "executing",
+      "action": "Task failed: Implement lighting, materials, and basic interactivity",
+      "status": "failed",
+      "metadata": {
+        "error": "Provider error 500: {\"error\":\"Internal Server Error (ref: 1c4e29c7-772b-422b-ba76-e94e556a1bbf)\"}\n"
+      }
+    },
+    {
+      "id": "log_9af65433-20d3-4121-86f4-1c703c0b642f",
+      "timestamp": "2026-07-21T04:52:26.908Z",
+      "stage": "executing",
+      "action": "Skipping task: Set up GSAP ScrollTrigger to animate camera or model based on scroll (unmet dependencies: Implement lighting, materials, and basic interactivity)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Implement lighting, materials, and basic interactivity"
+        ]
+      }
+    },
+    {
+      "id": "log_cc8bf3c5-cff6-4f68-a7d5-a7237ee25cef",
+      "timestamp": "2026-07-21T04:52:26.910Z",
+      "stage": "executing",
+      "action": "Executing task: Integrate premium font styling for headings and body text, ensuring responsive layout",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 7,
+        "taskTitle": "Integrate premium font styling for headings and body text, ensuring responsive layout",
+        "goal": "Apply the chosen typography to all page content and make the layout adapt to different screen sizes.",
+        "expectedOutput": "Updated index.html with semantic sections (hero, features, etc.) and CSS file with font‑family rules, padding/margin, and media queries for mobile responsiveness."
+      }
+    },
+    {
+      "id": "log_14239507-a483-4889-a4f4-2bcfba5f7943",
+      "timestamp": "2026-07-21T04:53:22.553Z",
+      "stage": "executing",
+      "action": "Task completed: Integrate premium font styling for headings and body text, ensuring responsive layout",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_48aa1450-092b-465e-91ba-741cc26176c6",
+      "timestamp": "2026-07-21T04:53:22.566Z",
+      "stage": "executing",
+      "action": "Executing task: Add analytics tracking for page views and custom interactions",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 8,
+        "taskTitle": "Add analytics tracking for page views and custom interactions",
+        "goal": "Capture usage data such as page loads, model clicks, and scroll milestones.",
+        "expectedOutput": "src/analytics.js initializing an analytics library (e.g., Google Analytics 4 or Plausible), sending a pageview on load, and attaching event listeners for clicks on the canvas and scroll‑triggered milestones."
+      }
+    },
+    {
+      "id": "log_498f2467-7e22-45b9-a494-ff56cfee2952",
+      "timestamp": "2026-07-21T04:53:37.294Z",
+      "stage": "executing",
+      "action": "Task completed: Add analytics tracking for page views and custom interactions",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_c40690ca-a864-407e-9342-bb631868ad93",
+      "timestamp": "2026-07-21T04:53:37.307Z",
+      "stage": "executing",
+      "action": "Skipping task: Perform verification: linting, building, and cross‑browser testing (unmet dependencies: Implement lighting, materials, and basic interactivity, Set up GSAP ScrollTrigger to animate camera or model based on scroll)",
+      "status": "failed",
+      "metadata": {
+        "missingDependencies": [
+          "Implement lighting, materials, and basic interactivity",
+          "Set up GSAP ScrollTrigger to animate camera or model based on scroll"
+        ]
+      }
+    },
+    {
+      "id": "log_677650f2-ffc2-4457-97dc-713b192811a1",
+      "timestamp": "2026-07-21T04:53:45.743Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "The repository provides a basic project scaffold (HTML, CSS, JS modules) and mentions Three.js and GSAP, but the core mission requirements—an intricate premium 3D coffee bean model, scroll‑triggered GSAP animations, premium typography, and analytics tracking—are either missing or only stubbed out. The files exist but lack the detailed implementation needed for a production‑ready landing page."
+      }
+    },
+    {
+      "id": "log_4bd140da-60c2-4f51-8a02-65c3286039ed",
+      "timestamp": "2026-07-21T04:53:45.749Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalTasks": 10,
+        "completedTasks": 7,
+        "failedTasks": 3,
+        "totalArtifacts": 6
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_9d819493-30f2-4e50-9bca-662db1dbc931",
+      "createdAt": "2026-07-21T04:46:58.501Z",
+      "key": "task-0-Analyze requirements and define tech stack",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_c2c750c1-5d36-4fb4-bdd2-6855812f6e4f",
+      "createdAt": "2026-07-21T04:48:30.763Z",
+      "key": "task-1-Initialize project repository and set up build tool",
+      "value": "Coding agent completed after 7 steps, 6 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_be91a954-4764-4535-afd0-945fd6923837",
+      "createdAt": "2026-07-21T04:49:35.184Z",
+      "key": "task-2-Install and configure Three.js and GSAP dependencies",
+      "value": "Coding agent completed after 12 steps, 11 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_f0f225f2-1aac-46b4-9164-dff381053894",
+      "createdAt": "2026-07-21T04:50:23.907Z",
+      "key": "task-3-Add premium font and basic CSS styling",
+      "value": "Coding agent completed after 9 steps, 8 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_adeda2e0-52a4-4d57-98ac-133f46dcc7a6",
+      "createdAt": "2026-07-21T04:52:02.687Z",
+      "key": "task-4-Create Three.js scene container and load a coffee bean 3D model",
+      "value": "Coding agent completed after 12 steps, 11 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_a4153f01-6874-4818-a2a5-da64c6897429",
+      "createdAt": "2026-07-21T04:53:22.560Z",
+      "key": "task-7-Integrate premium font styling for headings and body text, ensuring responsive layout",
+      "value": "Coding agent completed after 8 steps, 7 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_4c40471b-c4ae-4a48-a8c2-e756f7d7777e",
+      "createdAt": "2026-07-21T04:53:37.302Z",
+      "key": "task-8-Add analytics tracking for page views and custom interactions",
+      "value": "Coding agent completed after 1 steps, 0 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_ea4291e4-8822-49aa-8225-c2181193f5d6",
+      "createdAt": "2026-07-21T04:46:58.499Z",
+      "type": "code",
+      "title": "Analyze requirements and define tech stack",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": [
+          "tech-stack.md"
+        ]
+      }
+    },
+    {
+      "id": "output_36df9173-a799-49a5-b4f3-3550afdb2fca",
+      "createdAt": "2026-07-21T04:48:30.762Z",
+      "type": "code",
+      "title": "Initialize project repository and set up build tool",
+      "content": "Coding agent completed after 7 steps, 6 tool calls",
+      "metadata": {
+        "artifacts": [
+          "package.json",
+          "index.html",
+          "src/style.css",
+          "src/coffee-canvas.js"
+        ]
+      }
+    },
+    {
+      "id": "output_e0c88f4a-ff37-463b-879a-73801d9fe432",
+      "createdAt": "2026-07-21T04:49:35.182Z",
+      "type": "code",
+      "title": "Install and configure Three.js and GSAP dependencies",
+      "content": "Coding agent completed after 12 steps, 11 tool calls",
+      "metadata": {
+        "artifacts": [
+          "src/main.js"
+        ]
+      }
+    },
+    {
+      "id": "output_f72a8202-1cca-4871-8b3f-a94029f27970",
+      "createdAt": "2026-07-21T04:50:23.904Z",
+      "type": "code",
+      "title": "Add premium font and basic CSS styling",
+      "content": "Coding agent completed after 9 steps, 8 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_f7dc9d7b-fa2f-4032-b965-c308bb6201b1",
+      "createdAt": "2026-07-21T04:52:02.687Z",
+      "type": "code",
+      "title": "Create Three.js scene container and load a coffee bean 3D model",
+      "content": "Coding agent completed after 12 steps, 11 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_1f9dd962-8894-4415-8b41-740b3c49ac86",
+      "createdAt": "2026-07-21T04:53:22.558Z",
+      "type": "code",
+      "title": "Integrate premium font styling for headings and body text, ensuring responsive layout",
+      "content": "Coding agent completed after 8 steps, 7 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_c1480a19-7e88-43db-9d5a-f77fcfd7c21e",
+      "createdAt": "2026-07-21T04:53:37.299Z",
+      "type": "code",
+      "title": "Add analytics tracking for page views and custom interactions",
+      "content": "Coding agent completed after 1 steps, 0 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_b26f5007-a0b6-43c3-984d-dc9a9fbfd7f0",
+      "createdAt": "2026-07-21T04:53:45.746Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 48,\n  \"summary\": \"The repository provides a basic project scaffold (HTML, CSS, JS modules) and mentions Three.js and GSAP, but the core mission requirements—an intricate premium 3D coffee bean model, scroll‑triggered GSAP animations, premium typography, and analytics tracking—are either missing or only stubbed out. The files exist but lack the detailed implementation needed for a production‑ready landing page.\",\n  \"issues\": [\n    \"No visible implementation of an interactive 3D coffee bean model (Three.js scene appears absent or placeholder).\",\n    \"GSAP ScrollTrigger is not utilized; scroll‑based animations are missing.\",\n    \"Premium font integration (e.g., Google Fonts, Adobe Fonts, or custom web‑font) is not evident in style.css or HTML.\",\n    \"Analytics/usage tracking code (e.g., Google Analytics, Plausible, or custom events) is not present.\",\n    \"Missing responsive design considerations and performance optimizations (e.g., lazy loading, texture compression).\",\n    \"Limited documentation beyond tech‑stack.md; no clear instructions for running or extending the project.\"\n  ],\n  \"recommendations\": [\n    \"Implement a detailed Three.js coffee bean model: load a high‑quality GLTF/OBJ, apply realistic materials, add rotation/interaction controls, and ensure it renders in a canvas that fills the hero section.\",\n    \"Add GSAP ScrollTrigger to animate elements (e.g., fade‑in text, scale the 3D model, reveal sections) based on scroll progress; create a dedicated animation module and import it in main.js.\",\n    \"Integrate a premium font (choose a high‑end serif or sans‑serif) via @font-face or a font‑service, and apply it consistently throughout style.css with appropriate fallback stacks.\",\n    \"Insert analytics snippet (e.g., Google Analytics gtag.js or a lightweight alternative) in the <head> of index.html, and consider tracking custom events such as model interactions or scroll milestones.\",\n    \"Optimize assets: compress textures, use glTF‑binary, enable GPU‑instancing if multiple beans, and add a loading spinner or placeholder while assets load.\",\n    \"Improve documentation: add a README with setup steps, development scripts, and a brief architecture overview; include a linting/formatting config (ESLint, Prettier) to maintain code quality.\",\n    \"Consider adding a basic testing setup (Jest or Vitest) for JS modules and a visual regression tool for CSS to safeguard future changes.\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_bc64e3d0-998c-451a-9f7e-cb4a880969e6",
+      "createdAt": "2026-07-21T04:46:58.494Z",
+      "name": "tech-stack.md",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "tech-stack.md",
+        "task": "Analyze requirements and define tech stack"
+      }
+    },
+    {
+      "id": "artifact_14921823-1887-477b-8d75-5fe648c5439b",
+      "createdAt": "2026-07-21T04:48:30.749Z",
+      "name": "package.json",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "package.json",
+        "task": "Initialize project repository and set up build tool"
+      }
+    },
+    {
+      "id": "artifact_d2bcb507-4ece-48fd-979e-bea33b59a009",
+      "createdAt": "2026-07-21T04:48:30.758Z",
+      "name": "index.html",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "index.html",
+        "task": "Initialize project repository and set up build tool"
+      }
+    },
+    {
+      "id": "artifact_7bca0266-0480-47ce-b3a2-5e770a9e4132",
+      "createdAt": "2026-07-21T04:48:30.759Z",
+      "name": "src/style.css",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/style.css",
+        "task": "Initialize project repository and set up build tool"
+      }
+    },
+    {
+      "id": "artifact_5846973d-8331-4bb6-ada9-5b81bda3ed32",
+      "createdAt": "2026-07-21T04:48:30.760Z",
+      "name": "src/coffee-canvas.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/coffee-canvas.js",
+        "task": "Initialize project repository and set up build tool"
+      }
+    },
+    {
+      "id": "artifact_477bf520-5158-4b5e-b252-038c8b11b802",
+      "createdAt": "2026-07-21T04:49:35.178Z",
+      "name": "src/main.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/main.js",
+        "task": "Install and configure Three.js and GSAP dependencies"
+      }
+    }
+  ],
+  "repairHistory": [],
+  "finalPlan": [
+    {
+      "id": "stage-1",
+      "title": "Analyze requirements and define tech stack",
+      "objective": "Determine the libraries, project structure, and tools needed for the landing page.",
+      "explanation": "A tech-stack.md document listing chosen tools (e.g., Vite, React, Three.js, GSAP, font source, analytics provider) and their versions.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Tech stack document created",
+        "List of libraries and versions identified"
+      ]
+    },
+    {
+      "id": "stage-2",
+      "title": "Initialize project repository and set up build tool",
+      "objective": "Create a starter project with a dev server and basic file structure.",
+      "explanation": "Initialized folder containing package.json, vite.config.js, index.html, and src/main.js that can run locally.",
+      "complexity": "medium",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-1"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "npm"
+      ],
+      "completionCriteria": [
+        "Project can be started with npm run dev and shows a blank page"
+      ]
+    },
+    {
+      "id": "stage-3",
+      "title": "Install and configure Three.js and GSAP dependencies",
+      "objective": "Add the core 3D and animation libraries to the project.",
+      "explanation": "package.json updated with three and gsap; node_modules installed; ability to import them in src/main.js without errors.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-2"
+      ],
+      "suggestedTools": [
+        "npm"
+      ],
+      "completionCriteria": [
+        "npm install three gsap succeeds",
+        "Import statements work in src/main.js without errors"
+      ]
+    },
+    {
+      "id": "stage-4",
+      "title": "Add premium font and basic CSS styling",
+      "objective": "Apply a high-quality typeface and baseline styling for the landing page.",
+      "explanation": "CSS file (e.g., src/styles.css) with @font-face or Google Fonts link applied to body and heading selectors.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-2"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Font loads without 404 errors",
+        "Text elements render with the specified font"
+      ]
+    },
+    {
+      "id": "stage-5",
+      "title": "Create Three.js scene container and load a coffee bean 3D model",
+      "objective": "Display an interactive 3D coffee bean model on the page.",
+      "explanation": "src/ThreeCoffeeBean.js that initializes a Three.js scene, camera, renderer, loads a GLTF coffee bean model via GLTFLoader, and renders it to a canvas element.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-3"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Model loads and is visible in the canvas",
+        "No console errors related to three.js"
+      ]
+    },
+    {
+      "id": "stage-6",
+      "title": "Implement lighting, materials, and basic interactivity",
+      "objective": "Enhance the 3D model with realistic lighting and enable mouse drag rotation.",
+      "explanation": "Updated ThreeCoffeeBean.js containing ambient and directional lights, material adjustments, and pointer controls (OrbitControls or custom) for model rotation.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-5"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Model responds to mouse drag with smooth rotation",
+        "Lighting looks premium (soft shadows, specular highlights)"
+      ]
+    },
+    {
+      "id": "stage-7",
+      "title": "Set up GSAP ScrollTrigger to animate camera or model based on scroll",
+      "objective": "Add scroll‑triggered animations that change the camera position or model rotation as the user scrolls.",
+      "explanation": "src/ScrollAnimation.js that imports gsap and ScrollTrigger, defines a timeline linked to scroll progress, and updates the Three.js camera or model properties accordingly.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-3",
+        "stage-6"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Scrolling down changes camera position or model rotation smoothly",
+        "Animation pauses/resumes correctly on scroll"
+      ]
+    },
+    {
+      "id": "stage-8",
+      "title": "Integrate premium font styling for headings and body text, ensuring responsive layout",
+      "objective": "Apply the chosen typography to all page content and make the layout adapt to different screen sizes.",
+      "explanation": "Updated index.html with semantic sections (hero, features, etc.) and CSS file with font‑family rules, padding/margin, and media queries for mobile responsiveness.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-4"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Headings use the premium font",
+        "Layout adapts to mobile viewport without overflow"
+      ]
+    },
+    {
+      "id": "stage-9",
+      "title": "Add analytics tracking for page views and custom interactions",
+      "objective": "Capture usage data such as page loads, model clicks, and scroll milestones.",
+      "explanation": "src/analytics.js initializing an analytics library (e.g., Google Analytics 4 or Plausible), sending a pageview on load, and attaching event listeners for clicks on the canvas and scroll‑triggered milestones.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-2"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Analytics script loads without errors",
+        "Pageview event appears in analytics dashboard (test mode)",
+        "Custom event fires on model click"
+      ]
+    },
+    {
+      "id": "stage-10",
+      "title": "Perform verification: linting, building, and cross‑browser testing",
+      "objective": "Ensure code quality, production readiness, and correct behavior across browsers.",
+      "explanation": "ESLint report with no errors, successful production build (npm run build) generating a dist/ folder, and screenshots confirming the page works in Chrome and Firefox (or Safari).",
+      "complexity": "medium",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-1",
+        "stage-2",
+        "stage-3",
+        "stage-4",
+        "stage-5",
+        "stage-6",
+        "stage-7",
+        "stage-8",
+        "stage-9"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "npm"
+      ],
+      "completionCriteria": [
+        "ESLint passes with no errors",
+        "Production build outputs dist/ folder with assets",
+        "Page loads and functions correctly in at least two browsers"
+      ]
+    }
+  ]
+}

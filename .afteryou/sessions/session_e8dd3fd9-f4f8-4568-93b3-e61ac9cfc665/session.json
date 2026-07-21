@@ -1,0 +1,91 @@
+{
+  "id": "session_e8dd3fd9-f4f8-4568-93b3-e61ac9cfc665",
+  "name": "Build a production-ready SaaS landing page for a fictional AI startup called \"Lu",
+  "status": "idle",
+  "createdAt": "2026-07-21T09:10:04.842Z",
+  "updatedAt": "2026-07-21T09:10:05.614Z",
+  "missions": [
+    {
+      "missionId": "mission_cca56abf-01fd-46f3-b95c-c47efa06454d",
+      "title": "Build a production-ready SaaS landing page for a fictional AI startup called \"Lumina AI\".\n\nRequirements:\n- Use HTML, CSS, and JavaScript only.\n- Create separate",
+      "goal": "Build a production-ready SaaS landing page for a fictional AI startup called \"Lumina AI\".\n\nRequirements:\n- Use HTML, CSS, and JavaScript only.\n- Create separate index.html, styles.css, and script.js files.\n- Design a premium, modern interface with polished typography, subtle animations, and excellent visual hierarchy.\n- Include a hero section, features, pricing, testimonials, FAQ, contact form, and footer.\n- Implement dark/light mode with smooth transitions.\n- Make the site fully responsive across desktop, tablet, and mobile.\n- Ensure accessibility using semantic HTML, keyboard navigation, ARIA labels, and proper contrast.\n- Optimize performance by minimizing unnecessary JavaScript, lazy-loading where appropriate, and using efficient CSS.\n- Verify that every button, link, animation, and form behaves correctly.\n- Produce clean, maintainable, production-quality code with clear organization.\n\nExpected behavior:\n- Create a complete execution plan before coding.\n- Execute each stage sequentially.\n- Run verification after every major stage.\n- Automatically repair any detected issues before continuing.\n- Use project memory to avoid duplicate work.\n- Create timeline checkpoints throughout execution.\n- Generate diagnostics for every stage.\n- Complete only after the reviewer approves the final result and all verification checks pass.",
+      "status": "queued",
+      "artifactsCount": 0,
+      "checkpointsCount": 0,
+      "repairAttempts": 0
+    },
+    {
+      "missionId": "mission_66ea8e26-6bab-4508-a1ee-1dc9da1a4ed1",
+      "title": "Define detailed content outline and wireframes for all sections",
+      "goal": "Define detailed content outline and wireframes for all sections",
+      "status": "queued",
+      "artifactsCount": 0,
+      "checkpointsCount": 0,
+      "repairAttempts": 0
+    },
+    {
+      "missionId": "mission_270d1c63-9e73-47ac-9ac5-0cc560ce46db",
+      "title": "Add comprehensive error handling and loading states",
+      "goal": "Add comprehensive error handling and loading states",
+      "status": "queued",
+      "artifactsCount": 0,
+      "checkpointsCount": 0,
+      "repairAttempts": 0
+    },
+    {
+      "missionId": "mission_cd71fb8a-8865-4b7d-90df-652d13139c28",
+      "title": "Implement dark/light mode toggle with CSS variables and persistent preference",
+      "goal": "Implement dark/light mode toggle with CSS variables and persistent preference",
+      "status": "queued",
+      "artifactsCount": 0,
+      "checkpointsCount": 0,
+      "repairAttempts": 0
+    }
+  ],
+  "currentMissionIndex": -1,
+  "projectMemory": [],
+  "runtimeMs": 0,
+  "budgetMs": 3600000,
+  "diagnostics": {
+    "totalMissions": 0,
+    "completedMissions": 0,
+    "failedMissions": 0,
+    "totalArtifacts": 0,
+    "totalCheckpoints": 4,
+    "totalRepairs": 0,
+    "successfulRepairs": 0,
+    "totalRuntimeMs": 0,
+    "providerCalls": 0,
+    "totalTokensUsed": 0
+  },
+  "checkpoints": [
+    {
+      "id": "scp_c8286916-3ff6-4892-9f79-097c29bf20ce",
+      "timestamp": "2026-07-21T09:10:05.097Z",
+      "label": "Mission attached: Build a production-ready SaaS landing page for a fictional AI startup called \"Lumina AI\".\n\nRequirements:\n- Use HTML, CSS, and JavaScript only.\n- Create separate",
+      "missionId": "mission_cca56abf-01fd-46f3-b95c-c47efa06454d",
+      "state": {}
+    },
+    {
+      "id": "scp_e31513ca-0dde-48ca-bf66-e63ba8b6c480",
+      "timestamp": "2026-07-21T09:10:05.400Z",
+      "label": "Mission queued: Define detailed content outline and wireframes for all sections",
+      "missionId": "mission_66ea8e26-6bab-4508-a1ee-1dc9da1a4ed1",
+      "state": {}
+    },
+    {
+      "id": "scp_95d28347-3ebe-45b4-981c-2a7ad6d49ab2",
+      "timestamp": "2026-07-21T09:10:05.582Z",
+      "label": "Mission queued: Add comprehensive error handling and loading states",
+      "missionId": "mission_270d1c63-9e73-47ac-9ac5-0cc560ce46db",
+      "state": {}
+    },
+    {
+      "id": "scp_1cf0f96d-12d3-48ba-b69f-f3939a0a42f8",
+      "timestamp": "2026-07-21T09:10:05.614Z",
+      "label": "Mission queued: Implement dark/light mode toggle with CSS variables and persistent preference",
+      "missionId": "mission_cd71fb8a-8865-4b7d-90df-652d13139c28",
+      "state": {}
+    }
+  ]
+}

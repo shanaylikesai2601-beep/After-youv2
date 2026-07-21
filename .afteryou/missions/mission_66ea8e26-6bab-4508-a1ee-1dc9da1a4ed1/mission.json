@@ -1,0 +1,28 @@
+{
+  "id": "mission_66ea8e26-6bab-4508-a1ee-1dc9da1a4ed1",
+  "title": "Define detailed content outline and wireframes for all sections",
+  "description": "Define detailed content outline and wireframes for all sections",
+  "goal": "Define detailed content outline and wireframes for all sections",
+  "status": "queued",
+  "createdAt": "2026-07-21T09:10:05.377Z",
+  "updatedAt": "2026-07-21T09:10:05.377Z",
+  "estimatedDuration": 30,
+  "progress": 0,
+  "logs": [
+    {
+      "id": "log_93cbcf39-1dfd-420b-ab89-ea13731e948a",
+      "timestamp": "2026-07-21T09:10:05.377Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Define detailed content outline and wireframes for all sections"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "mission_310a5a6a-3174-4c21-8fd4-b28c75fc3308",
+  "title": "Establish a design system with CSS variables",
+  "description": "Establish a design system with CSS variables",
+  "goal": "Establish a design system with CSS variables",
+  "status": "queued",
+  "createdAt": "2026-07-21T12:54:11.269Z",
+  "updatedAt": "2026-07-21T12:54:11.269Z",
+  "estimatedDuration": 30,
+  "progress": 0,
+  "logs": [
+    {
+      "id": "log_c9381aae-2f6c-40fb-a9b6-b7913d69fd54",
+      "timestamp": "2026-07-21T12:54:11.269Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Establish a design system with CSS variables"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

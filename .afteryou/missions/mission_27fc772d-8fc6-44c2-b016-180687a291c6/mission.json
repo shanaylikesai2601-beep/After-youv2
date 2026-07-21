@@ -1,0 +1,120 @@
+{
+  "id": "mission_27fc772d-8fc6-44c2-b016-180687a291c6",
+  "title": "Quick test",
+  "description": "test",
+  "goal": "create test.txt",
+  "status": "failed",
+  "createdAt": "2026-07-20T16:11:21.628Z",
+  "updatedAt": "2026-07-20T16:15:49.403Z",
+  "estimatedDuration": 30,
+  "progress": 55,
+  "logs": [
+    {
+      "id": "log_0f4cbf7c-1e6b-4d26-b1ae-17c55ef3f6cf",
+      "timestamp": "2026-07-20T16:11:21.628Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "create test.txt"
+      }
+    },
+    {
+      "id": "log_2bfcdad2-e570-4b14-a353-df03472ae5f4",
+      "timestamp": "2026-07-20T16:11:21.633Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_4d8d468d-a4f7-46a6-819c-21456040c9ae",
+      "timestamp": "2026-07-20T16:11:24.277Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Plan created with 2 tasks"
+      }
+    },
+    {
+      "id": "log_f8ceae24-b384-4ea4-a436-da2d46db1428",
+      "timestamp": "2026-07-20T16:11:24.279Z",
+      "stage": "executing",
+      "action": "Starting 2 tasks",
+      "status": "started",
+      "metadata": {
+        "taskCount": 2
+      }
+    },
+    {
+      "id": "log_23bf0395-2411-4c76-9b88-890271eead97",
+      "timestamp": "2026-07-20T16:11:24.281Z",
+      "stage": "executing",
+      "action": "Executing task: Create test.txt with the given content",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Create test.txt with the given content"
+      }
+    },
+    {
+      "id": "log_8d3d2b83-a3b1-4718-9345-6f4f92b0fae5",
+      "timestamp": "2026-07-20T16:11:27.854Z",
+      "stage": "executing",
+      "action": "Task completed: Create test.txt with the given content",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 1
+      }
+    },
+    {
+      "id": "log_21a0601e-d5f3-4217-84ea-32bf9b0ddc42",
+      "timestamp": "2026-07-20T16:11:27.858Z",
+      "stage": "executing",
+      "action": "Executing task: Verify file creation and content",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Verify file creation and content"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_3623a062-5735-46ca-ab0c-099741a22099",
+      "createdAt": "2026-07-20T16:11:27.855Z",
+      "key": "task-0-result",
+      "value": "Coding agent completed after 2 steps, 1 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_b6bc6dc7-fc07-433a-9a0d-cd99d6df2612",
+      "createdAt": "2026-07-20T16:11:27.855Z",
+      "type": "code",
+      "title": "Create test.txt with the given content",
+      "content": "Coding agent completed after 2 steps, 1 tool calls",
+      "metadata": {
+        "artifacts": [
+          "test.txt"
+        ]
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_74131307-fe55-4099-a7ad-b62f9066349a",
+      "createdAt": "2026-07-20T16:11:27.852Z",
+      "name": "test.txt",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "test.txt"
+      }
+    }
+  ],
+  "repairHistory": []
+}

@@ -82,6 +82,9 @@ export interface AgentExecutionContext {
   title: string;
   description: string;
   goal: string;
+  /** Planning previews retain specialist decomposition instead of implementation consolidation. */
+  adaptivePlanning?: boolean;
+  workspacePath?: string;
   previousMessages: AgentMessage<unknown>[];
   toolObservations: Array<{ toolId: string; summary: string; data: Record<string, unknown> }>;
   memory: Array<{ key: string; value: string; source: string }>;

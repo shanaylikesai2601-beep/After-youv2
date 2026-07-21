@@ -1,0 +1,62 @@
+# OpenAPI specification for project filtering and search
+openapi: 3.0.3
+info:
+  title: Project Filtering API
+  version: 1.0.0
+  description: API endpoint to retrieve projects with optional search and tag filters.
+servers:
+  - url: /api
+paths:
+  /projects:
+    get:
+      summary: Get list of projects
+      description: Returns projects filtered by search keyword and tags.
+      parameters:
+        - in: query
+          name: search
+          schema:
+            type: string
+          description: Keyword to search in project title or description.
+        - in: query
+          name: tags
+          schema:
+            type: string
+            description: Comma‑separated list of tags to filter by.
+          style: form
+          explode: false
+      responses:
+        '200':
+          description: A JSON array of project objects.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Project'
+        '400':
+          description: Bad request.
+components:
+  schemas:
+    Project:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+          format: uri
+        link:
+          type: string
+          format: uri
+        tags:
+          type: array
+          items:
+            type: string
+      required:
+        - title
+        - description
+        - image
+        - link
+        - tags

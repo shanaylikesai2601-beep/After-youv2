@@ -1,0 +1,28 @@
+{
+  "id": "mission_ff74b349-2861-45b7-a428-b6d9f887749a",
+  "title": "Build semantic, accessible UI components using the design system",
+  "description": "Build semantic, accessible UI components using the design system",
+  "goal": "Build semantic, accessible UI components using the design system",
+  "status": "queued",
+  "createdAt": "2026-07-21T12:54:11.279Z",
+  "updatedAt": "2026-07-21T12:54:11.279Z",
+  "estimatedDuration": 30,
+  "progress": 0,
+  "logs": [
+    {
+      "id": "log_64615e79-e8c7-470b-9723-89d1dd7c1d81",
+      "timestamp": "2026-07-21T12:54:11.279Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Build semantic, accessible UI components using the design system"
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

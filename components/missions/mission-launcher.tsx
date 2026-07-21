@@ -1,10 +1,5 @@
-"use client";
-
-import { useState } from "react";
-
-import { MissionCreateModal } from "@/components/missions/mission-create-modal";
+import Link from "next/link";
 
 export function MissionLauncher(): React.ReactElement {
-  const [open, setOpen] = useState(false);
-  return <><button className="button primary" onClick={() => setOpen(true)}>Assign mission</button><MissionCreateModal open={open} onClose={() => setOpen(false)} /></>;
+  return <Link className="button primary" href="/missions/new">Assign mission</Link>;
 }

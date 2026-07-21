@@ -1,0 +1,442 @@
+{
+  "id": "mission_eb42f066-40b0-4ffa-8053-1e1f10011f8b",
+  "title": "Define exact copy and content hierarchy for each section",
+  "description": "Define exact copy and content hierarchy for each section",
+  "goal": "Define exact copy and content hierarchy for each section",
+  "status": "completed",
+  "createdAt": "2026-07-21T09:22:58.793Z",
+  "updatedAt": "2026-07-21T10:18:04.748Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_f2086366-394f-44f2-9dfe-cca11924de48",
+      "timestamp": "2026-07-21T09:22:58.793Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Define exact copy and content hierarchy for each section"
+      }
+    },
+    {
+      "id": "log_f0b67dc4-8484-4cee-92ae-aee412660327",
+      "timestamp": "2026-07-21T10:05:28.648Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_f96ad769-9532-4e8a-84e8-de00865f7d0e",
+      "timestamp": "2026-07-21T10:06:18.771Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Plan created with 8 tasks"
+      }
+    },
+    {
+      "id": "log_f97b0554-6b04-4db9-8d91-4ff5fec743fe",
+      "timestamp": "2026-07-21T10:06:18.775Z",
+      "stage": "executing",
+      "action": "Starting 8 tasks in dependency order",
+      "status": "started",
+      "metadata": {
+        "taskCount": 8
+      }
+    },
+    {
+      "id": "log_82b8b213-b936-47f1-bd1d-ed91bddd010a",
+      "timestamp": "2026-07-21T10:06:18.778Z",
+      "stage": "executing",
+      "action": "Executing task: Analyze existing sections and current copy",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Analyze existing sections and current copy",
+        "goal": "Understand what sections exist and what copy is currently used to establish a baseline",
+        "expectedOutput": "A list of sections with their current copy snippets and hierarchy notes"
+      }
+    },
+    {
+      "id": "log_8d574e5f-4298-4454-9b4c-54dc1923fa4b",
+      "timestamp": "2026-07-21T10:07:29.139Z",
+      "stage": "executing",
+      "action": "Task completed: Analyze existing sections and current copy",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_b0ba1681-22ae-4ae4-9170-37ab0984d399",
+      "timestamp": "2026-07-21T10:07:29.141Z",
+      "stage": "executing",
+      "action": "Executing task: Define purpose and target audience for each section",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Define purpose and target audience for each section",
+        "goal": "Clarify why each section exists and who it serves to inform copy tone and hierarchy",
+        "expectedOutput": "A matrix mapping each section to its purpose and primary audience"
+      }
+    },
+    {
+      "id": "log_81a0338d-0105-4078-beac-39af88a8927c",
+      "timestamp": "2026-07-21T10:08:26.302Z",
+      "stage": "executing",
+      "action": "Task completed: Define purpose and target audience for each section",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_c514b153-4c1e-40e3-8831-5b80f590b8f1",
+      "timestamp": "2026-07-21T10:08:26.305Z",
+      "stage": "executing",
+      "action": "Executing task: Establish copy tone, style, and length guidelines",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 2,
+        "taskTitle": "Establish copy tone, style, and length guidelines",
+        "goal": "Create consistent voice and messaging rules that align with brand and audience",
+        "expectedOutput": "A copy guideline document (tone, voice, word count limits, terminology) for each section"
+      }
+    },
+    {
+      "id": "log_fddeaef3-d972-469f-ad86-b191d5d47dda",
+      "timestamp": "2026-07-21T10:10:22.282Z",
+      "stage": "executing",
+      "action": "Task completed: Establish copy tone, style, and length guidelines",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_804ec205-7426-461e-bc02-f46e19d190c5",
+      "timestamp": "2026-07-21T10:10:22.284Z",
+      "stage": "executing",
+      "action": "Executing task: Outline content hierarchy (headings, subheadings, body, CTAs) per section",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 3,
+        "taskTitle": "Outline content hierarchy (headings, subheadings, body, CTAs) per section",
+        "goal": "Determine the structural order of content elements to guide layout and readability",
+        "expectedOutput": "A hierarchy outline per section showing required elements and their nesting"
+      }
+    },
+    {
+      "id": "log_a9da110a-d74a-460b-9b3d-ff342ed2b58b",
+      "timestamp": "2026-07-21T10:11:17.267Z",
+      "stage": "executing",
+      "action": "Task completed: Outline content hierarchy (headings, subheadings, body, CTAs) per section",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_e532a752-b82b-4b9b-914b-67f773b768b0",
+      "timestamp": "2026-07-21T10:11:17.271Z",
+      "stage": "executing",
+      "action": "Executing task: Draft copy and content hierarchy specification document",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 4,
+        "taskTitle": "Draft copy and content hierarchy specification document",
+        "goal": "Combine purpose, audience, copy guidelines, and hierarchy into a single reference",
+        "expectedOutput": "A specification file (e.g., SPEC.md or JSON) containing all section details"
+      }
+    },
+    {
+      "id": "log_1597d77b-e5aa-44db-bd33-35840b00ab35",
+      "timestamp": "2026-07-21T10:12:24.013Z",
+      "stage": "executing",
+      "action": "Task completed: Draft copy and content hierarchy specification document",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_df7f7b3b-b374-4558-8ae2-67b8aea31ac4",
+      "timestamp": "2026-07-21T10:12:24.018Z",
+      "stage": "executing",
+      "action": "Executing task: Conduct stakeholder review and incorporate feedback",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 5,
+        "taskTitle": "Conduct stakeholder review and incorporate feedback",
+        "goal": "Validate the specification with product, design, and content teams to ensure accuracy",
+        "expectedOutput": "Review comments log and updated specification reflecting feedback"
+      }
+    },
+    {
+      "id": "log_fe827f27-4edd-4c76-815b-5b8feca24871",
+      "timestamp": "2026-07-21T10:13:26.005Z",
+      "stage": "executing",
+      "action": "Task completed: Conduct stakeholder review and incorporate feedback",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 4
+      }
+    },
+    {
+      "id": "log_32796350-9198-4ffe-b823-784d0333a470",
+      "timestamp": "2026-07-21T10:13:26.007Z",
+      "stage": "executing",
+      "action": "Executing task: Finalize specification and integrate into design system",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 6,
+        "taskTitle": "Finalize specification and integrate into design system",
+        "goal": "Make the copy and hierarchy spec the authoritative source for designers and developers",
+        "expectedOutput": "Final spec file placed in design-system/docs and referenced in component guidelines"
+      }
+    },
+    {
+      "id": "log_e86ca022-422d-4c1a-a685-2dc844396c39",
+      "timestamp": "2026-07-21T10:14:23.162Z",
+      "stage": "executing",
+      "action": "Task completed: Finalize specification and integrate into design system",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_b6489754-5112-4eb4-93a8-24be9afe18a2",
+      "timestamp": "2026-07-21T10:14:23.165Z",
+      "stage": "executing",
+      "action": "Executing task: Validate specification completeness and usability",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 7,
+        "taskTitle": "Validate specification completeness and usability",
+        "goal": "Ensure the spec is actionable and can be used to implement sections without ambiguity",
+        "expectedOutput": "A validation checklist passed and a brief report confirming readiness"
+      }
+    },
+    {
+      "id": "log_4bf5b294-7595-441e-a1b8-5be7a47d2a7a",
+      "timestamp": "2026-07-21T10:17:51.093Z",
+      "stage": "executing",
+      "action": "Task failed: Validate specification completeness and usability",
+      "status": "failed",
+      "metadata": {
+        "error": "Provider request timed out after 60 seconds"
+      }
+    },
+    {
+      "id": "log_39073572-5c99-478d-b0a2-fe6cd2476d41",
+      "timestamp": "2026-07-21T10:18:04.745Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "The work produced a basic Todo app (HTML, CSS, JS) but did not address the mission goal of defining exact copy and content hierarchy for each section. The output lacks any specification of copy, hierarchy, or section‑level content details, and includes a duplicate script.js file."
+      }
+    },
+    {
+      "id": "log_cd308fed-68ae-4c68-a660-d6c1b12c6ea9",
+      "timestamp": "2026-07-21T10:18:04.747Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalTasks": 8,
+        "completedTasks": 7,
+        "failedTasks": 1,
+        "totalArtifacts": 4
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_470e2a84-508a-437e-bbaa-1cdadcd062b7",
+      "createdAt": "2026-07-21T10:07:29.141Z",
+      "key": "task-0-Analyze existing sections and current copy",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_8add4538-c0a7-471f-8d1b-56f0a2e80f84",
+      "createdAt": "2026-07-21T10:08:26.304Z",
+      "key": "task-1-Define purpose and target audience for each section",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_c154836a-a347-4dea-a1ac-568952af31ed",
+      "createdAt": "2026-07-21T10:10:22.284Z",
+      "key": "task-2-Establish copy tone, style, and length guidelines",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_b1d83aa6-5459-47f9-b9a1-5abf4a4db457",
+      "createdAt": "2026-07-21T10:11:17.269Z",
+      "key": "task-3-Outline content hierarchy (headings, subheadings, body, CTAs) per section",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_f4342551-4dd0-4757-91b0-70ec00417a7a",
+      "createdAt": "2026-07-21T10:12:24.016Z",
+      "key": "task-4-Draft copy and content hierarchy specification document",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_4eaff108-3ea5-4e97-bebe-2c35b05e3372",
+      "createdAt": "2026-07-21T10:13:26.006Z",
+      "key": "task-5-Conduct stakeholder review and incorporate feedback",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_16b10f1f-0022-45b5-9687-017122c6dadf",
+      "createdAt": "2026-07-21T10:14:23.164Z",
+      "key": "task-6-Finalize specification and integrate into design system",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_34b6bc79-8d5d-422d-8216-7b3d97758a4f",
+      "createdAt": "2026-07-21T10:07:29.140Z",
+      "type": "code",
+      "title": "Analyze existing sections and current copy",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_a2aa7de3-b345-4be9-8d05-ab3f65d8be77",
+      "createdAt": "2026-07-21T10:08:26.303Z",
+      "type": "code",
+      "title": "Define purpose and target audience for each section",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_2a314080-f6a5-41aa-848c-b85ca18f4607",
+      "createdAt": "2026-07-21T10:10:22.283Z",
+      "type": "code",
+      "title": "Establish copy tone, style, and length guidelines",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_89b024d5-1fcd-4a57-9f85-8617d146db80",
+      "createdAt": "2026-07-21T10:11:17.268Z",
+      "type": "code",
+      "title": "Outline content hierarchy (headings, subheadings, body, CTAs) per section",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_055d02b7-d8a8-4576-a9a7-93faf25b32e9",
+      "createdAt": "2026-07-21T10:12:24.015Z",
+      "type": "code",
+      "title": "Draft copy and content hierarchy specification document",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_8cb0b840-190c-41b4-8981-111b6cf6c545",
+      "createdAt": "2026-07-21T10:13:26.006Z",
+      "type": "code",
+      "title": "Conduct stakeholder review and incorporate feedback",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": [
+          "todo-app/index.html",
+          "todo-app/style.css",
+          "todo-app/script.js",
+          "todo-app/script.js"
+        ]
+      }
+    },
+    {
+      "id": "output_b2d6167a-5537-492d-ba95-081b19907e51",
+      "createdAt": "2026-07-21T10:14:23.163Z",
+      "type": "code",
+      "title": "Finalize specification and integrate into design system",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_509ed2fd-365f-4435-a7d5-b9f92e4ec93e",
+      "createdAt": "2026-07-21T10:18:04.747Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 20,\n  \"summary\": \"The work produced a basic Todo app (HTML, CSS, JS) but did not address the mission goal of defining exact copy and content hierarchy for each section. The output lacks any specification of copy, hierarchy, or section‑level content details, and includes a duplicate script.js file.\",\n  \"issues\": [\n    \"No copy or content hierarchy defined for any section.\",\n    \"Deliverables are a Todo app rather than a content specification.\",\n    \"Duplicate file entry (script.js) indicates unclear file management.\",\n    \"No documentation or rationale linking the created files to the mission objective.\"\n  ],\n  \"recommendations\": [\n    \"Create a clear specification document (e.g., content-hierarchy.md) that lists each section, its exact copy, and hierarchical structure (headings, sub‑headings, lists, etc.).\",\n    \"Remove the duplicate script.js file and ensure only necessary artifacts are present.\",\n    \"If a Todo app is needed as an example, keep it separate and reference it in the specification, but do not let it replace the required copy hierarchy deliverable.\",\n    \"Add a brief README explaining how the files relate to the mission goal and how to use the content hierarchy definition.\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_708ddf45-8cc0-41e5-bb5d-5e0b69673d08",
+      "createdAt": "2026-07-21T10:13:26.002Z",
+      "name": "todo-app/index.html",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "todo-app/index.html",
+        "task": "Conduct stakeholder review and incorporate feedback"
+      }
+    },
+    {
+      "id": "artifact_3ab7d5d6-832c-4d4c-b218-70122101703f",
+      "createdAt": "2026-07-21T10:13:26.003Z",
+      "name": "todo-app/style.css",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "todo-app/style.css",
+        "task": "Conduct stakeholder review and incorporate feedback"
+      }
+    },
+    {
+      "id": "artifact_a3fe2dfd-3fcb-4efb-8837-7d08a8a476e0",
+      "createdAt": "2026-07-21T10:13:26.004Z",
+      "name": "todo-app/script.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "todo-app/script.js",
+        "task": "Conduct stakeholder review and incorporate feedback"
+      }
+    },
+    {
+      "id": "artifact_f09f6913-cfbb-4582-b000-ccccf3755389",
+      "createdAt": "2026-07-21T10:13:26.004Z",
+      "name": "todo-app/script.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "todo-app/script.js",
+        "task": "Conduct stakeholder review and incorporate feedback"
+      }
+    }
+  ],
+  "repairHistory": []
+}

@@ -1,0 +1,91 @@
+{
+  "id": "session_2082151c-e086-4a38-8c89-1a6742a9ad42",
+  "name": "Build a premium coffee shop landing page called Aurora Coffee using HTML, CSS, a",
+  "status": "idle",
+  "createdAt": "2026-07-21T08:47:38.639Z",
+  "updatedAt": "2026-07-21T08:47:38.791Z",
+  "missions": [
+    {
+      "missionId": "mission_fec57d55-f13d-4d27-8cff-f385f1d7ff57",
+      "title": "Build a premium coffee shop landing page called Aurora Coffee using HTML, CSS, and JavaScript. Create index.html, styles.css, and script.js. Include a hero sect",
+      "goal": "Build a premium coffee shop landing page called Aurora Coffee using HTML, CSS, and JavaScript. Create index.html, styles.css, and script.js. Include a hero section, featured drinks, about section, testimonials, contact section, smooth scrolling, and subtle modern animations.",
+      "status": "queued",
+      "artifactsCount": 0,
+      "checkpointsCount": 0,
+      "repairAttempts": 0
+    },
+    {
+      "missionId": "mission_47f5144b-83d7-460c-97b5-95c0faeca269",
+      "title": "Create a full‑screen hero section with background image and CTA button",
+      "goal": "Create a full‑screen hero section with background image and CTA button",
+      "status": "queued",
+      "artifactsCount": 0,
+      "checkpointsCount": 0,
+      "repairAttempts": 0
+    },
+    {
+      "missionId": "mission_5fee14be-2056-4640-82a4-e058b8ce2fd0",
+      "title": "Implement responsive hero with srcset background and accessible CTA",
+      "goal": "Implement responsive hero with srcset background and accessible CTA",
+      "status": "queued",
+      "artifactsCount": 0,
+      "checkpointsCount": 0,
+      "repairAttempts": 0
+    },
+    {
+      "missionId": "mission_7eff2609-9bb1-44bb-b652-298d933b0e12",
+      "title": "Create a responsive featured drinks grid with hover cards",
+      "goal": "Create a responsive featured drinks grid with hover cards",
+      "status": "queued",
+      "artifactsCount": 0,
+      "checkpointsCount": 0,
+      "repairAttempts": 0
+    }
+  ],
+  "currentMissionIndex": -1,
+  "projectMemory": [],
+  "runtimeMs": 0,
+  "budgetMs": 3600000,
+  "diagnostics": {
+    "totalMissions": 0,
+    "completedMissions": 0,
+    "failedMissions": 0,
+    "totalArtifacts": 0,
+    "totalCheckpoints": 4,
+    "totalRepairs": 0,
+    "successfulRepairs": 0,
+    "totalRuntimeMs": 0,
+    "providerCalls": 0,
+    "totalTokensUsed": 0
+  },
+  "checkpoints": [
+    {
+      "id": "scp_35ebf81b-461a-4026-9cec-8c81da773c0d",
+      "timestamp": "2026-07-21T08:47:38.663Z",
+      "label": "Mission attached: Build a premium coffee shop landing page called Aurora Coffee using HTML, CSS, and JavaScript. Create index.html, styles.css, and script.js. Include a hero sect",
+      "missionId": "mission_fec57d55-f13d-4d27-8cff-f385f1d7ff57",
+      "state": {}
+    },
+    {
+      "id": "scp_3bd487e0-a94a-45ab-a4a0-51e23a0b92c1",
+      "timestamp": "2026-07-21T08:47:38.697Z",
+      "label": "Mission queued: Create a full‑screen hero section with background image and CTA button",
+      "missionId": "mission_47f5144b-83d7-460c-97b5-95c0faeca269",
+      "state": {}
+    },
+    {
+      "id": "scp_40dc3163-08b3-4fbe-acff-686c9d34f9bc",
+      "timestamp": "2026-07-21T08:47:38.738Z",
+      "label": "Mission queued: Implement responsive hero with srcset background and accessible CTA",
+      "missionId": "mission_5fee14be-2056-4640-82a4-e058b8ce2fd0",
+      "state": {}
+    },
+    {
+      "id": "scp_172fd6a2-e939-49d1-ab2f-f12d5248a42c",
+      "timestamp": "2026-07-21T08:47:38.791Z",
+      "label": "Mission queued: Create a responsive featured drinks grid with hover cards",
+      "missionId": "mission_7eff2609-9bb1-44bb-b652-298d933b0e12",
+      "state": {}
+    }
+  ]
+}

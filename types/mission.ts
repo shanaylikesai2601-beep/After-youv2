@@ -57,12 +57,47 @@ export interface MissionArtifact {
   createdAt: string;
   metadata: Record<string, unknown>;
 }
+export type MissionFailureCategory = "coding" | "build" | "typecheck" | "runtime-validation" | "feature-completeness" | "reviewer" | "filesystem" | "planner" | "provider" | "verification" | "unknown";
+export interface MissionRepairAttempt {
+  attempt: number;
+  startedAt: string;
+  completedAt?: string;
+  durationMs?: number;
+  status: "running" | "succeeded" | "failed";
+  failureType: MissionFailureCategory;
+  affectedFiles: string[];
+  probableCause: string;
+  confidence: number;
+  suggestedRepair: string;
+  verification?: "passed" | "failed";
+  filesModified?: string[];
+  error?: string;
+}
+export interface MissionCheckpoint {
+  id: string;
+  missionId: string;
+  parentCheckpointId?: string;
+  timestamp: string;
+  stage: string;
+  title: string;
+  summary: string;
+  filesChanged: string[];
+  fileCount: number;
+  plannerSummary?: string;
+  reviewerSummary?: string;
+  buildStatus: string;
+  verificationStatus: string;
+  repairHistory: MissionRepairAttempt[];
+  workspaceSnapshotReference: string;
+  projectMemorySnapshotReference: string;
+}
 
 export interface Mission {
   id: string;
   title: string;
   description: string;
   goal: string;
+  workspace?: WorkspaceContext;
   status: MissionStatus;
   createdAt: string;
   updatedAt: string;
@@ -73,13 +108,29 @@ export interface Mission {
   memory: MissionMemory[];
   outputs: MissionOutput[];
   artifacts: MissionArtifact[];
+  chain?: MissionChain;
+  /** Traceability for adaptive planning: AI suggestion, user edits, and executed snapshot. */
+  originalPlan?: MissionPlanStage[];
+  editedPlan?: MissionPlanStage[];
+  finalPlan?: MissionPlanStage[];
+  repairHistory: MissionRepairAttempt[];
+  checkpoints?: MissionCheckpoint[];
+  currentBranch?: string;
 }
+export interface MissionChainStage { id: string; objective: string; status: "planned" | "queued" | "running" | "completed" | "failed"; dependencies: string[]; estimatedTasks: number; estimatedDuration: number; startedAt?: string; completedAt?: string; summary?: string; }
+export interface MissionChain { stages: MissionChainStage[]; currentStage: number; }
+export interface MissionPlanStage { id: string; title: string; objective: string; explanation: string; complexity: "low" | "medium" | "high"; estimatedDuration: number; dependencies: string[]; suggestedTools?: string[]; completionCriteria?: string[]; }
+export interface WorkspaceContext { workspaceName: string; workspacePath: string; indexedAt: string; fileCount?: number; directoryTree?: string[]; extensions?: string[]; }
 
 export interface CreateMissionInput {
   title: string;
   description: string;
   goal: string;
   estimatedDuration?: number;
+  workspace?: WorkspaceContext;
+  nextObjectives?: string[];
+  plan?: MissionPlanStage[];
+  previewOnly?: boolean;
 }
 
 export interface UpdateMissionInput {
@@ -89,4 +140,7 @@ export interface UpdateMissionInput {
   status?: MissionStatus;
   estimatedDuration?: number;
   progress?: number;
+  chain?: MissionChain;
+  finalPlan?: MissionPlanStage[];
+  repairHistory?: MissionRepairAttempt[];
 }

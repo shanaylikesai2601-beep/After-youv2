@@ -1,0 +1,690 @@
+{
+  "id": "mission_351a25ad-04f0-4d80-8e4a-2d81c851d357",
+  "title": "Enhance this coffee landing page",
+  "description": "Enhance this coffee landing page",
+  "goal": "Enhance this coffee landing page\n\nAdd a responsive hero section with flexible images and CSS Grid\n\nImplement lazy loading for hero images using Intersection Observer\n\nImplement responsive and mobile-first layout",
+  "workspace": {
+    "workspaceName": "untitled folder",
+    "workspacePath": "/Users/shanaypatel/untitled folder",
+    "indexedAt": "2026-07-21T05:08:17.742Z",
+    "fileCount": 22,
+    "directoryTree": [
+      ".afteryou/",
+      ".afteryou/checkpoints/",
+      "coffee-landing/",
+      "coffee-landing/.gitignore",
+      "coffee-landing/.oxlintrc.json",
+      "coffee-landing/README.md",
+      "coffee-landing/index.html",
+      "coffee-landing/package-lock.json",
+      "coffee-landing/package.json",
+      "coffee-landing/public/",
+      "coffee-landing/public/favicon.svg",
+      "coffee-landing/public/icons.svg",
+      "coffee-landing/src/",
+      "coffee-landing/src/App.css",
+      "coffee-landing/src/App.tsx",
+      "coffee-landing/src/assets/",
+      "coffee-landing/src/index.css",
+      "coffee-landing/src/main.tsx",
+      "coffee-landing/tsconfig.app.json",
+      "coffee-landing/tsconfig.json",
+      "coffee-landing/tsconfig.node.json",
+      "coffee-landing/vite.config.ts",
+      "index.html",
+      "package.json",
+      "src/",
+      "src/coffee-canvas.js",
+      "src/main.js",
+      "src/style.css",
+      "tech-stack.md"
+    ],
+    "extensions": [
+      ".css",
+      ".html",
+      ".js",
+      ".json",
+      ".md",
+      ".svg",
+      ".ts",
+      ".tsx"
+    ]
+  },
+  "status": "completed",
+  "createdAt": "2026-07-21T05:08:26.731Z",
+  "updatedAt": "2026-07-21T05:25:08.679Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_b7574249-0801-4750-8c6f-ed370532da0e",
+      "timestamp": "2026-07-21T05:08:26.731Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Enhance this coffee landing page"
+      }
+    },
+    {
+      "id": "log_451953cb-aef9-4ba9-bf9c-7e6638065af5",
+      "timestamp": "2026-07-21T05:14:53.209Z",
+      "stage": "planning",
+      "action": "Using pre-built plan from skeleton",
+      "status": "succeeded",
+      "metadata": {
+        "taskCount": 9
+      }
+    },
+    {
+      "id": "log_7ffa2d03-099b-44c6-8537-8a336ba2d3c1",
+      "timestamp": "2026-07-21T05:14:53.211Z",
+      "stage": "executing",
+      "action": "Starting 9 tasks in dependency order",
+      "status": "started",
+      "metadata": {
+        "taskCount": 9
+      }
+    },
+    {
+      "id": "log_6aba83bc-3fa9-462a-8af8-734c010c8221",
+      "timestamp": "2026-07-21T05:14:53.213Z",
+      "stage": "executing",
+      "action": "Executing task: Analyze existing codebase structure and patterns",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Analyze existing codebase structure and patterns",
+        "goal": "Understand where to place the hero section, identify current CSS methodology, and locate relevant files for modification.",
+        "expectedOutput": "Analysis document (e.g., analysis.md) listing relevant HTML, CSS, JS files and naming conventions."
+      }
+    },
+    {
+      "id": "log_44dd1f15-27da-4103-8798-29b815419a95",
+      "timestamp": "2026-07-21T05:17:20.235Z",
+      "stage": "executing",
+      "action": "Task completed: Analyze existing codebase structure and patterns",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_543e785f-365a-4c13-a241-e78cbd6910f0",
+      "timestamp": "2026-07-21T05:17:20.247Z",
+      "stage": "executing",
+      "action": "Executing task: Identify files to create or modify for hero section",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Identify files to create or modify for hero section",
+        "goal": "Decide on exact file paths for the hero component, its styles, and any JavaScript needed.",
+        "expectedOutput": "List of files to create/modify (e.g., src/components/Hero.jsx, src/styles/hero.css, src/js/lazyLoad.js)."
+      }
+    },
+    {
+      "id": "log_64ca124c-f379-452e-9a31-0ea30f72ed5f",
+      "timestamp": "2026-07-21T05:18:45.645Z",
+      "stage": "executing",
+      "action": "Task completed: Identify files to create or modify for hero section",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_acb997c4-6cea-4942-9f6d-7f227d04b395",
+      "timestamp": "2026-07-21T05:18:45.648Z",
+      "stage": "executing",
+      "action": "Executing task: Create hero section HTML structure with CSS Grid container",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 2,
+        "taskTitle": "Create hero section HTML structure with CSS Grid container",
+        "goal": "Add semantic HTML markup for the hero section using a CSS Grid container and placeholder images.",
+        "expectedOutput": "Hero component file (e.g., src/components/Hero.jsx) containing a grid container with image placeholders."
+      }
+    },
+    {
+      "id": "log_8e3dd112-f4c5-44bc-992d-1a6790b3e5cc",
+      "timestamp": "2026-07-21T05:19:34.867Z",
+      "stage": "executing",
+      "action": "Task completed: Create hero section HTML structure with CSS Grid container",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_ab13954c-55e2-4338-b334-455571a9fec8",
+      "timestamp": "2026-07-21T05:19:34.875Z",
+      "stage": "executing",
+      "action": "Executing task: Implement CSS Grid layout and responsive styling",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 3,
+        "taskTitle": "Implement CSS Grid layout and responsive styling",
+        "goal": "Define CSS Grid template areas, columns, rows, and responsive breakpoints for mobile-first layout.",
+        "expectedOutput": "CSS file (e.g., src/styles/hero.css) with grid-template-areas, media queries, and base styling."
+      }
+    },
+    {
+      "id": "log_dad7d292-a3f4-42d4-87b2-6c68d0ed6451",
+      "timestamp": "2026-07-21T05:20:54.014Z",
+      "stage": "executing",
+      "action": "Task completed: Implement CSS Grid layout and responsive styling",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_b27d7b4c-a4d4-4a48-9e44-a9526fafca0a",
+      "timestamp": "2026-07-21T05:20:54.023Z",
+      "stage": "executing",
+      "action": "Executing task: Add flexible image handling with srcset and CSS",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 4,
+        "taskTitle": "Add flexible image handling with srcset and CSS",
+        "goal": "Make hero images responsive using srcset/sizes and ensure they scale within grid cells.",
+        "expectedOutput": "Updated hero component HTML with img tags using srcset and sizes; CSS rules for max-width:100%; height:auto; object-fit:cover."
+      }
+    },
+    {
+      "id": "log_d31dcafc-7d34-4032-8b89-66f80e1959e3",
+      "timestamp": "2026-07-21T05:22:01.383Z",
+      "stage": "executing",
+      "action": "Task completed: Add flexible image handling with srcset and CSS",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 2
+      }
+    },
+    {
+      "id": "log_ea4f960b-0372-4513-9b6f-1a75c8c9f586",
+      "timestamp": "2026-07-21T05:22:01.388Z",
+      "stage": "executing",
+      "action": "Executing task: Implement lazy loading for hero images using Intersection Observer",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 5,
+        "taskTitle": "Implement lazy loading for hero images using Intersection Observer",
+        "goal": "Defer loading of hero images until they enter the viewport using Intersection Observer.",
+        "expectedOutput": "JavaScript module (e.g., src/js/lazyLoad.js) that observes hero images, swaps data-src to src on intersection, and a small init script in the hero component."
+      }
+    },
+    {
+      "id": "log_98361f83-0b51-455d-8503-185496951460",
+      "timestamp": "2026-07-21T05:22:31.247Z",
+      "stage": "executing",
+      "action": "Task completed: Implement lazy loading for hero images using Intersection Observer",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_48679797-e0ef-46a8-b1b6-e4205235dfab",
+      "timestamp": "2026-07-21T05:22:31.259Z",
+      "stage": "executing",
+      "action": "Executing task: Validate mobile-first responsive layout across breakpoints",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 6,
+        "taskTitle": "Validate mobile-first responsive layout across breakpoints",
+        "goal": "Test the hero section layout on mobile, tablet, and desktop to ensure proper grid behavior and image flexibility.",
+        "expectedOutput": "Responsive test report (e.g., responsive-test.md) with screenshots or checklist confirming correct layout at 320px, 768px, 1024px, and 1440px widths."
+      }
+    },
+    {
+      "id": "log_28f8532d-67d3-42f4-add1-fb058bb6ed54",
+      "timestamp": "2026-07-21T05:23:39.671Z",
+      "stage": "executing",
+      "action": "Task completed: Validate mobile-first responsive layout across breakpoints",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_00e9f285-ca6e-443c-bc04-cfdc8d50610f",
+      "timestamp": "2026-07-21T05:23:39.678Z",
+      "stage": "executing",
+      "action": "Executing task: Run build, lint, and type checking to ensure integration",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 7,
+        "taskTitle": "Run build, lint, and type checking to ensure integration",
+        "goal": "Verify that the new hero section code integrates without breaking the existing build or introducing lint/type errors.",
+        "expectedOutput": "Successful build output (e.g., npm run build) and lint/type check reports with zero errors."
+      }
+    },
+    {
+      "id": "log_d0726198-607d-4309-811b-8a610751255e",
+      "timestamp": "2026-07-21T05:24:11.598Z",
+      "stage": "executing",
+      "action": "Task completed: Run build, lint, and type checking to ensure integration",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_5d2efe9c-fd6e-4185-bd51-2e2e1972754d",
+      "timestamp": "2026-07-21T05:24:11.606Z",
+      "stage": "executing",
+      "action": "Executing task: Perform final QA and produce verification report",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 8,
+        "taskTitle": "Perform final QA and produce verification report",
+        "goal": "Conduct a final quality assurance check to confirm all acceptance criteria are met and document the outcome.",
+        "expectedOutput": "QA verification report (e.g., QA-report.md) stating that hero section is responsive, uses CSS Grid, has flexible images, lazy loads correctly, and passes build/lint."
+      }
+    },
+    {
+      "id": "log_07becab2-2aa1-4c35-983b-df0027c13684",
+      "timestamp": "2026-07-21T05:25:03.645Z",
+      "stage": "executing",
+      "action": "Task completed: Perform final QA and produce verification report",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_fcb9ca83-074f-4f3a-a87b-f23efe4bc53c",
+      "timestamp": "2026-07-21T05:25:08.672Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "The work only created two JavaScript files (src/coffeeCup.js and src/main.js) with no visible HTML, CSS, or implementation of the requested hero section, CSS Grid, lazy loading, or responsive layout. Consequently, the mission requirements are not met."
+      }
+    },
+    {
+      "id": "log_b2bdfe4f-f63b-4720-b4ff-80b83e835b1b",
+      "timestamp": "2026-07-21T05:25:08.678Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalTasks": 9,
+        "completedTasks": 9,
+        "failedTasks": 0,
+        "totalArtifacts": 2
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_50831107-3e62-4668-a5e4-e9626d201d27",
+      "createdAt": "2026-07-21T05:17:20.244Z",
+      "key": "task-0-Analyze existing codebase structure and patterns",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_354ca40e-232e-4b5b-a597-d2f53939ddf8",
+      "createdAt": "2026-07-21T05:18:45.647Z",
+      "key": "task-1-Identify files to create or modify for hero section",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_e5765c3b-f50a-47dc-98f2-8e6e6bebfd0f",
+      "createdAt": "2026-07-21T05:19:34.872Z",
+      "key": "task-2-Create hero section HTML structure with CSS Grid container",
+      "value": "Coding agent completed after 9 steps, 8 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_c781defb-24e9-43a5-acfa-340805dd15f7",
+      "createdAt": "2026-07-21T05:20:54.018Z",
+      "key": "task-3-Implement CSS Grid layout and responsive styling",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_5fcfc8f6-15ae-4b06-9f15-42469c2ac80e",
+      "createdAt": "2026-07-21T05:22:01.387Z",
+      "key": "task-4-Add flexible image handling with srcset and CSS",
+      "value": "Coding agent completed after 12 steps, 11 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_c9f35fe6-439a-41be-b716-79ce881f0bd6",
+      "createdAt": "2026-07-21T05:22:31.256Z",
+      "key": "task-5-Implement lazy loading for hero images using Intersection Observer",
+      "value": "Coding agent completed after 6 steps, 5 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_7795ac5f-c8f4-4e6a-bd30-5795a9cda7d1",
+      "createdAt": "2026-07-21T05:23:39.676Z",
+      "key": "task-6-Validate mobile-first responsive layout across breakpoints",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_7691f256-8183-4aef-b0a0-8372ca877618",
+      "createdAt": "2026-07-21T05:24:11.604Z",
+      "key": "task-7-Run build, lint, and type checking to ensure integration",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_272de0a4-1420-4d43-a373-427bb03e1a9a",
+      "createdAt": "2026-07-21T05:25:03.648Z",
+      "key": "task-8-Perform final QA and produce verification report",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_3ee1ab4e-7849-4a72-9d77-aa44cc2159b6",
+      "createdAt": "2026-07-21T05:17:20.242Z",
+      "type": "code",
+      "title": "Analyze existing codebase structure and patterns",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_14d5f1b9-068c-40c4-95ed-176857f37428",
+      "createdAt": "2026-07-21T05:18:45.647Z",
+      "type": "code",
+      "title": "Identify files to create or modify for hero section",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_76db21f4-9568-4c2c-b030-7e2e047b3bca",
+      "createdAt": "2026-07-21T05:19:34.870Z",
+      "type": "code",
+      "title": "Create hero section HTML structure with CSS Grid container",
+      "content": "Coding agent completed after 9 steps, 8 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_fc9f49c1-8c5e-4eca-bc6c-e1fa07812495",
+      "createdAt": "2026-07-21T05:20:54.017Z",
+      "type": "code",
+      "title": "Implement CSS Grid layout and responsive styling",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_871619cf-74df-43ed-bead-3c251251dbf7",
+      "createdAt": "2026-07-21T05:22:01.385Z",
+      "type": "code",
+      "title": "Add flexible image handling with srcset and CSS",
+      "content": "Coding agent completed after 12 steps, 11 tool calls",
+      "metadata": {
+        "artifacts": [
+          "src/coffeeCup.js",
+          "src/main.js"
+        ]
+      }
+    },
+    {
+      "id": "output_64aab729-040a-4579-affc-796d7b59b960",
+      "createdAt": "2026-07-21T05:22:31.251Z",
+      "type": "code",
+      "title": "Implement lazy loading for hero images using Intersection Observer",
+      "content": "Coding agent completed after 6 steps, 5 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_ff2eaa6d-9b8a-4ae5-858e-d101a84fe5ca",
+      "createdAt": "2026-07-21T05:23:39.676Z",
+      "type": "code",
+      "title": "Validate mobile-first responsive layout across breakpoints",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_de52699b-0e11-453e-8990-558235467aa6",
+      "createdAt": "2026-07-21T05:24:11.603Z",
+      "type": "code",
+      "title": "Run build, lint, and type checking to ensure integration",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_5fde0219-d1b7-4709-bd6e-9cd7945dc5fa",
+      "createdAt": "2026-07-21T05:25:03.647Z",
+      "type": "code",
+      "title": "Perform final QA and produce verification report",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_335b87e1-9b50-4a68-9833-d223d12fb211",
+      "createdAt": "2026-07-21T05:25:08.675Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 20,\n  \"summary\": \"The work only created two JavaScript files (src/coffeeCup.js and src/main.js) with no visible HTML, CSS, or implementation of the requested hero section, CSS Grid, lazy loading, or responsive layout. Consequently, the mission requirements are not met.\",\n  \"issues\": [\n    \"Missing HTML markup for the hero section and overall page structure.\",\n    \"No CSS (or CSS-in-JS) to create a responsive hero section with flexible images and CSS Grid.\",\n    \"No Intersection Observer implementation for lazy loading hero images.\",\n    \"No evidence of mobile-first responsive layout (media queries, fluid units, etc.).\",\n    \"The provided JavaScript files appear empty or unrelated to the task (content not visible for review).\"\n  ],\n  \"recommendations\": [\n    \"Create an HTML file (or JSX if using a framework) that contains a hero section with a container for images and text.\",\n    \"Add CSS (or styled-components) that uses CSS Grid to layout the hero, sets images to max-width: 100% and height: auto, and includes mobile-first breakpoints.\",\n    \"Implement lazy loading in JavaScript: observe hero images with Intersection Observer and swap src from data-src when they enter the viewport.\",\n    \"Ensure all assets are optimized and include appropriate alt attributes for accessibility.\",\n    \"Test the page across various viewport sizes and verify that the layout remains fluid and that images load lazily.\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_1ad569c0-cbdc-4611-91fb-27f581a40809",
+      "createdAt": "2026-07-21T05:22:01.369Z",
+      "name": "src/coffeeCup.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/coffeeCup.js",
+        "task": "Add flexible image handling with srcset and CSS"
+      }
+    },
+    {
+      "id": "artifact_5b6fa537-a753-42c8-84db-145a96ddb370",
+      "createdAt": "2026-07-21T05:22:01.380Z",
+      "name": "src/main.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/main.js",
+        "task": "Add flexible image handling with srcset and CSS"
+      }
+    }
+  ],
+  "repairHistory": [],
+  "finalPlan": [
+    {
+      "id": "stage-1",
+      "title": "Analyze existing codebase structure and patterns",
+      "objective": "Understand where to place the hero section, identify current CSS methodology, and locate relevant files for modification.",
+      "explanation": "Analysis document (e.g., analysis.md) listing relevant HTML, CSS, JS files and naming conventions.",
+      "complexity": "low",
+      "estimatedDuration": 6,
+      "dependencies": [],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "List of candidate files for hero section identified",
+        "Notes on existing CSS layout approach (e.g., BEM, utility-first)",
+        "Determination of component or page file to edit"
+      ]
+    },
+    {
+      "id": "stage-2",
+      "title": "Identify files to create or modify for hero section",
+      "objective": "Decide on exact file paths for the hero component, its styles, and any JavaScript needed.",
+      "explanation": "List of files to create/modify (e.g., src/components/Hero.jsx, src/styles/hero.css, src/js/lazyLoad.js).",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-1"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "File paths documented",
+        "Decision on whether to create new component or edit existing page",
+        "Confirmation that paths follow project conventions"
+      ]
+    },
+    {
+      "id": "stage-3",
+      "title": "Create hero section HTML structure with CSS Grid container",
+      "objective": "Add semantic HTML markup for the hero section using a CSS Grid container and placeholder images.",
+      "explanation": "Hero component file (e.g., src/components/Hero.jsx) containing a grid container with image placeholders.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-2"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "File exists and contains a <section> with class 'hero'",
+        "Inner div with class 'hero__grid' set as display: grid",
+        "At least two <img> elements with placeholder src attributes"
+      ]
+    },
+    {
+      "id": "stage-4",
+      "title": "Implement CSS Grid layout and responsive styling",
+      "objective": "Define CSS Grid template areas, columns, rows, and responsive breakpoints for mobile-first layout.",
+      "explanation": "CSS file (e.g., src/styles/hero.css) with grid-template-areas, media queries, and base styling.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-3"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "CSS includes display: grid on hero__grid",
+        "Grid-template-columns defined as 1fr for mobile, adjusting to 2fr 1fr or similar at min-width: 768px",
+        "Grid-template-areas named for image and content areas",
+        "No syntax errors in CSS"
+      ]
+    },
+    {
+      "id": "stage-5",
+      "title": "Add flexible image handling with srcset and CSS",
+      "objective": "Make hero images responsive using srcset/sizes and ensure they scale within grid cells.",
+      "explanation": "Updated hero component HTML with img tags using srcset and sizes; CSS rules for max-width:100%; height:auto; object-fit:cover.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-4"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Each img includes srcset with at least two widths and sizes attribute",
+        "CSS sets width:100%; height:auto; object-fit:cover on hero images",
+        "Images do not overflow their grid cells on any breakpoint"
+      ]
+    },
+    {
+      "id": "stage-6",
+      "title": "Implement lazy loading for hero images using Intersection Observer",
+      "objective": "Defer loading of hero images until they enter the viewport using Intersection Observer.",
+      "explanation": "JavaScript module (e.g., src/js/lazyLoad.js) that observes hero images, swaps data-src to src on intersection, and a small init script in the hero component.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-5"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "JS file defines IntersectionObserver callback",
+        "Hero images have data-src attribute (or similar) and a placeholder src",
+        "On scroll/resize, images load when near viewport",
+        "No console errors related to observer"
+      ]
+    },
+    {
+      "id": "stage-7",
+      "title": "Validate mobile-first responsive layout across breakpoints",
+      "objective": "Test the hero section layout on mobile, tablet, and desktop to ensure proper grid behavior and image flexibility.",
+      "explanation": "Responsive test report (e.g., responsive-test.md) with screenshots or checklist confirming correct layout at 320px, 768px, 1024px, and 1440px widths.",
+      "complexity": "medium",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-6"
+      ],
+      "suggestedTools": [
+        "filesystem",
+        "browser"
+      ],
+      "completionCriteria": [
+        "Layout passes visual inspection at mobile width (<=480px)",
+        "Layout passes at tablet width (481px-1024px)",
+        "Layout passes at desktop width (>1024px)",
+        "No overlapping or broken grid items"
+      ]
+    },
+    {
+      "id": "stage-8",
+      "title": "Run build, lint, and type checking to ensure integration",
+      "objective": "Verify that the new hero section code integrates without breaking the existing build or introducing lint/type errors.",
+      "explanation": "Successful build output (e.g., npm run build) and lint/type check reports with zero errors.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-7"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "Build command exits with code 0",
+        "ESLint reports no new errors",
+        "TypeScript (if used) shows no new type errors",
+        "Bundle size increase is reasonable (<5% for added assets)"
+      ]
+    },
+    {
+      "id": "stage-9",
+      "title": "Perform final QA and produce verification report",
+      "objective": "Conduct a final quality assurance check to confirm all acceptance criteria are met and document the outcome.",
+      "explanation": "QA verification report (e.g., QA-report.md) stating that hero section is responsive, uses CSS Grid, has flexible images, lazy loads correctly, and passes build/lint.",
+      "complexity": "low",
+      "estimatedDuration": 5,
+      "dependencies": [
+        "stage-8"
+      ],
+      "suggestedTools": [
+        "filesystem"
+      ],
+      "completionCriteria": [
+        "All previous task completion criteria satisfied",
+        "No regressions in existing page functionality",
+        "Report signed off as ready for deployment"
+      ]
+    }
+  ]
+}
