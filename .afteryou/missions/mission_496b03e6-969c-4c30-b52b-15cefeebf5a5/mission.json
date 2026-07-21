@@ -1,0 +1,36 @@
+{
+  "id": "mission_496b03e6-969c-4c30-b52b-15cefeebf5a5",
+  "title": "Build a modern AI SaaS landing page for “FlowBoard” — a collaborative project management platform for startups. Create a beautiful homepage with a glassmorphism",
+  "description": "Build a modern AI SaaS landing page for “FlowBoard” — a collaborative project management platform for startups. Create a beautiful homepage with a glassmorphism design, dark theme, animated hero section, pricing cards, testimonials, FAQ, responsive navigation, authentication pages, dashboard layout, and reusable React components. Generate production-ready code using Next.js, TypeScript, Tailwind CSS, and shadcn/ui. Ensure accessibility, smooth animations, and clean component architecture.",
+  "goal": "Build a modern AI SaaS landing page for “FlowBoard” — a collaborative project management platform for startups. Create a beautiful homepage with a glassmorphism design, dark theme, animated hero section, pricing cards, testimonials, FAQ, responsive navigation, authentication pages, dashboard layout, and reusable React components. Generate production-ready code using Next.js, TypeScript, Tailwind CSS, and shadcn/ui. Ensure accessibility, smooth animations, and clean component architecture.",
+  "workspace": {
+    "workspaceName": "Project 1",
+    "workspacePath": "/Users/shanaypatel/Documents/Project Lumina/Project 1",
+    "indexedAt": "2026-07-21T14:39:20.506Z",
+    "fileCount": 0,
+    "directoryTree": [],
+    "extensions": []
+  },
+  "status": "queued",
+  "createdAt": "2026-07-21T14:39:33.034Z",
+  "updatedAt": "2026-07-21T14:39:33.034Z",
+  "estimatedDuration": 30,
+  "progress": 0,
+  "logs": [
+    {
+      "id": "log_e1d136d9-fb31-4857-b89b-c398efd86c1a",
+      "timestamp": "2026-07-21T14:39:33.034Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Build a modern AI SaaS landing page for “FlowBoard” — a collaborative project management platform for startups. Create a beautiful homepage with a glassmorphism design, dark theme, animated hero section, pricing cards, testimonials, FAQ, responsive navigation, authentication pages, dashboard layout, and reusable React components. Generate production-ready code using Next.js, TypeScript, Tailwind CSS, and shadcn/ui. Ensure accessibility, smooth animations, and clean component architecture."
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [],
+  "outputs": [],
+  "artifacts": [],
+  "repairHistory": []
+}

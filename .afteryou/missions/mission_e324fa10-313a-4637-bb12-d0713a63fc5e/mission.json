@@ -1,0 +1,472 @@
+{
+  "id": "mission_e324fa10-313a-4637-bb12-d0713a63fc5e",
+  "title": "Enhance accessibility of the hero section with ARIA and reduced‑motion support",
+  "description": "Enhance accessibility of the hero section with ARIA and reduced‑motion support",
+  "goal": "Enhance accessibility of the hero section with ARIA and reduced‑motion support",
+  "status": "completed",
+  "createdAt": "2026-07-21T14:11:42.683Z",
+  "updatedAt": "2026-07-21T14:37:29.486Z",
+  "estimatedDuration": 30,
+  "progress": 100,
+  "logs": [
+    {
+      "id": "log_061183f8-57b0-47de-98a8-2f8c0a10436b",
+      "timestamp": "2026-07-21T14:11:42.683Z",
+      "stage": "queued",
+      "action": "Mission queued",
+      "status": "info",
+      "metadata": {
+        "goal": "Enhance accessibility of the hero section with ARIA and reduced‑motion support"
+      }
+    },
+    {
+      "id": "log_e12872ca-29e2-4808-b9b4-e9072dbc2742",
+      "timestamp": "2026-07-21T14:24:54.359Z",
+      "stage": "planning",
+      "action": "Planning mission",
+      "status": "started",
+      "metadata": {}
+    },
+    {
+      "id": "log_f9fed44b-1e4f-4ae1-b085-0c864f174f52",
+      "timestamp": "2026-07-21T14:25:25.926Z",
+      "stage": "planning",
+      "action": "Planning completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "Plan created with 8 tasks"
+      }
+    },
+    {
+      "id": "log_7f31925c-25eb-40d0-8cb3-8085aa95fddd",
+      "timestamp": "2026-07-21T14:25:25.933Z",
+      "stage": "executing",
+      "action": "Starting 8 tasks in dependency order",
+      "status": "started",
+      "metadata": {
+        "taskCount": 8
+      }
+    },
+    {
+      "id": "log_b46ebfb3-9ecc-4d90-abb2-956c5da57bd7",
+      "timestamp": "2026-07-21T14:25:25.939Z",
+      "stage": "executing",
+      "action": "Executing task: Analyze existing hero section implementation",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 0,
+        "taskTitle": "Analyze existing hero section implementation",
+        "goal": "Understand current markup, styles, and animations to identify accessibility gaps",
+        "expectedOutput": "Analysis document listing missing ARIA roles, labels, landmarks, and motion issues"
+      }
+    },
+    {
+      "id": "log_e9b73f60-c838-41f5-a94d-15cd1ffa0fa8",
+      "timestamp": "2026-07-21T14:26:01.056Z",
+      "stage": "executing",
+      "action": "Task completed: Analyze existing hero section implementation",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_3b640e36-aade-4c73-923a-bf40b9512c52",
+      "timestamp": "2026-07-21T14:26:01.065Z",
+      "stage": "executing",
+      "action": "Executing task: Define ARIA and reduced‑motion requirements for hero section",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 1,
+        "taskTitle": "Define ARIA and reduced‑motion requirements for hero section",
+        "goal": "Specify exact ARIA attributes to add and CSS media query rules for prefers‑reduced‑motion",
+        "expectedOutput": "Requirements specification file detailing ARIA roles, labels, aria‑live, etc., and CSS changes"
+      }
+    },
+    {
+      "id": "log_59ac7ec8-351a-4219-9b88-c35f3afbf0ef",
+      "timestamp": "2026-07-21T14:27:30.208Z",
+      "stage": "executing",
+      "action": "Task completed: Define ARIA and reduced‑motion requirements for hero section",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 4
+      }
+    },
+    {
+      "id": "log_b65b8e08-61a1-42c5-ac44-07f60cd1e0eb",
+      "timestamp": "2026-07-21T14:27:30.211Z",
+      "stage": "executing",
+      "action": "Executing task: Create modification plan for hero component",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 2,
+        "taskTitle": "Create modification plan for hero component",
+        "goal": "Translate requirements into concrete code changes (files to edit, lines to add/modify)",
+        "expectedOutput": "Step‑by‑step edit plan (e.g., add role=\"banner\", aria‑label, adjust CSS)"
+      }
+    },
+    {
+      "id": "log_1177d878-decc-41c4-b9e5-9a69b38619ac",
+      "timestamp": "2026-07-21T14:28:29.951Z",
+      "stage": "executing",
+      "action": "Task completed: Create modification plan for hero component",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_f67327b9-32d7-4883-a9d9-ef4b08d77d3f",
+      "timestamp": "2026-07-21T14:28:29.978Z",
+      "stage": "executing",
+      "action": "Executing task: Implement ARIA enhancements in hero component",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 3,
+        "taskTitle": "Implement ARIA enhancements in hero component",
+        "goal": "Add appropriate ARIA roles, labels, and landmarks to improve screen‑reader accessibility",
+        "expectedOutput": "Updated hero component file (src/components/Hero.jsx) with ARIA attributes added"
+      }
+    },
+    {
+      "id": "log_71d6e1f1-00d8-4668-8300-355101581b2e",
+      "timestamp": "2026-07-21T14:30:02.848Z",
+      "stage": "executing",
+      "action": "Task completed: Implement ARIA enhancements in hero component",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 1
+      }
+    },
+    {
+      "id": "log_7925d8f2-ac39-4630-86dd-2f972af257ad",
+      "timestamp": "2026-07-21T14:30:02.853Z",
+      "stage": "executing",
+      "action": "Executing task: Add reduced‑motion support via CSS media query",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 4,
+        "taskTitle": "Add reduced‑motion support via CSS media query",
+        "goal": "Ensure animations respect prefers‑reduced‑motion to prevent motion‑sensitivity issues",
+        "expectedOutput": "CSS (or styled‑components) updated with @media (prefers-reduced-motion: reduce) rules that disable or simplify animations"
+      }
+    },
+    {
+      "id": "log_4e8fc366-3be4-47db-916e-424ee4376a37",
+      "timestamp": "2026-07-21T14:31:55.159Z",
+      "stage": "executing",
+      "action": "Task completed: Add reduced‑motion support via CSS media query",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_f5476029-55b3-4300-8d53-9d7cbe94a322",
+      "timestamp": "2026-07-21T14:31:55.164Z",
+      "stage": "executing",
+      "action": "Executing task: Write accessibility and reduced‑motion tests",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 5,
+        "taskTitle": "Write accessibility and reduced‑motion tests",
+        "goal": "Verify ARIA correctness and that reduced‑motion behavior works as intended",
+        "expectedOutput": "Test file (src/components/Hero.test.jsx) using jest‑axe and a visual check for reduced motion"
+      }
+    },
+    {
+      "id": "log_82efdd46-fd0b-4d6a-a997-ff890ece674f",
+      "timestamp": "2026-07-21T14:34:06.575Z",
+      "stage": "executing",
+      "action": "Task completed: Write accessibility and reduced‑motion tests",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_527405d1-6a00-4bbe-ab46-4d213f8691ca",
+      "timestamp": "2026-07-21T14:34:06.585Z",
+      "stage": "executing",
+      "action": "Executing task: Run linting, type checking, and production build",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 6,
+        "taskTitle": "Run linting, type checking, and production build",
+        "goal": "Ensure code quality and that no regressions were introduced",
+        "expectedOutput": "Successful lint, tsc (if TypeScript), and build output with no errors"
+      }
+    },
+    {
+      "id": "log_f2fdf8c3-8dbd-474d-9f47-173ecb84f2f4",
+      "timestamp": "2026-07-21T14:35:42.247Z",
+      "stage": "executing",
+      "action": "Task completed: Run linting, type checking, and production build",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_675f4ced-0b54-45e0-9803-fe5e0e97be33",
+      "timestamp": "2026-07-21T14:35:42.269Z",
+      "stage": "executing",
+      "action": "Executing task: Document changes and verify final accessibility",
+      "status": "started",
+      "metadata": {
+        "taskIndex": 7,
+        "taskTitle": "Document changes and verify final accessibility",
+        "goal": "Confirm that hero section meets ARIA and reduced‑motion standards via manual check or automated tool",
+        "expectedOutput": "Verification report (e.g., axe output) showing no accessibility failures and reduced‑motion compliance"
+      }
+    },
+    {
+      "id": "log_8d5330e1-b952-4821-acbb-032881a074f9",
+      "timestamp": "2026-07-21T14:37:15.598Z",
+      "stage": "executing",
+      "action": "Task completed: Document changes and verify final accessibility",
+      "status": "succeeded",
+      "metadata": {
+        "artifacts": 0
+      }
+    },
+    {
+      "id": "log_72f2ba88-b3b3-4ee0-bb4b-e58debd1ef18",
+      "timestamp": "2026-07-21T14:37:29.480Z",
+      "stage": "reviewing",
+      "action": "Review completed",
+      "status": "succeeded",
+      "metadata": {
+        "summary": "The artifacts show an effort to add ARIA attributes and reduced‑motion support to the hero section, but several accessibility details are incomplete or missing, preventing full compliance with WCAG 2.1 AA."
+      }
+    },
+    {
+      "id": "log_f56926a1-3563-4ac6-8aa8-bdc89d4309ef",
+      "timestamp": "2026-07-21T14:37:29.485Z",
+      "stage": "completed",
+      "action": "Mission completed",
+      "status": "succeeded",
+      "metadata": {
+        "totalTasks": 8,
+        "completedTasks": 8,
+        "failedTasks": 0,
+        "totalArtifacts": 5
+      }
+    }
+  ],
+  "timeline": [],
+  "memory": [
+    {
+      "id": "mem_467eb5d0-b00b-4816-9622-495d22d6e526",
+      "createdAt": "2026-07-21T14:26:01.062Z",
+      "key": "task-0-Analyze existing hero section implementation",
+      "value": "Coding agent completed after 8 steps, 7 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_e2c3cb27-e0b0-42a4-a4fb-4a5ab5ae40d5",
+      "createdAt": "2026-07-21T14:27:30.209Z",
+      "key": "task-1-Define ARIA and reduced‑motion requirements for hero section",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_7afa932d-ff3b-4b08-96d1-b3ee30ed5971",
+      "createdAt": "2026-07-21T14:28:29.976Z",
+      "key": "task-2-Create modification plan for hero component",
+      "value": "Coding agent completed after 1 steps, 0 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_b6424ad6-4d7f-448e-b61b-f399e4f4fdfe",
+      "createdAt": "2026-07-21T14:30:02.851Z",
+      "key": "task-3-Implement ARIA enhancements in hero component",
+      "value": "Coding agent completed after 11 steps, 10 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_e16b871a-3edc-4bc6-be2e-241c897251ba",
+      "createdAt": "2026-07-21T14:31:55.162Z",
+      "key": "task-4-Add reduced‑motion support via CSS media query",
+      "value": "Coding agent completed after 12 steps, 12 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_df701b15-61ae-46ac-b615-d4b876f69e11",
+      "createdAt": "2026-07-21T14:34:06.582Z",
+      "key": "task-5-Write accessibility and reduced‑motion tests",
+      "value": "Coding agent completed after 12 steps, 11 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_14e2b228-d4b2-4020-b98b-5a6f8e702469",
+      "createdAt": "2026-07-21T14:35:42.267Z",
+      "key": "task-6-Run linting, type checking, and production build",
+      "value": "Coding agent completed after 6 steps, 5 tool calls",
+      "source": "executing"
+    },
+    {
+      "id": "mem_a8725b22-7a7b-4816-9faf-8dd6562dfb0b",
+      "createdAt": "2026-07-21T14:37:15.611Z",
+      "key": "task-7-Document changes and verify final accessibility",
+      "value": "Coding agent completed after 3 steps, 2 tool calls",
+      "source": "executing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output_440d6761-9a94-45b8-9369-c7fb4495957f",
+      "createdAt": "2026-07-21T14:26:01.061Z",
+      "type": "code",
+      "title": "Analyze existing hero section implementation",
+      "content": "Coding agent completed after 8 steps, 7 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_dac46b69-1c84-48eb-922b-07b499dc3171",
+      "createdAt": "2026-07-21T14:27:30.209Z",
+      "type": "code",
+      "title": "Define ARIA and reduced‑motion requirements for hero section",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": [
+          "hero-accessibility-requirements.md",
+          "index.html",
+          "styles.css",
+          "script.js"
+        ]
+      }
+    },
+    {
+      "id": "output_3741311c-7b24-4ab5-a7ef-6b4ce2b1018c",
+      "createdAt": "2026-07-21T14:28:29.975Z",
+      "type": "code",
+      "title": "Create modification plan for hero component",
+      "content": "Coding agent completed after 1 steps, 0 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_c567c548-c802-4205-bdc2-64b418ec68ee",
+      "createdAt": "2026-07-21T14:30:02.849Z",
+      "type": "code",
+      "title": "Implement ARIA enhancements in hero component",
+      "content": "Coding agent completed after 11 steps, 10 tool calls",
+      "metadata": {
+        "artifacts": [
+          "src/components/HeroSection.jsx"
+        ]
+      }
+    },
+    {
+      "id": "output_1a138700-1919-4d0a-8c7d-9b22d2c587cd",
+      "createdAt": "2026-07-21T14:31:55.162Z",
+      "type": "code",
+      "title": "Add reduced‑motion support via CSS media query",
+      "content": "Coding agent completed after 12 steps, 12 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_4434c0d1-a4a9-4861-8b79-225683453f73",
+      "createdAt": "2026-07-21T14:34:06.579Z",
+      "type": "code",
+      "title": "Write accessibility and reduced‑motion tests",
+      "content": "Coding agent completed after 12 steps, 11 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_e3f14e47-c378-4cc9-bcb5-5fe41589ad9d",
+      "createdAt": "2026-07-21T14:35:42.258Z",
+      "type": "code",
+      "title": "Run linting, type checking, and production build",
+      "content": "Coding agent completed after 6 steps, 5 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_2f25944f-f162-430f-b80d-d669bece4b8c",
+      "createdAt": "2026-07-21T14:37:15.611Z",
+      "type": "code",
+      "title": "Document changes and verify final accessibility",
+      "content": "Coding agent completed after 3 steps, 2 tool calls",
+      "metadata": {
+        "artifacts": []
+      }
+    },
+    {
+      "id": "output_0868b643-56d1-463b-ab8c-76a8f2cbce8d",
+      "createdAt": "2026-07-21T14:37:29.483Z",
+      "type": "summary",
+      "title": "Review",
+      "content": "{\n  \"approved\": false,\n  \"qualityScore\": 78,\n  \"summary\": \"The artifacts show an effort to add ARIA attributes and reduced‑motion support to the hero section, but several accessibility details are incomplete or missing, preventing full compliance with WCAG 2.1 AA.\",\n  \"issues\": [\n    \"Missing or incomplete ARIA labels/descriptions on interactive hero elements (e.g., CTA buttons, carousel controls).\",\n    \"Reduced‑motion media query not consistently applied to all CSS animations/transitions in the hero section.\",\n    \"No keyboard focus management for dynamic content (e.g., slide changes) – focus can be lost or trapped.\",\n    \"Missing lang attribute on <html> and insufficient color contrast verification for hero text over background images.\",\n    \"No fallback content or noscript handling for users with JavaScript disabled.\",\n    \"Absence of automated accessibility testing (e.g., axe, jest-axe) in the provided files.\",\n    \"HeroSection.jsx lacks proper semantic heading structure (e.g., missing <h1> for the primary headline).\"\n  ],\n  \"recommendations\": [\n    \"Add explicit aria-label or aria-labelledby to all buttons, links, and carousel controls; ensure decorative images have alt=\\\"\\\" and informative images have descriptive alt text.\",\n    \"Extend the prefers-reduced-motion media query to disable or replace all hero‑section animations, transitions, and parallax effects.\",\n    \"Implement focus trapping or restore focus after slide changes; use tabindex=\\\"-1\\\" on off‑screen slides and manage focus with React useEffect hooks.\",\n    \"Verify color contrast ratios (minimum 4.5:1 for normal text) and add a lang attribute to the <html> element (e.g., lang=\\\"en\\\").\",\n    \"Provide a noscript fallback that displays static hero content without relying on JavaScript.\",\n    \"Integrate automated accessibility tests (axe-core, jest-axe, or similar) into the build/CI pipeline to catch regressions.\",\n    \"Ensure the hero section uses a logical heading hierarchy (<h1> for main title, <h2> for sub‑title, etc.) and consider adding a landmark role (role=\\\"region\\\" with aria-labelledby) for screen‑reader navigation.\"\n  ]\n}",
+      "metadata": {}
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact_7c1090d9-4385-4ee6-82b3-00506c7e7136",
+      "createdAt": "2026-07-21T14:27:30.196Z",
+      "name": "hero-accessibility-requirements.md",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "hero-accessibility-requirements.md",
+        "task": "Define ARIA and reduced‑motion requirements for hero section"
+      }
+    },
+    {
+      "id": "artifact_64ca589d-e9d8-4a08-9af3-df779f1f2c5a",
+      "createdAt": "2026-07-21T14:27:30.201Z",
+      "name": "index.html",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "index.html",
+        "task": "Define ARIA and reduced‑motion requirements for hero section"
+      }
+    },
+    {
+      "id": "artifact_bdbe8797-b8c2-4ac9-9014-a67dc41eaaed",
+      "createdAt": "2026-07-21T14:27:30.205Z",
+      "name": "styles.css",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "styles.css",
+        "task": "Define ARIA and reduced‑motion requirements for hero section"
+      }
+    },
+    {
+      "id": "artifact_0ea042ee-395d-4396-8332-d678cb78026a",
+      "createdAt": "2026-07-21T14:27:30.207Z",
+      "name": "script.js",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "script.js",
+        "task": "Define ARIA and reduced‑motion requirements for hero section"
+      }
+    },
+    {
+      "id": "artifact_99437b08-39bf-46e5-bb28-4fa85c37d8f5",
+      "createdAt": "2026-07-21T14:30:02.841Z",
+      "name": "src/components/HeroSection.jsx",
+      "kind": "file",
+      "metadata": {
+        "toolId": "filesystem",
+        "path": "src/components/HeroSection.jsx",
+        "task": "Implement ARIA enhancements in hero component"
+      }
+    }
+  ],
+  "repairHistory": []
+}
