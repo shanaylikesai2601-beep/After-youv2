@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { missionsApi } from "@/api/missions";
 import type { WorkspaceContextValue } from "./workspace-context";
 
+const IS_VERCEL = !!process.env.NEXT_PUBLIC_VERCEL_ENV;
+
 export function MissionWorkspace() {
   const router = useRouter();
   const [prompt, setPrompt] = useState("");
@@ -89,7 +91,9 @@ export function MissionWorkspace() {
         </div>
 
         <div className="mission-new-card">
-          {workspace ? (
+          {IS_VERCEL ? (
+            <p className="mission-new-workspace-banner">Workspace connection is available in the desktop/local version. Continue without a local workspace.</p>
+          ) : workspace ? (
             <div className="mission-new-workspace-card">
               <div className="mission-new-workspace-info">
                 <strong>{workspace.workspaceName}</strong>
