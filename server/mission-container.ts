@@ -8,11 +8,15 @@ let _runner: MissionRunner | null = null;
 let _sessionRepo: SessionRepository | null = null;
 let _sessionManager: WorkingSessionManager | null = null;
 
+const USE_VERCEL = !!process.env.VERCEL;
+
 async function ensure(): Promise<{ repository: MissionRepository; runner: MissionRunner }> {
   if (!_repository) {
-    const { MissionRepository } = await import("@/server/storage/mission-repository");
+    const { MissionRepository: Repo } = USE_VERCEL
+      ? await import("@/server/storage/mission-repository-vercel")
+      : await import("@/server/storage/mission-repository");
     const { MissionRunner } = await import("@/server/pipeline/mission-runner");
-    _repository = new MissionRepository();
+    _repository = new Repo() as unknown as MissionRepository;
     _runner = new MissionRunner(_repository);
   }
   return { repository: _repository!, runner: _runner! };
@@ -20,10 +24,12 @@ async function ensure(): Promise<{ repository: MissionRepository; runner: Missio
 
 async function ensureSession(): Promise<{ sessionRepo: SessionRepository; sessionManager: WorkingSessionManager }> {
   if (!_sessionRepo) {
-    const { SessionRepository } = await import("@/server/session/session-repository");
+    const { SessionRepository: SRepo } = USE_VERCEL
+      ? await import("@/server/session/session-repository-vercel")
+      : await import("@/server/session/session-repository");
     const { WorkingSessionManager } = await import("@/server/session/working-session-manager");
     const { repository, runner } = await ensure();
-    _sessionRepo = new SessionRepository();
+    _sessionRepo = new SRepo() as unknown as SessionRepository;
     _sessionManager = new WorkingSessionManager(_sessionRepo, repository, runner);
   }
   return { sessionRepo: _sessionRepo!, sessionManager: _sessionManager! };

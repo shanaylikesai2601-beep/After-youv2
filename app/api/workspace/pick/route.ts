@@ -6,7 +6,7 @@ const execFileAsync = promisify(execFile);
 
 /** Opens the OS folder dialog only for the local desktop host. */
 export async function POST(): Promise<Response> {
-  if (process.platform !== "darwin") return Response.json({ error: "Native folder selection is unavailable in this environment." }, { status: 501 });
+  if (process.env.VERCEL || process.platform !== "darwin") return Response.json({ error: "Native folder selection is unavailable in this environment." }, { status: 501 });
   try {
     const { stdout } = await execFileAsync("osascript", ["-e", "POSIX path of (choose folder with prompt \"Choose a project workspace\")"]);
     const workspacePath = stdout.trim();
