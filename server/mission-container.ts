@@ -12,12 +12,18 @@ const USE_VERCEL = !!process.env.VERCEL;
 
 async function ensure(): Promise<{ repository: MissionRepository; runner: MissionRunner }> {
   if (!_repository) {
+    console.log("[mission-container] ensure() USE_VERCEL=", USE_VERCEL);
+    console.log("[mission-container] importing repository module");
     const { MissionRepository: Repo } = USE_VERCEL
       ? await import("@/server/storage/mission-repository-vercel")
       : await import("@/server/storage/mission-repository");
+    console.log("[mission-container] importing mission-runner module");
     const { MissionRunner } = await import("@/server/pipeline/mission-runner");
+    console.log("[mission-container] creating repository instance");
     _repository = new Repo() as unknown as MissionRepository;
+    console.log("[mission-container] creating runner instance");
     _runner = new MissionRunner(_repository);
+    console.log("[mission-container] ensure() done");
   }
   return { repository: _repository!, runner: _runner! };
 }

@@ -45,10 +45,12 @@ export class MissionRunner {
   constructor(private repository: MissionRepository) {}
 
   async run(missionId: string): Promise<void> {
+    console.log("[mission-runner] run() called for mission", missionId);
     if (this.activeRuns.has(missionId)) return;
     this.activeRuns.add(missionId);
 
     try {
+      console.log("[mission-runner] calling execute()");
       await this.execute(missionId);
     } catch (err) {
       await this.repository.addLog(missionId, {
@@ -91,19 +93,22 @@ export class MissionRunner {
         }).filter(Boolean),
         completionCriteria: stage.completionCriteria ?? [stage.objective],
       }));
-    } else {
-      // Phase 1: Planning (AI-generated plan)
-      await this.repository.addLog(missionId, {
-        stage: "planning",
-        action: "Planning mission",
-        status: "started",
-        metadata: {},
-      });
+      } else {
+        // Phase 1: Planning (AI-generated plan)
+        console.log("[mission-runner] starting AI planning phase");
+        await this.repository.addLog(missionId, {
+          stage: "planning",
+          action: "Planning mission",
+          status: "started",
+          metadata: {},
+        });
 
-      let planResult;
-      try {
-        const provider = getAIProvider();
-        planResult = await runPlanner(
+        let planResult;
+        try {
+          console.log("[mission-runner] calling getAIProvider()");
+          const provider = getAIProvider();
+          console.log("[mission-runner] calling runPlanner()");
+          planResult = await runPlanner(
           {
             missionId,
             title: mission.title,

@@ -2,6 +2,7 @@ import type { AIProvider } from "./types";
 import { createOpenAICompatibleProvider } from "./provider";
 
 export function getAIProvider(): AIProvider {
+  console.log("[provider-factory] getAIProvider() called, AI_PROVIDER=", process.env.AI_PROVIDER);
   const provider = process.env.AI_PROVIDER ?? "nvidia";
 
   const configs: Record<string, { apiKey: string; baseUrl: string; model: string; maxOutputTokens: number }> = {
