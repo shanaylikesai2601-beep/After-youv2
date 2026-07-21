@@ -1,61 +1,79 @@
+// Carousel functionality with prefers-reduced-motion support
 document.addEventListener('DOMContentLoaded', function() {
-    const root = document.getElementById('root');
+    const carousel = document.querySelector('.carousel');
+    const slides = carousel.querySelectorAll('.slide');
+    const prevButton = carousel.querySelector('.prev');
+    const nextButton = carousel.querySelector('.next');
     
-    root.innerHTML = `
-        <header>
-            <div class="container">
-                <h1>Lumina AI</h1>
-                <p>Illuminating the Future of Artificial Intelligence</p>
-            </div>
-        </header>
+    let currentIndex = 0;
+    let autoPlayInterval;
+    const slideInterval = 5000; // 5 seconds
+    
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    
+    // Function to show a specific slide
+    function showSlide(index) {
+        // Remove active class from all slides
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            slide.setAttribute('aria-hidden', i !== index ? 'true' : 'false');
+        });
         
-        <section class="features">
-            <div class="container">
-                <div class="feature">
-                    <div class="feature-icon">🧠</div>
-                    <h3>Advanced AI Models</h3>
-                    <p>Cutting-edge machine learning models tailored for your business needs.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Lightning Fast Processing</h3>
-                    <p>Optimized algorithms that deliver results in real-time.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Secure & Private</h3>
-                    <p>Enterprise-grade security with data privacy at our core.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">📊</div>
-                    <h3>Actionable Insights</h3>
-                    <p>Turn data into decisions with intuitive analytics dashboards.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Seamless Integration</h3>
-                    <p>Easy API integration with your existing workflows and systems.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">💡</div>
-                    <h3>Innovative Solutions</h3>
-                    <p>Custom AI solutions designed to solve your unique challenges.</p>
-                </div>
-            </div>
-        </section>
+        // Add active class to current slide
+        slides[index].classList.add('active');
+        slides[index].setAttribute('aria-hidden', 'false');
         
-        <section class="cta">
-            <div class="container">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Get started with Lumina AI today and experience the power of intelligent automation.</p>
-                <a href="#" class="cta-button">Request a Demo</a>
-            </div>
-        </section>
-        
-        <footer>
-            <div class="container">
-                <p>&copy; 2023 Lumina AI. All rights reserved.</p>
-            </div>
-        </footer>
-    `;
+        currentIndex = index;
+    }
+    
+    // Function to show next slide
+    function showNextSlide() {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        showSlide(nextIndex);
+    }
+    
+    // Function to show previous slide
+    function showPrevSlide() {
+        const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(prevIndex);
+    }
+    
+    // Event listeners for buttons
+    prevButton.addEventListener('click', function() {
+        showPrevSlide();
+        resetAutoPlay();
+    });
+    
+    nextButton.addEventListener('click', function() {
+        showNextSlide();
+        resetAutoPlay();
+    });
+    
+    // Function to reset auto-play (respects reduced motion)
+    function resetAutoPlay() {
+        clearInterval(autoPlayInterval);
+        if (!prefersReducedMotion.matches) {
+            autoPlayInterval = setInterval(showNextSlide, slideInterval);
+        }
+    }
+    
+    // Initialize
+    showSlide(0);
+    
+    // Start auto-play only if not preferring reduced motion
+    if (!prefersReducedMotion.matches) {
+        autoPlayInterval = setInterval(showNextSlide, slideInterval);
+    }
+    
+    // Listen for changes in reduced motion preference
+    prefersReducedMotion.addEventListener('change', function(e) {
+        if (e.matches) {
+            // User enabled reduced motion - stop auto-play
+            clearInterval(autoPlayInterval);
+        } else {
+            // User disabled reduced motion - start auto-play
+            autoPlayInterval = setInterval(showNextSlide, slideInterval);
+        }
+    });
 });

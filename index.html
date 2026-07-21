@@ -3,13 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina AI</title>
+    <title>Hero Section Accessibility Example</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="root">
-        <!-- Content will be added here -->
-    </div>
+    <!-- Hero Section -->
+    <header class="hero" role="banner" aria-label="Home page hero banner">
+        <div class="hero-content">
+            <h1 id="hero-title">Welcome to Our Website</h1>
+            <p class="hero-description">Discover amazing products and services.</p>
+            <a href="#features" class="cta-button">Learn More</a>
+        </div>
+
+        <!-- Carousel Slides (example) -->
+        <div class="carousel" aria-live="polite" aria-atomic="true">
+            <div class="slide active" aria-hidden="false">
+                <img src="slide1.jpg" alt="Slide 1: Summer Sale" aria-hidden="true">
+            </div>
+            <div class="slide" aria-hidden="true">
+                <img src="slide2.jpg" alt="Slide 2: New Arrivals" aria-hidden="true">
+            </div>
+            <div class="slide" aria-hidden="true">
+                <img src="slide3.jpg" alt="Slide 3: Clearance" aria-hidden="true">
+            </div>
+        </div>
+
+        <!-- Carousel Navigation -->
+        <button class="carousel-btn prev" aria-label="Previous slide" aria-controls="carousel" aria-expanded="false">
+            &#9664; <!-- Left arrow -->
+        </button>
+        <button class="carousel-btn next" aria-label="Next slide" aria-controls="carousel" aria-expanded="false">
+            &#9654; <!-- Right arrow -->
+        </button>
+
+        <!-- Decorative element (purely decorative) -->
+        <div class="decorative-element" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <section id="features">
+            <h2>Features</section>
+        </main>
+
     <script src="script.js"></script>
 </body>
 </html>
