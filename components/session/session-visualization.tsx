@@ -201,6 +201,7 @@ function useSessionPoll(sessionId: string) {
     async function poll() {
       try {
         const res = await fetch(`/api/sessions/${sessionId}`);
+        if (!res.headers.get("content-type")?.includes("application/json")) { if (mounted) return; return; }
         const json = await res.json();
         if (mounted) setData(json.data);
       } catch { /* ignore */ }

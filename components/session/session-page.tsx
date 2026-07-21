@@ -13,6 +13,7 @@ function useSession(sessionId: string) {
   const load = useCallback(async () => {
     try {
       const res = await fetch(`/api/sessions/${sessionId}`);
+      if (!res.headers.get("content-type")?.includes("application/json")) throw new Error(await res.text());
       const payload = await res.json();
       if (!res.ok) throw new Error(payload.error);
       setSession(payload.data);
@@ -38,6 +39,7 @@ function useActivities(sessionId: string) {
     async function poll() {
       try {
         const res = await fetch(`/api/sessions/${sessionId}/activities`);
+        if (!res.headers.get("content-type")?.includes("application/json")) { if (mounted) return; return; }
         const payload = await res.json();
         if (mounted) setActivities(payload.data ?? []);
       } catch { /* ignore */ }

@@ -31,6 +31,7 @@ export function MissionSkeleton({ missionId }: { missionId: string }) {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ missionId }),
         });
+        if (!res.headers.get("content-type")?.includes("application/json")) throw new Error(await res.text());
         const payload = await res.json();
         if (!res.ok) throw new Error(payload.error || "Failed to generate skeleton");
 

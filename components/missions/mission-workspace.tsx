@@ -17,6 +17,7 @@ export function MissionWorkspace() {
     setIndexing(true);
     try {
       const pick = await fetch("/api/workspace/pick", { method: "POST" });
+      if (!pick.headers.get("content-type")?.includes("application/json")) throw new Error(await pick.text());
       const pickData = await pick.json();
       if (!pick.ok) throw new Error(pickData.error || "Could not select workspace");
 
@@ -25,6 +26,7 @@ export function MissionWorkspace() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ workspacePath: pickData.data.workspacePath }),
       });
+      if (!idx.headers.get("content-type")?.includes("application/json")) throw new Error(await idx.text());
       const idxData = await idx.json();
       if (!idx.ok) throw new Error(idxData.error || "Could not index workspace");
 

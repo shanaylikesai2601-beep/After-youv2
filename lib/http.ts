@@ -9,5 +9,5 @@ export function jsonError(error: unknown): Response {
     return Response.json({ error: error.message }, { status: 404 });
   }
 
-  return Response.json({ error: "Internal server error" }, { status: 500 });
+  return Response.json({ error: error instanceof Error ? error.message : "Internal Server Error" }, { status: 500 });
 }

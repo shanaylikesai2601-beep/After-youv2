@@ -15,6 +15,7 @@ export function MorningReportView({ sessionId }: { sessionId: string }) {
     async function load() {
       try {
         const res = await fetch(`/api/sessions/${sessionId}/report`);
+        if (!res.headers.get("content-type")?.includes("application/json")) throw new Error(await res.text());
         const payload = await res.json();
         setReport(payload.data);
       } catch (e) {

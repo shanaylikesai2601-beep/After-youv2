@@ -19,6 +19,7 @@ export function SessionList() {
     async function load() {
       try {
         const res = await fetch("/api/sessions");
+        if (!res.headers.get("content-type")?.includes("application/json")) throw new Error(await res.text());
         const payload = await res.json();
         setSessions(payload.data ?? []);
       } catch { /* ignore */ }
@@ -36,6 +37,7 @@ export function SessionList() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: name.trim(), goal: goal.trim() || undefined }),
       });
+      if (!res.headers.get("content-type")?.includes("application/json")) throw new Error(await res.text());
       const payload = await res.json();
       if (!res.ok) throw new Error(payload.error);
       router.push(`/sessions/${payload.data.id}`);
